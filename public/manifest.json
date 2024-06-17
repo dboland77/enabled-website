@@ -1,6 +1,6 @@
 {
-  "name": "Minimal UI",
-  "short_name": "Minimal UI",
+  "name": "EnableD",
+  "short_name": "EnableD",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#000000",
