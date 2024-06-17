@@ -1,9 +1,11 @@
-import { redirect } from 'next/navigation';
-
-import { PATH_AFTER_LOGIN } from 'src/config-global';
+import { HomeView } from 'src/sections/home/view';
 
 // ----------------------------------------------------------------------
 
-export default async function HomePage() {
-  redirect(PATH_AFTER_LOGIN);
+export const metadata = {
+  title: 'EnableD: Workplace Accommodations Made Easy',
+};
+
+export default function HomePage() {
+  return <HomeView />;
 }
