@@ -6,7 +6,6 @@ import Box, { BoxProps } from '@mui/material/Box';
 
 import { RouterLink } from 'src/routes/components';
 
-// ----------------------------------------------------------------------
 
 export interface LogoProps extends BoxProps {
   disabledLink?: boolean;
@@ -26,7 +25,7 @@ const Logo = forwardRef<HTMLDivElement, LogoProps>(
       <Box
         component="img"
         src="/logo/logo_full.svg"
-        sx={{ width: 80, height: 50, cursor: 'pointer', ...sx }}
+        sx={{ width: 100, height: 50, cursor: 'pointer', ...sx }}
       />
     );
 

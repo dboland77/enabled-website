@@ -42,7 +42,7 @@ export default function RootLayout({ children }: Props) {
         >
           <ThemeProvider>
             <MotionLazy>
-              <SettingsDrawer />
+              {/* <SettingsDrawer /> */}
               <ProgressBar />
               {children}
             </MotionLazy>

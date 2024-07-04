@@ -23,9 +23,8 @@ import NavDesktop from './nav/desktop';
 import { HEADER } from '../config-layout';
 import { navConfig } from './config-navigation';
 import HeaderShadow from '../common/header-shadow';
-import SettingsButton from '../common/settings-button';
+// import SettingsButton from '../common/settings-button';
 
-// ----------------------------------------------------------------------
 
 export default function Header() {
   const theme = useTheme();
@@ -37,7 +36,6 @@ export default function Header() {
   return (
     <AppBar>
       <Toolbar
-        disableGutters
         sx={{
           height: {
             xs: HEADER.H_MOBILE,
@@ -66,17 +64,10 @@ export default function Header() {
               },
             }}
             badgeContent={
-              <Link
-                href={paths.changelog}
-                target="_blank"
-                rel="noopener"
-                underline="none"
-                sx={{ ml: 1 }}
-              >
+           
                 <Label color="info" sx={{ textTransform: 'unset', height: 22, px: 0.5 }}>
-                  v5.6.0
+                 Beta
                 </Label>
-              </Link>
             }
           >
             <Logo />
@@ -87,17 +78,17 @@ export default function Header() {
           {mdUp && <NavDesktop data={navConfig} />}
 
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
-            <Button variant="contained" target="_blank" rel="noopener" href={paths.minimalUI}>
-              Purchase Now
+            <Button variant="contained">
+              Try Now
             </Button>
 
 
-            <SettingsButton
+            {/* <SettingsButton
               sx={{
                 ml: { xs: 1, md: 0 },
                 mr: { md: 2 },
               }}
-            />
+            /> */}
 
             {!mdUp && <NavMobile data={navConfig} />}
           </Stack>
