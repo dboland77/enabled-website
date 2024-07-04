@@ -4,7 +4,6 @@ import { checkboxClasses } from '@mui/material/Checkbox';
 import { menuItemClasses } from '@mui/material/MenuItem';
 import { autocompleteClasses } from '@mui/material/Autocomplete';
 
-// ----------------------------------------------------------------------
 
 export const paper = ({
   theme,
@@ -23,7 +22,7 @@ export const paper = ({
       color: bgcolor,
     }),
   }),
-  backgroundImage: 'url(/assets/cyan-blur.png), url(/assets/red-blur.png)',
+  backgroundImage: '',
   backgroundRepeat: 'no-repeat, no-repeat',
   backgroundPosition: 'top right, left bottom',
   backgroundSize: '50%, 50%',
@@ -37,7 +36,6 @@ export const paper = ({
   }),
 });
 
-// ----------------------------------------------------------------------
 
 export const menuItem = (theme: Theme) => ({
   ...theme.typography.body2,
@@ -69,7 +67,6 @@ export const menuItem = (theme: Theme) => ({
   },
 });
 
-// ----------------------------------------------------------------------
 
 type BgBlurProps = {
   blur?: number;
@@ -110,7 +107,6 @@ export function bgBlur(props?: BgBlurProps) {
   };
 }
 
-// ----------------------------------------------------------------------
 
 type BgGradientProps = {
   direction?: string;
@@ -143,7 +139,6 @@ export function bgGradient(props?: BgGradientProps) {
   };
 }
 
-// ----------------------------------------------------------------------
 
 export function textGradient(value: string) {
   return {
@@ -153,7 +148,6 @@ export function textGradient(value: string) {
   };
 }
 
-// ----------------------------------------------------------------------
 
 export const hideScroll = {
   x: {

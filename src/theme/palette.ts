@@ -20,6 +20,8 @@ declare module '@mui/material/styles/createPalette' {
 
 // SETUP COLORS
 
+// logo colour: #1077c6
+
 export const grey = {
   0: '#FFFFFF',
   100: '#F9FAFB',
@@ -34,10 +36,10 @@ export const grey = {
 };
 
 export const primary = {
-  lighter: '#C8FAD6',
-  light: '#5BE49B',
-  main: '#00A76F',
-  dark: '#007867',
+  lighter: '2E2EFF',
+  light: '#0B558E',
+  main: '#0B558E',
+  dark: '#B9DCF9',
   darker: '#004B50',
   contrastText: '#FFFFFF',
 };
@@ -115,7 +117,6 @@ const base = {
   action,
 };
 
-// ----------------------------------------------------------------------
 
 export function palette(mode: 'light' | 'dark') {
   const light = {
