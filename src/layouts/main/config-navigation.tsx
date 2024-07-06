@@ -13,13 +13,13 @@ export const navConfig = [
     path: '/',
   },
   {
-    title: 'Components',
+    title: 'About',
     icon: <Iconify icon="solar:atom-bold-duotone" />,
     path: paths.components,
   },
   {
-    title: 'Pages',
-    path: '/pages',
+    title: 'Blog',
+    path: '/blog',
     icon: <Iconify icon="solar:file-bold-duotone" />,
     children: [
       {
@@ -83,7 +83,7 @@ export const navConfig = [
     ],
   },
   {
-    title: 'Docs',
+    title: 'Product Demo',
     icon: <Iconify icon="solar:notebook-bold-duotone" />,
     path: paths.docs,
   },
