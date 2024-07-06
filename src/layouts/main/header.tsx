@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
@@ -8,7 +8,7 @@ import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Badge, { badgeClasses } from '@mui/material/Badge';
 
-import { paths } from 'src/routes/paths';
+// import { paths } from 'src/routes/paths';
 
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
 import { useResponsive } from 'src/hooks/use-responsive';
@@ -24,7 +24,6 @@ import { HEADER } from '../config-layout';
 import { navConfig } from './config-navigation';
 import HeaderShadow from '../common/header-shadow';
 // import SettingsButton from '../common/settings-button';
-
 
 export default function Header() {
   const theme = useTheme();
@@ -64,10 +63,9 @@ export default function Header() {
               },
             }}
             badgeContent={
-           
-                <Label color="info" sx={{ textTransform: 'unset', height: 22, px: 0.5 }}>
-                 Beta
-                </Label>
+              <Label color="info" sx={{ textTransform: 'unset', height: 22, px: 0.5 }}>
+                Beta
+              </Label>
             }
           >
             <Logo />
@@ -78,10 +76,7 @@ export default function Header() {
           {mdUp && <NavDesktop data={navConfig} />}
 
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
-            <Button variant="contained">
-              Try Now
-            </Button>
-
+            <Button variant="contained">Try Now</Button>
 
             {/* <SettingsButton
               sx={{

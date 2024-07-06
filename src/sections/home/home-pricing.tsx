@@ -1,23 +1,21 @@
 import { m } from 'framer-motion';
-import { useState, useCallback } from 'react';
+// import { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import Tabs from '@mui/material/Tabs';
+// import Tab from '@mui/material/Tab';
+// import Tabs from '@mui/material/Tabs';
 import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
+// import Divider from '@mui/material/Divider';
 import { alpha } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Stack, { StackProps } from '@mui/material/Stack';
+import Stack from '@mui/material/Stack';
 
-import { paths } from 'src/routes/paths';
+// import { paths } from 'src/routes/paths';
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
-import { _homePlans } from 'src/_mock';
-
-import Iconify from 'src/components/iconify';
+// import Iconify from 'src/components/iconify';
 import { varFade, MotionViewport } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
@@ -25,11 +23,11 @@ import { varFade, MotionViewport } from 'src/components/animate';
 export default function HomePricing() {
   const mdUp = useResponsive('up', 'md');
 
-  const [currentTab, setCurrentTab] = useState('Standard');
+  // const [currentTab, setCurrentTab] = useState('Standard');
 
-  const handleChangeTab = useCallback((event: React.SyntheticEvent, newValue: string) => {
-    setCurrentTab(newValue);
-  }, []);
+  // const handleChangeTab = useCallback((event: React.SyntheticEvent, newValue: string) => {
+  //   setCurrentTab(newValue);
+  // }, []);
 
   const renderDescription = (
     <Stack spacing={3} sx={{ mb: 10, textAlign: 'center' }}>
@@ -64,20 +62,20 @@ export default function HomePricing() {
             border: (theme) => `dashed 1px ${theme.palette.divider}`,
           }}
         >
-          {_homePlans.map((plan) => (
+          {/* {_homePlans.map((plan) => (
             <m.div key={plan.license} variants={varFade().in}>
               <PlanCard key={plan.license} plan={plan} />
             </m.div>
-          ))}
+          ))} */}
         </Box>
       ) : (
         <>
           <Stack alignItems="center" sx={{ mb: 5 }}>
-            <Tabs value={currentTab} onChange={handleChangeTab}>
+            {/* <Tabs value={currentTab} onChange={handleChangeTab}>
               {_homePlans.map((tab) => (
                 <Tab key={tab.license} value={tab.license} label={tab.license} />
               ))}
-            </Tabs>
+            </Tabs> */}
           </Stack>
 
           <Box
@@ -86,7 +84,7 @@ export default function HomePricing() {
               border: (theme) => `dashed 1px ${theme.palette.divider}`,
             }}
           >
-            {_homePlans.map(
+            {/* {_homePlans.map(
               (tab) =>
                 tab.license === currentTab && (
                   <PlanCard
@@ -97,7 +95,7 @@ export default function HomePricing() {
                     }}
                   />
                 )
-            )}
+            )} */}
           </Box>
         </>
       )}
@@ -153,17 +151,16 @@ export default function HomePricing() {
   );
 }
 
-// ----------------------------------------------------------------------
+// interface PlanCardProps extends StackProps {
+//   plan: {
+//     license: string;
+//     commons: string[];
+//     options: string[];
+//     icons: string[];
+//   };
+// }
 
-interface PlanCardProps extends StackProps {
-  plan: {
-    license: string;
-    commons: string[];
-    options: string[];
-    icons: string[];
-  };
-}
-
+/* 
 function PlanCard({ plan, sx, ...other }: PlanCardProps) {
   const { license, commons, options, icons } = plan;
 
@@ -267,3 +264,5 @@ function PlanCard({ plan, sx, ...other }: PlanCardProps) {
     </Stack>
   );
 }
+
+*/

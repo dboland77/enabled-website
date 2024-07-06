@@ -109,23 +109,52 @@ export default function Footer() {
               }}
             >
               <Link
-                key={'linkedIn'}
+                key="linkedIn"
                 component={RouterLink}
-                href={'https://www.linkedin.com/company/enabled-app/'}
+                href="https://www.linkedin.com/company/enabled-app/"
                 color="inherit"
                 variant="body2"
               >
                 <IconButton
-                  key={'linkedin'}
+                  key="linkedin"
                   sx={{
                     '&:hover': {
                       bgcolor: alpha('#123456', 0.08),
                     },
                   }}
                 >
-                  <Iconify color={'blue'} icon={'skill-icons:linkedin'} />
+                  <Iconify color="blue" icon="skill-icons:linkedin" />
                 </IconButton>
               </Link>
+            </Stack>
+          </Grid>
+
+          <Grid xs={12} md={6}>
+            <Stack spacing={5} direction={{ xs: 'column', md: 'row' }}>
+              {LINKS.map((list) => (
+                <Stack
+                  key={list.headline}
+                  spacing={2}
+                  alignItems={{ xs: 'center', md: 'flex-start' }}
+                  sx={{ width: 1 }}
+                >
+                  <Typography component="div" variant="overline">
+                    {list.headline}
+                  </Typography>
+
+                  {list.children.map((link) => (
+                    <Link
+                      key={link.name}
+                      component={RouterLink}
+                      href={link.href}
+                      color="inherit"
+                      variant="body2"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </Stack>
+              ))}
             </Stack>
           </Grid>
         </Grid>
@@ -137,5 +166,5 @@ export default function Footer() {
     </Box>
   );
 
-  return homePage ? mainFooter : mainFooter;
+  return homePage ? mainFooter : simpleFooter;
 }

@@ -5,7 +5,7 @@ import { primaryFont } from 'src/theme/typography';
 
 import ProgressBar from 'src/components/progress-bar';
 import { MotionLazy } from 'src/components/animate/motion-lazy';
-import { SettingsDrawer, SettingsProvider } from 'src/components/settings';
+import { SettingsProvider } from 'src/components/settings';
 
 export const metadata = {
   title: 'EnableD - disability accommodations admin',

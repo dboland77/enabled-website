@@ -9,16 +9,15 @@ import MainLayout from 'src/layouts/main';
 
 import ScrollProgress from 'src/components/scroll-progress';
 
-import HomeHero from '../home-hero';
-import HomeMinimal from '../home-enabled';
-import HomePricing from '../home-pricing';
-import HomeDarkMode from '../home-dark-mode';
-import HomeLookingFor from '../home-looking-for';
-import HomeForDesigner from '../home-for-designer';
-import HomeColorPresets from '../home-color-presets';
-import HomeAdvertisement from '../home-advertisement';
-import HomeCleanInterfaces from '../home-clean-interfaces';
-import HomeHugePackElements from '../home-hugepack-elements';
+// import HomeHero from '../home-hero';
+// import HomeMinimal from '../home-enabled';
+// import HomePricing from '../home-pricing';
+// import HomeDarkMode from '../home-dark-mode';
+// import HomeLookingFor from '../home-looking-for';
+// import HomeForDesigner from '../home-for-designer';
+// import HomeColorPresets from '../home-color-presets';
+// import HomeAdvertisement from '../home-advertisement';
+// import HomeCleanInterfaces from '../home-clean-interfaces';
 
 type StyledPolygonProps = {
   anchor?: 'top' | 'bottom';
