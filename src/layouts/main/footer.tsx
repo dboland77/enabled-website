@@ -17,31 +17,29 @@ import { _socials } from 'src/_mock';
 import Logo from 'src/components/logo';
 import Iconify from 'src/components/iconify';
 
-// ----------------------------------------------------------------------
+
+const currentYear = new Date().getFullYear()
 
 const LINKS = [
   {
-    headline: 'Minimal',
+    headline: 'Enabled',
     children: [
-      { name: 'About us', href: paths.about },
-      { name: 'Contact us', href: paths.contact },
+      { name: 'About', href: paths.about },
       { name: 'FAQs', href: paths.faqs },
     ],
   },
   {
     headline: 'Legal',
     children: [
-      { name: 'Terms and Condition', href: '#' },
+      { name: 'Terms and Conditions', href: '#' },
       { name: 'Privacy Policy', href: '#' },
     ],
   },
   {
     headline: 'Contact',
-    children: [{ name: 'support@minimals.cc', href: '#' }],
+    children: [{ name: 'hello@getenabled.co.uk', href: paths.contact}],
   },
 ];
-
-// ----------------------------------------------------------------------
 
 export default function Footer() {
   const pathname = usePathname();
@@ -62,9 +60,7 @@ export default function Footer() {
         <Logo sx={{ mb: 1, mx: 'auto' }} />
 
         <Typography variant="caption" component="div">
-          © All rights reserved
-          <br /> made by
-          <Link href="https://minimals.cc/"> minimals.cc </Link>
+          © {currentYear} All rights reserved
         </Typography>
       </Container>
     </Box>
@@ -104,8 +100,7 @@ export default function Footer() {
                 mx: { xs: 'auto', md: 'unset' },
               }}
             >
-              The starting point for your next project with Minimal UI Kit, built on the newest
-              version of Material-UI ©, ready to be customized to your style.
+             Disability accommodations in the workplace made easy with EnableD. 
             </Typography>
 
             <Stack
@@ -162,11 +157,11 @@ export default function Footer() {
         </Grid>
 
         <Typography variant="body2" sx={{ mt: 10 }}>
-          © 2021. All rights reserved
+          © {currentYear}. All rights reserved
         </Typography>
       </Container>
     </Box>
   );
 
-  return homePage ? simpleFooter : mainFooter;
+  return homePage ? mainFooter : mainFooter;
 }
