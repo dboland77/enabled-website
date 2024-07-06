@@ -20,7 +20,6 @@ import HomeAdvertisement from '../home-advertisement';
 import HomeCleanInterfaces from '../home-clean-interfaces';
 import HomeHugePackElements from '../home-hugepack-elements';
 
-
 type StyledPolygonProps = {
   anchor?: 'top' | 'bottom';
 };
@@ -44,8 +43,6 @@ const StyledPolygon = styled('div')<StyledPolygonProps>(({ anchor = 'top', theme
     backgroundColor: theme.palette.grey[900],
   }),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function HomeView() {
   const { scrollYProgress } = useScroll();

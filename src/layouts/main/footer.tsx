@@ -12,13 +12,10 @@ import { paths } from 'src/routes/paths';
 import { usePathname } from 'src/routes/hooks';
 import { RouterLink } from 'src/routes/components';
 
-import { _socials } from 'src/_mock';
-
 import Logo from 'src/components/logo';
 import Iconify from 'src/components/iconify';
 
-
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 
 const LINKS = [
   {
@@ -37,7 +34,7 @@ const LINKS = [
   },
   {
     headline: 'Contact',
-    children: [{ name: 'hello@getenabled.co.uk', href: paths.contact}],
+    children: [{ name: 'hello@getenabled.co.uk', href: paths.contact }],
   },
 ];
 
@@ -100,7 +97,7 @@ export default function Footer() {
                 mx: { xs: 'auto', md: 'unset' },
               }}
             >
-             Disability accommodations in the workplace made easy with EnableD. 
+              Disability accommodations in the workplace made easy with EnableD.
             </Typography>
 
             <Stack
@@ -111,47 +108,24 @@ export default function Footer() {
                 mb: { xs: 5, md: 0 },
               }}
             >
-              {_socials.map((social) => (
+              <Link
+                key={'linkedIn'}
+                component={RouterLink}
+                href={'https://www.linkedin.com/company/enabled-app/'}
+                color="inherit"
+                variant="body2"
+              >
                 <IconButton
-                  key={social.name}
+                  key={'linkedin'}
                   sx={{
                     '&:hover': {
-                      bgcolor: alpha(social.color, 0.08),
+                      bgcolor: alpha('#123456', 0.08),
                     },
                   }}
                 >
-                  <Iconify color={social.color} icon={social.icon} />
+                  <Iconify color={'blue'} icon={'skill-icons:linkedin'} />
                 </IconButton>
-              ))}
-            </Stack>
-          </Grid>
-
-          <Grid xs={12} md={6}>
-            <Stack spacing={5} direction={{ xs: 'column', md: 'row' }}>
-              {LINKS.map((list) => (
-                <Stack
-                  key={list.headline}
-                  spacing={2}
-                  alignItems={{ xs: 'center', md: 'flex-start' }}
-                  sx={{ width: 1 }}
-                >
-                  <Typography component="div" variant="overline">
-                    {list.headline}
-                  </Typography>
-
-                  {list.children.map((link) => (
-                    <Link
-                      key={link.name}
-                      component={RouterLink}
-                      href={link.href}
-                      color="inherit"
-                      variant="body2"
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
-                </Stack>
-              ))}
+              </Link>
             </Stack>
           </Grid>
         </Grid>

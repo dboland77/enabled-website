@@ -1,10 +1,6 @@
 import { paths } from 'src/routes/paths';
 
-import { PATH_AFTER_LOGIN } from 'src/config-global';
-
 import Iconify from 'src/components/iconify';
-
-// ----------------------------------------------------------------------
 
 export const navConfig = [
   {
@@ -75,10 +71,6 @@ export const navConfig = [
           { title: 'Page 404', path: paths.page404 },
           { title: 'Page 500', path: paths.page500 },
         ],
-      },
-      {
-        subheader: 'Dashboard',
-        items: [{ title: 'Dashboard', path: PATH_AFTER_LOGIN }],
       },
     ],
   },
