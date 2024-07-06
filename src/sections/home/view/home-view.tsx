@@ -10,7 +10,7 @@ import MainLayout from 'src/layouts/main';
 import ScrollProgress from 'src/components/scroll-progress';
 
 import HomeHero from '../home-hero';
-import HomeMinimal from '../home-minimal';
+import HomeMinimal from '../home-enabled';
 import HomePricing from '../home-pricing';
 import HomeDarkMode from '../home-dark-mode';
 import HomeLookingFor from '../home-looking-for';
@@ -20,7 +20,6 @@ import HomeAdvertisement from '../home-advertisement';
 import HomeCleanInterfaces from '../home-clean-interfaces';
 import HomeHugePackElements from '../home-hugepack-elements';
 
-// ----------------------------------------------------------------------
 
 type StyledPolygonProps = {
   anchor?: 'top' | 'bottom';
@@ -55,7 +54,7 @@ export default function HomeView() {
     <MainLayout>
       <ScrollProgress scrollYProgress={scrollYProgress} />
 
-      <HomeHero />
+      {/* <HomeHero /> */}
 
       <Box
         sx={{
@@ -64,27 +63,27 @@ export default function HomeView() {
           bgcolor: 'background.default',
         }}
       >
-        <HomeMinimal />
+        {/* <HomeMinimal /> */}
 
-        <HomeHugePackElements />
+        {/* <HomeHugePackElements /> */}
 
         <Box sx={{ position: 'relative' }}>
           <StyledPolygon />
-          <HomeForDesigner />
+          {/* <HomeForDesigner /> */}
           <StyledPolygon anchor="bottom" />
         </Box>
 
-        <HomeDarkMode />
+        {/* <HomeDarkMode /> */}
 
-        <HomeColorPresets />
+        {/* <HomeColorPresets /> */}
 
-        <HomeCleanInterfaces />
+        {/* <HomeCleanInterfaces /> */}
 
-        <HomePricing />
+        {/* <HomePricing /> */}
 
-        <HomeLookingFor />
+        {/* <HomeLookingFor /> */}
 
-        <HomeAdvertisement />
+        {/* <HomeAdvertisement /> */}
       </Box>
     </MainLayout>
   );

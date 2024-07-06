@@ -9,8 +9,6 @@ import Typography from '@mui/material/Typography';
 
 import { varFade, MotionViewport } from 'src/components/animate';
 
-// ----------------------------------------------------------------------
-
 const CARDS = [
   {
     icon: ' /assets/icons/home/ic_make_brand.svg',
@@ -30,9 +28,7 @@ const CARDS = [
   },
 ];
 
-// ----------------------------------------------------------------------
-
-export default function HomeMinimal() {
+export default function HomeEnabled() {
   return (
     <Container
       component={MotionViewport}
@@ -49,13 +45,13 @@ export default function HomeMinimal() {
       >
         <m.div variants={varFade().inUp}>
           <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-            Minimal UI
+            enableD
           </Typography>
         </m.div>
 
         <m.div variants={varFade().inDown}>
           <Typography variant="h2">
-            What Minimal <br /> helps you?
+            How will enableD <br /> help you?
           </Typography>
         </m.div>
       </Stack>
