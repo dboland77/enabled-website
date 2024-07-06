@@ -5,8 +5,6 @@ import { usePathname } from 'src/routes/hooks';
 import Footer from './footer';
 import Header from './header';
 
-// ----------------------------------------------------------------------
-
 type Props = {
   children: React.ReactNode;
 };
