@@ -1,6 +1,4 @@
-import  {CookiesPolicyView} from 'src/sections/legal'
-
-
+import { CookiesPolicyView } from 'src/sections/legal';
 
 export const metadata = {
   title: 'EnableD: Cookies Policy',

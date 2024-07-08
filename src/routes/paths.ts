@@ -1,8 +1,8 @@
 import { paramCase } from 'src/utils/change-case';
 
-const MOCK_ID = 12345
+const MOCK_ID = 12345;
 
-const MOCK_TITLE = 'test title'
+const MOCK_TITLE = 'test title';
 
 export const paths = {
   pricing: '/pricing',
@@ -12,7 +12,7 @@ export const paths = {
   page404: '/error/404',
   product: '/product',
   cookies: '/cookies-policy',
-  termsandconditions: '/terms-and-conditions',
+  privacypolicy: '/privacy-policy',
   post: {
     root: `/post`,
     details: (title: string) => `/post/${paramCase(title)}`,
@@ -20,4 +20,4 @@ export const paths = {
       details: `/post/${paramCase(MOCK_TITLE)}`,
     },
   },
-  }
+};

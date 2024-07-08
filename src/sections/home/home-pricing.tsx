@@ -18,8 +18,6 @@ import { useResponsive } from 'src/hooks/use-responsive';
 // import Iconify from 'src/components/iconify';
 import { varFade, MotionViewport } from 'src/components/animate';
 
-// ----------------------------------------------------------------------
-
 export default function HomePricing() {
   const mdUp = useResponsive('up', 'md');
 
@@ -266,7 +264,6 @@ function PlanCard({ plan, sx, ...other }: PlanCardProps) {
 }
 
 */
-
 
 /* 
 export default function PricingTablesSection() {

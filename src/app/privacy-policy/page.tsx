@@ -1,5 +1,4 @@
-import  {PrivacyPolicyView}  from 'src/sections/legal';
-
+import { PrivacyPolicyView } from 'src/sections/legal';
 
 export const metadata = {
   title: 'EnableD: Privacy Policy',
