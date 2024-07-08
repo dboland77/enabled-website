@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 import Image from 'src/components/image';
 import { varFade, MotionViewport } from 'src/components/animate';
 
-// ----------------------------------------------------------------------
 
 export default function HomeCleanInterfaces() {
   const renderDescription = (

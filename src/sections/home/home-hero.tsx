@@ -22,7 +22,6 @@ import { bgBlur, bgGradient, textGradient } from 'src/theme/css';
 import Iconify from 'src/components/iconify';
 import { varFade, MotionContainer } from 'src/components/animate';
 
-// ----------------------------------------------------------------------
 
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
@@ -124,7 +123,6 @@ const StyledPolygon = styled('div')<StyledPolygonProps>(
   })
 );
 
-// ----------------------------------------------------------------------
 
 export default function HomeHero() {
   const mdUp = useResponsive('up', 'md');
@@ -233,51 +231,6 @@ export default function HomeHero() {
         </Stack>
       </m.div>
 
-      <m.div variants={varFade().in}>
-        <Stack spacing={1.5} direction={{ xs: 'column-reverse', sm: 'row' }} sx={{ mb: 5 }}>
-          <Stack alignItems="center" spacing={2}>
-            <Button
-              component={RouterLink}
-              href={paths.dashboard.root}
-              color="inherit"
-              size="large"
-              variant="contained"
-              startIcon={<Iconify icon="eva:flash-fill" width={24} />}
-            >
-              Live Preview
-            </Button>
-
-            <Link
-              color="inherit"
-              variant="caption"
-              target="_blank"
-              rel="noopener"
-              href={paths.freeUI}
-              sx={{
-                textDecoration: 'underline',
-                display: 'inline-flex',
-                alignItems: 'center',
-              }}
-            >
-              <Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />
-              Get Free Version
-            </Link>
-          </Stack>
-
-          <Button
-            color="inherit"
-            size="large"
-            variant="outlined"
-            startIcon={<Iconify icon="eva:external-link-fill" width={24} />}
-            target="_blank"
-            rel="noopener"
-            href={paths.figma}
-            sx={{ borderColor: 'text.primary' }}
-          >
-            Design Preview
-          </Button>
-        </Stack>
-      </m.div>
 
       <Stack spacing={3} sx={{ textAlign: 'center' }}>
         <m.div variants={varFade().in}>
@@ -430,3 +383,29 @@ export default function HomeHero() {
     </>
   );
 }
+
+
+
+
+/* old hero from old website
+<Container>
+      <div className={styles.content}>
+        <OverTitle>Tired of being excluded from the workplace? </OverTitle>
+        <h1 className={styles.heading}>Welcome to EnableD</h1>
+        <div className={styles.description}>
+          The solution for employees with disabilities and their employers to create a more inclusive workplace where everyone thrives.
+        </div>
+        <ButtonGroup>
+          <Link href="/contact" passHref>
+            <Button text="Lets go">
+              Features <span>&rarr;</span>
+            </Button>
+          </Link>
+        </ButtonGroup>
+      </div>
+      <div className={styles.ImageContainer}>
+        <HeroIllustration />
+      </div>
+    </Container>
+
+    */

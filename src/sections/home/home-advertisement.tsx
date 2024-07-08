@@ -48,7 +48,7 @@ export default function HomeAdvertisement() {
             variant="contained"
             target="_blank"
             rel="noopener"
-            href={paths.minimalUI}
+            href={paths.about}
             sx={{
               color: 'grey.800',
               bgcolor: 'common.white',
@@ -65,7 +65,7 @@ export default function HomeAdvertisement() {
             variant="outlined"
             target="_blank"
             rel="noopener"
-            href={paths.freeUI}
+            href={paths.about}
             endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />}
             sx={{
               color: 'common.white',

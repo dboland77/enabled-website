@@ -266,3 +266,44 @@ function PlanCard({ plan, sx, ...other }: PlanCardProps) {
 }
 
 */
+
+
+/* 
+export default function PricingTablesSection() {
+  return (
+    <div className={styles.wrapper}>
+      <AutoFitGrid>
+        <PricingCard
+          title="Free Plan"
+          description="Try free for 12 months!"
+          benefits={['1 employee', '1 manager', 'Unlimited accommodation requests']}
+        >
+          £0<span>/month</span>
+        </PricingCard>
+        <PricingCard
+          title="Small Business"
+          description="Best for < 20 users"
+          benefits={['10 employees', '5 managers', '1 admin', 'Unlimited accommodation requests', 'Export Disability Passport']}
+          isOutlined
+        >
+          £25<span>/month</span>
+        </PricingCard>
+        <PricingCard
+          title="Enterprise"
+          description="Best for > 20 users"
+          benefits={[
+            'Employee Accounts',
+            'Manager accounts',
+            'Admin accounts',
+            'Unlimited accommodation requests',
+            'Export Disability Passport',
+          ]}
+        >
+          Bespoke Pricing
+        </PricingCard>
+        {/* </div> }
+        </AutoFitGrid>
+        </div>
+      );
+    }
+    */
