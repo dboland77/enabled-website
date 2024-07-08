@@ -1,5 +1,3 @@
-
-
 const FEATURES = [
   {
     imageUrl: '/grid-icons/asset-1.svg',
@@ -37,17 +35,5 @@ const FEATURES = [
 ];
 
 export default function FeaturesPage() {
-  return (
-    <Page
-      title="Features"
-      description={`We know that disability adjustments are a complex and sensitive issue,
-       so we have designed our features to make it easy for you to meet the needs of your employees.`}
-    >
-      <AutoFitGrid>
-        {FEATURES.map((singleFeature, idx) => (
-          <BasicCard key={singleFeature.title} {...singleFeature} />
-        ))}
-      </AutoFitGrid>
-    </Page>
-  );
+  return <></>;
 }

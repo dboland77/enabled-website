@@ -50,7 +50,11 @@ export default function CookiesPolicyView() {
           </li>
           <li>
             <strong>Website</strong> refers to EnableD, accessible from{' '}
-            <a href="https://www.getenabled.co.uk" rel="external nofollow noopener" target="_blank">
+            <a
+              href="https://www.getenabled.co.uk"
+              rel="external nofollow noopener noreferrer"
+              target="_blank"
+            >
               https://www.getenabled.co.uk
             </a>
           </li>
@@ -117,7 +121,7 @@ export default function CookiesPolicyView() {
               For the Chrome web browser, please visit this page from Google:{' '}
               <a
                 href="https://support.google.com/accounts/answer/32050"
-                rel="external nofollow noopener"
+                rel="external nofollow noopener noreferrer"
                 target="_blank"
               >
                 https://support.google.com/accounts/answer/32050
@@ -129,7 +133,7 @@ export default function CookiesPolicyView() {
               For the Internet Explorer web browser, please visit this page from Microsoft:{' '}
               <a
                 href="http://support.microsoft.com/kb/278835"
-                rel="external nofollow noopener"
+                rel="external nofollow noopener noreferrer"
                 target="_blank"
               >
                 http://support.microsoft.com/kb/278835
@@ -141,7 +145,7 @@ export default function CookiesPolicyView() {
               For the Firefox web browser, please visit this page from Mozilla:{' '}
               <a
                 href="https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored"
-                rel="external nofollow noopener"
+                rel="external nofollow noopener noreferrer"
                 target="_blank"
               >
                 https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored
@@ -153,7 +157,7 @@ export default function CookiesPolicyView() {
               For the Safari web browser, please visit this page from Apple:{' '}
               <a
                 href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac"
-                rel="external nofollow noopener"
+                rel="external nofollow noopener noreferrer"
                 target="_blank"
               >
                 https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac
@@ -165,7 +169,7 @@ export default function CookiesPolicyView() {
         <h2>More Information about Cookies</h2>
         <p>
           You can learn more about cookies:{' '}
-          <a href="https://www.privacypolicies.com/blog/cookies/" target="_blank">
+          <a href="https://www.privacypolicies.com/blog/cookies/" target="_blank" rel="noreferrer">
             What Are Cookies?
           </a>
           .
