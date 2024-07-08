@@ -108,7 +108,11 @@ export default function PrivacyPolicyView() {
           <li>
             <p>
               <strong>Website</strong> refers to EnableD, accessible from{' '}
-              <a href="https://getenabled.co.uk" rel="external nofollow noopener" target="_blank">
+              <a
+                href="https://getenabled.co.uk"
+                rel="external nofollow noopener noreferrer"
+                target="_blank"
+              >
                 https://getenabled.co.uk
               </a>
             </p>
@@ -220,6 +224,7 @@ export default function PrivacyPolicyView() {
           <a
             href="https://www.privacypolicies.com/blog/privacy-policy-template/#Use_Of_Cookies_Log_Files_And_Tracking"
             target="_blank"
+            rel="noreferrer"
           >
             Privacy Policies website
           </a>{' '}
