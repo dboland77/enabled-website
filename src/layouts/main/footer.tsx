@@ -28,13 +28,13 @@ const LINKS = [
   {
     headline: 'Legal',
     children: [
-      { name: 'Terms and Conditions', href: '#' },
-      { name: 'Privacy Policy', href: '#' },
+      { name: 'Privacy Policy', href: paths.privacypolicy },
+      { name: 'Cookies Policy', href: paths.cookies },
     ],
   },
   {
     headline: 'Contact',
-    children: [{ name: 'hello@getenabled.co.uk', href: paths.contact }],
+    children: [{ name: 'hello@getenabled.co.uk', href: 'mailto:hello@getenabled.co.uk' }],
   },
 ];
 
