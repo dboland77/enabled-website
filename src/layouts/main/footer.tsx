@@ -21,8 +21,8 @@ const LINKS = [
   {
     headline: 'Enabled',
     children: [
-      { name: 'About', href: paths.about },
-      { name: 'FAQs', href: paths.faqs },
+      { name: 'Features', href:'#' },
+      { name: 'FAQ', href: paths.faq },
     ],
   },
   {
@@ -97,7 +97,7 @@ export default function Footer() {
                 mx: { xs: 'auto', md: 'unset' },
               }}
             >
-              Disability accommodations in the workplace made easy with EnableD.
+              Reasonable adjustments in the workplace made easy with enableD.
             </Typography>
 
             <Stack

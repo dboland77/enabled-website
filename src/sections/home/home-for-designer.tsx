@@ -16,7 +16,6 @@ import { bgGradient, textGradient } from 'src/theme/css';
 import Iconify from 'src/components/iconify';
 import { varFade, MotionViewport } from 'src/components/animate';
 
-// ----------------------------------------------------------------------
 
 export default function HomeForDesigner() {
   const theme = useTheme();
@@ -54,7 +53,7 @@ export default function HomeForDesigner() {
           endIcon={<Iconify icon="eva:arrow-ios-forward-fill" />}
           target="_blank"
           rel="noopener"
-          href={paths.about}
+          href={paths.features}
         >
           Figma Workspace
         </Button>
