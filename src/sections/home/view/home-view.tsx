@@ -11,6 +11,7 @@ import ScrollProgress from 'src/components/scroll-progress';
 
 // import HomeHero from '../home-hero';
 import HomeEnabled from '../home-enabled';
+import HomeFeatures from '../home-features'
 // import HomePricing from '../home-pricing';
 // import HomeDarkMode from '../home-dark-mode';
 // import HomeLookingFor from '../home-looking-for';
@@ -60,6 +61,7 @@ export default function HomeView() {
         }}
       >
         <HomeEnabled />
+        <HomeFeatures/>
 
         {/* <HomeHugePackElements /> */}
 
