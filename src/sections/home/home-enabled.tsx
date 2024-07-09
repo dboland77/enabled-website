@@ -25,7 +25,6 @@ export default function HomeEnabled() {
           mb: { xs: 5, md: 10 },
         }}
       >
-    
 
         <m.div variants={varFade().inDown}>
           <Typography variant="h2">

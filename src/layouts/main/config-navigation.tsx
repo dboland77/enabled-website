@@ -11,7 +11,7 @@ export const navConfig = [
   {
     title: 'FAQ',
     icon: <Iconify icon="solar:atom-bold-duotone" />,
-    path: paths.about,
+    path: paths.faq,
   },
   {
     title: 'Pricing',
@@ -19,24 +19,13 @@ export const navConfig = [
     path: paths.pricing,
   },
   {
-    title: 'Blog',
-    path: '/blog',
+    title: 'Articles',
+    path: paths.post.root,
     icon: <Iconify icon="solar:file-bold-duotone" />,
-    // children: [
-    //   {
-    //     subheader: 'Other',
-    //     items: [
-    //       { title: 'About us', path: paths.about },
-    //       { title: 'Contact us', path: paths.contact },
-    //       { title: 'FAQs', path: paths.faqs },
-    //       { title: 'Pricing', path: paths.pricing },
-    //     ],
-    //   },
-    // ],
   },
   {
     title: 'Demo',
     icon: <Iconify icon="solar:notebook-bold-duotone" />,
-    path: paths.product,
+    path: paths.demo,
   },
 ];

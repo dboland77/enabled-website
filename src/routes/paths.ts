@@ -6,11 +6,11 @@ const MOCK_TITLE = 'test title';
 
 export const paths = {
   pricing: '/pricing',
-  about: '/about',
-  contact: '/contact-us',
-  faqs: '/faqs',
+  features: '/features',
+  contact: '/contact',
+  faq: '/faq',
   page404: '/error/404',
-  product: '/product',
+  demo: '/demo',
   cookies: '/cookies-policy',
   privacypolicy: '/privacy-policy',
   post: {
