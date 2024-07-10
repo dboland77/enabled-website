@@ -11,7 +11,7 @@ import { varFade, MotionViewport } from 'src/components/animate';
 
 export default function ContactForm() {
   return (
-    <Stack component={MotionViewport} spacing={5}>
+    <Stack component={MotionViewport} spacing={5} id="contact">
       <m.div variants={varFade().inUp}>
         <Typography variant="h3">
           Feel free to contact us. <br />
