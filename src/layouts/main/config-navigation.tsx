@@ -19,8 +19,8 @@ export const navConfig = [
     path: paths.pricing,
   },
   {
-    title: 'Articles',
-    path: paths.post.root,
+    title: 'Contact',
+    path: paths.contact,
     icon: <Iconify icon="solar:file-bold-duotone" />,
   },
   {
