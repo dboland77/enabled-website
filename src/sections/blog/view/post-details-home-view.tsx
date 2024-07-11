@@ -37,7 +37,7 @@ const post = {
 export default function PostDetailsHomeView({ title }: Props) {
   const renderSkeleton = <PostDetailsSkeleton />;
 
-  const renderError = <Container sx={{ my: 10 }}>'hello'</Container>;
+  const renderError = <Container sx={{ my: 10 }}>hello</Container>;
 
   const renderPost = post && (
     <>
