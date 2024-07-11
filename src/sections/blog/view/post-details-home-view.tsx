@@ -20,9 +20,6 @@ import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 import PostList from '../post-list';
 import PostDetailsHero from '../post-details-hero';
 import { PostDetailsSkeleton } from '../post-skeleton';
-import { Covered_By_Your_Grace } from 'next/font/google';
-
-// ----------------------------------------------------------------------
 
 type Props = {
   title: string;
@@ -40,7 +37,7 @@ const post = {
 export default function PostDetailsHomeView({ title }: Props) {
   const renderSkeleton = <PostDetailsSkeleton />;
 
-  const renderError = <Container sx={{ my: 10 }}></Container>;
+  const renderError = <Container sx={{ my: 10 }}>'hello'</Container>;
 
   const renderPost = post && (
     <>
