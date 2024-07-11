@@ -18,9 +18,7 @@ import { useBoolean } from 'src/hooks/use-boolean';
 
 import Iconify from 'src/components/iconify';
 import FormProvider, {
-  RHFEditor,
   RHFSelect,
-  RHFUpload,
   RHFSwitch,
   RHFSlider,
   RHFCheckbox,
@@ -29,7 +27,7 @@ import FormProvider, {
   RHFMultiSelect,
   RHFAutocomplete,
   RHFMultiCheckbox,
-
+} from 'src/components/hook-form';
 
 import { FormSchema } from './schema';
 import ValuesPreview from './values-preview';
@@ -177,46 +175,6 @@ export default function ReactHookForm({ debug }: Props) {
             </Block>
 
             <Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
-              <Controller
-                name="startDate"
-                control={control}
-                render={({ field, fieldState: { error } }) => (
-                  <DatePicker
-                    {...field}
-                    label="Start date"
-                    format="dd/MM/yyyy"
-                    slotProps={{
-                      textField: {
-                        fullWidth: true,
-                        error: !!error,
-                        helperText: error?.message,
-                      },
-                    }}
-                  />
-                )}
-              />
-
-              <Controller
-                name="endDate"
-                control={control}
-                render={({ field, fieldState: { error } }) => (
-                  <DatePicker
-                    {...field}
-                    label="End date"
-                    format="dd/MM/yyyy"
-                    slotProps={{
-                      textField: {
-                        fullWidth: true,
-                        error: !!error,
-                        helperText: error?.message,
-                      },
-                    }}
-                  />
-                )}
-              />
-            </Stack>
-
-            <Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
               <Block>
                 <RHFTextField
                   name="password"
@@ -292,41 +250,9 @@ export default function ReactHookForm({ debug }: Props) {
                 options={OPTIONS}
               />
             </Block>
-
-            <Block label="RHFEditor">
-              <RHFEditor simple name="editor" sx={{ height: 200 }} />
-            </Block>
           </Stack>
 
           <Stack spacing={2}>
-            <Block label="RHFUpload">
-              <RHFUpload
-                name="singleUpload"
-                maxSize={3145728}
-                onDrop={handleDropSingleFile}
-                onDelete={() => setValue('singleUpload', null, { shouldValidate: true })}
-              />
-            </Block>
-
-            <Block label="RHFUpload">
-              <RHFUpload
-                multiple
-                thumbnail
-                name="multiUpload"
-                maxSize={3145728}
-                onDrop={handleDropMultiFile}
-                onRemove={(inputFile) =>
-                  setValue(
-                    'multiUpload',
-                    values.multiUpload && values.multiUpload?.filter((file) => file !== inputFile),
-                    { shouldValidate: true }
-                  )
-                }
-                onRemoveAll={() => setValue('multiUpload', [], { shouldValidate: true })}
-                onUpload={() => console.info('ON UPLOAD')}
-              />
-            </Block>
-
             <RHFCheckbox name="checkbox" label="RHFCheckbox" />
 
             <RHFSwitch name="switch" label="RHFSwitch" />

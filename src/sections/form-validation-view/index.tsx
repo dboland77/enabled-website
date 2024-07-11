@@ -16,8 +16,6 @@ import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 
 import ReactHookForm from './react-hook-form';
 
-// ----------------------------------------------------------------------
-
 export default function FormValidationView() {
   const [debug, setDebug] = useState(true);
 

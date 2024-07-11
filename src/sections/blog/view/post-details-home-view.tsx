@@ -14,20 +14,13 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
 
-import { fShortenNumber } from 'src/utils/format-number';
-
-import { useGetPost, useGetLatestPosts } from 'src/api/blog';
-
 import Iconify from 'src/components/iconify';
-import Markdown from 'src/components/markdown';
-import EmptyContent from 'src/components/empty-content';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 
 import PostList from '../post-list';
-import PostCommentList from '../post-comment-list';
-import PostCommentForm from '../post-comment-form';
 import PostDetailsHero from '../post-details-hero';
 import { PostDetailsSkeleton } from '../post-skeleton';
+import { Covered_By_Your_Grace } from 'next/font/google';
 
 // ----------------------------------------------------------------------
 
@@ -35,32 +28,19 @@ type Props = {
   title: string;
 };
 
+const post = {
+  title: '',
+  author: { name: '', avatarUrl: '' },
+  coverUrl: '',
+  createdAt: new Date(),
+  description: '',
+  tags: [],
+};
+
 export default function PostDetailsHomeView({ title }: Props) {
-  const { post, postError, postLoading } = useGetPost(title);
-
-  const { latestPosts, latestPostsLoading } = useGetLatestPosts(title);
-
   const renderSkeleton = <PostDetailsSkeleton />;
 
-  const renderError = (
-    <Container sx={{ my: 10 }}>
-      <EmptyContent
-        filled
-        title={`${postError?.message}`}
-        action={
-          <Button
-            component={RouterLink}
-            href={paths.post.root}
-            startIcon={<Iconify icon="eva:arrow-ios-back-fill" width={16} />}
-            sx={{ mt: 3 }}
-          >
-            Back to List
-          </Button>
-        }
-        sx={{ py: 10 }}
-      />
-    </Container>
-  );
+  const renderError = <Container sx={{ my: 10 }}></Container>;
 
   const renderPost = post && (
     <>
@@ -103,8 +83,6 @@ export default function PostDetailsHomeView({ title }: Props) {
             {post.description}
           </Typography>
 
-          <Markdown children={post.content} />
-
           <Stack
             spacing={3}
             sx={{
@@ -130,31 +108,17 @@ export default function PostDetailsHomeView({ title }: Props) {
                     checkedIcon={<Iconify icon="solar:heart-bold" />}
                   />
                 }
-                label={fShortenNumber(post.totalFavorites)}
+                label=""
                 sx={{ mr: 1 }}
               />
-
-              <AvatarGroup>
-                {post.favoritePerson.map((person) => (
-                  <Avatar key={person.name} alt={person.name} src={person.avatarUrl} />
-                ))}
-              </AvatarGroup>
             </Stack>
           </Stack>
 
           <Stack direction="row" sx={{ mb: 3, mt: 5 }}>
             <Typography variant="h4">Comments</Typography>
-
-            <Typography variant="subtitle2" sx={{ color: 'text.disabled' }}>
-              ({post.comments.length})
-            </Typography>
           </Stack>
 
-          <PostCommentForm />
-
           <Divider sx={{ mt: 5, mb: 2 }} />
-
-          <PostCommentList comments={post.comments} />
         </Stack>
       </Container>
     </>
@@ -165,24 +129,8 @@ export default function PostDetailsHomeView({ title }: Props) {
       <Typography variant="h4" sx={{ mb: 5 }}>
         Recent Posts
       </Typography>
-
-      <PostList
-        posts={latestPosts.slice(latestPosts.length - 4)}
-        loading={latestPostsLoading}
-        disabledIndex
-      />
     </>
   );
 
-  return (
-    <>
-      {postLoading && renderSkeleton}
-
-      {postError && renderError}
-
-      {post && renderPost}
-
-      <Container sx={{ pb: 15 }}>{!!latestPosts.length && renderLatestPosts}</Container>
-    </>
-  );
+  return <>{post && renderPost}</>;
 }

@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 
 import MainLayout from 'src/layouts/main';
+import { ContactView } from 'src/sections/contact/view';
 
 import ScrollProgress from 'src/components/scroll-progress';
 
@@ -13,7 +14,6 @@ import ScrollProgress from 'src/components/scroll-progress';
 import HomeEnabled from '../home-enabled';
 import HomeFeatures from '../home-features';
 import HomeFAQ from '../home-faq';
-import { ContactView } from 'src/sections/contact/view';
 // import HomePricing from '../home-pricing';
 // import HomeDarkMode from '../home-dark-mode';
 // import HomeLookingFor from '../home-looking-for';

@@ -13,17 +13,13 @@ import { RouterLink } from 'src/routes/components';
 import { useResponsive } from 'src/hooks/use-responsive';
 
 import { fDate } from 'src/utils/format-time';
-import { fShortenNumber } from 'src/utils/format-number';
 
 import Label from 'src/components/label';
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
-import TextMaxLine from 'src/components/text-max-line';
 import CustomPopover, { usePopover } from 'src/components/custom-popover';
 
 import { IPostItem } from 'src/types/blog';
-
-// ----------------------------------------------------------------------
 
 type Props = {
   post: IPostItem;
@@ -66,18 +62,6 @@ export default function PostItemHorizontal({ post }: Props) {
             </Box>
           </Stack>
 
-          <Stack spacing={1} flexGrow={1}>
-            <Link color="inherit" component={RouterLink} href={paths.dashboard.post.details(title)}>
-              <TextMaxLine variant="subtitle2" line={2}>
-                {title}
-              </TextMaxLine>
-            </Link>
-
-            <TextMaxLine variant="body2" sx={{ color: 'text.secondary' }}>
-              {description}
-            </TextMaxLine>
-          </Stack>
-
           <Stack direction="row" alignItems="center">
             <IconButton color={popover.open ? 'inherit' : 'default'} onClick={popover.onOpen}>
               <Iconify icon="eva:more-horizontal-fill" />
@@ -96,17 +80,17 @@ export default function PostItemHorizontal({ post }: Props) {
             >
               <Stack direction="row" alignItems="center">
                 <Iconify icon="eva:message-circle-fill" width={16} sx={{ mr: 0.5 }} />
-                {fShortenNumber(totalComments)}
+                {totalComments}
               </Stack>
 
               <Stack direction="row" alignItems="center">
                 <Iconify icon="solar:eye-bold" width={16} sx={{ mr: 0.5 }} />
-                {fShortenNumber(totalViews)}
+                {totalViews}
               </Stack>
 
               <Stack direction="row" alignItems="center">
                 <Iconify icon="solar:share-bold" width={16} sx={{ mr: 0.5 }} />
-                {fShortenNumber(totalShares)}
+                {totalShares}
               </Stack>
             </Stack>
           </Stack>
@@ -141,7 +125,7 @@ export default function PostItemHorizontal({ post }: Props) {
         <MenuItem
           onClick={() => {
             popover.onClose();
-            router.push(paths.dashboard.post.details(title));
+            router.push(paths.post.details(title));
           }}
         >
           <Iconify icon="solar:eye-bold" />
@@ -151,7 +135,7 @@ export default function PostItemHorizontal({ post }: Props) {
         <MenuItem
           onClick={() => {
             popover.onClose();
-            router.push(paths.dashboard.post.edit(title));
+            router.push(paths.contact);
           }}
         >
           <Iconify icon="solar:pen-bold" />

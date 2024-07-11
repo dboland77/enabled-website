@@ -12,7 +12,6 @@ import { useResponsive } from 'src/hooks/use-responsive';
 
 import { fDate } from 'src/utils/format-time';
 
-import { _socials } from 'src/_mock';
 import { bgGradient } from 'src/theme/css';
 
 import Iconify from 'src/components/iconify';
@@ -99,17 +98,7 @@ export default function PostDetailsHero({ title, author, coverUrl, createdAt }: 
               bottom: { xs: 32, md: 64 },
               right: { xs: 16, md: 24 },
             }}
-          >
-            {_socials.map((action) => (
-              <SpeedDialAction
-                key={action.name}
-                icon={<Iconify icon={action.icon} sx={{ color: action.color }} />}
-                tooltipTitle={action.name}
-                tooltipPlacement="top"
-                FabProps={{ color: 'default' }}
-              />
-            ))}
-          </SpeedDial>
+          ></SpeedDial>
         </Stack>
       </Container>
     </Box>

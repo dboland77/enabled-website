@@ -13,9 +13,7 @@ export default function ContactForm() {
   return (
     <Stack component={MotionViewport} spacing={5} id="contact">
       <m.div variants={varFade().inUp}>
-        <Typography variant="h3">
-          Get in touch. 
-        </Typography>
+        <Typography variant="h3">Get in touch.</Typography>
       </m.div>
 
       <Stack spacing={3}>

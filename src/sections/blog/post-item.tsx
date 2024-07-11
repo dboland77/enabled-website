@@ -13,17 +13,13 @@ import { RouterLink } from 'src/routes/components';
 import { useResponsive } from 'src/hooks/use-responsive';
 
 import { fDate } from 'src/utils/format-time';
-import { fShortenNumber } from 'src/utils/format-number';
 
 import { AvatarShape } from 'src/assets/illustrations';
 
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
-import TextMaxLine from 'src/components/text-max-line';
 
 import { IPostItem } from 'src/types/blog';
-
-// ----------------------------------------------------------------------
 
 type Props = {
   post: IPostItem;
@@ -114,8 +110,6 @@ export default function PostItem({ post, index }: Props) {
   );
 }
 
-// ----------------------------------------------------------------------
-
 type PostContentProps = {
   title: string;
   index?: number;
@@ -170,12 +164,6 @@ export function PostContent({
         {fDate(createdAt)}
       </Typography>
 
-      <Link color="inherit" component={RouterLink} href={linkTo}>
-        <TextMaxLine variant={mdUp && latestPostLarge ? 'h5' : 'subtitle2'} line={2} persistent>
-          {title}
-        </TextMaxLine>
-      </Link>
-
       <Stack
         spacing={1.5}
         direction="row"
@@ -192,17 +180,17 @@ export function PostContent({
       >
         <Stack direction="row" alignItems="center">
           <Iconify icon="eva:message-circle-fill" width={16} sx={{ mr: 0.5 }} />
-          {fShortenNumber(totalComments)}
+          {totalComments}
         </Stack>
 
         <Stack direction="row" alignItems="center">
           <Iconify icon="solar:eye-bold" width={16} sx={{ mr: 0.5 }} />
-          {fShortenNumber(totalViews)}
+          {totalViews}
         </Stack>
 
         <Stack direction="row" alignItems="center">
           <Iconify icon="solar:share-bold" width={16} sx={{ mr: 0.5 }} />
-          {fShortenNumber(totalShares)}
+          {totalShares}
         </Stack>
       </Stack>
     </CardContent>

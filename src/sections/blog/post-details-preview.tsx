@@ -7,13 +7,9 @@ import Typography from '@mui/material/Typography';
 import LoadingButton from '@mui/lab/LoadingButton';
 import DialogActions from '@mui/material/DialogActions';
 
-import Markdown from 'src/components/markdown';
 import Scrollbar from 'src/components/scrollbar';
-import EmptyContent from 'src/components/empty-content';
 
 import PostDetailsHero from './post-details-hero';
-
-// ----------------------------------------------------------------------
 
 type Props = {
   title: string;
@@ -67,29 +63,22 @@ export default function PostDetailsPreview({
       </DialogActions>
 
       <Divider />
+      <Scrollbar>
+        {hasHero && <PostDetailsHero title={title} coverUrl={coverUrl} />}
 
-      {hasContent ? (
-        <Scrollbar>
-          {hasHero && <PostDetailsHero title={title} coverUrl={coverUrl} />}
-
-          <Container sx={{ mt: 5, mb: 10 }}>
-            <Stack
-              sx={{
-                maxWidth: 720,
-                mx: 'auto',
-              }}
-            >
-              <Typography variant="h6" sx={{ mb: 5 }}>
-                {description}
-              </Typography>
-
-              <Markdown children={content} />
-            </Stack>
-          </Container>
-        </Scrollbar>
-      ) : (
-        <EmptyContent filled title="Empty Content!" />
-      )}
+        <Container sx={{ mt: 5, mb: 10 }}>
+          <Stack
+            sx={{
+              maxWidth: 720,
+              mx: 'auto',
+            }}
+          >
+            <Typography variant="h6" sx={{ mb: 5 }}>
+              {description}
+            </Typography>
+          </Stack>
+        </Container>
+      </Scrollbar>
     </Dialog>
   );
 }
