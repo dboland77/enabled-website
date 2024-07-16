@@ -7,6 +7,7 @@ import { styled } from '@mui/material/styles';
 
 import MainLayout from 'src/layouts/main';
 import { ContactView } from 'src/sections/contact/view';
+import FormValidationView from 'src/sections/form-validation-view'
 
 import ScrollProgress from 'src/components/scroll-progress';
 
@@ -61,7 +62,8 @@ export default function HomeView() {
           position: 'relative',
           bgcolor: 'background.default',
         }}
-      >
+        >
+        <FormValidationView/>
         <HomeEnabled />
         <HomeFeatures />
         <HomeFAQ />
