@@ -38,26 +38,16 @@ export default function ContactForm() {
 
   const onSubmit = handleSubmit(async (data) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
+      const response = await fetch('/api/send', {
+            method: 'POST',
+            body:'hello from form'
+          });
       reset();
-      console.info('DATA', data);
     } catch (error) {
       console.error(error);
     }
   });
 
-  // async function onSubmit(event: FormEvent<HTMLFormElement>) {
-  //   event.preventDefault();
-
-  //   const formData = new FormData(event.currentTarget);
-  //   const response = await fetch('/api/send', {
-  //     method: 'POST',
-  //     body: formData,
-  //   });
-
-  //   const data = await response.json();
-  //  return data
-  // }
   return (
     <FormProvider methods={methods} onSubmit={onSubmit}>
     <Box
@@ -78,7 +68,6 @@ export default function ContactForm() {
         </Box>
 
         <LoadingButton
-              
               size="large"
               type="submit"
               variant="contained"
