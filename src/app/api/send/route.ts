@@ -23,10 +23,8 @@ export async function POST(request:Request) {
     const data = await res.json();
     return Response.json(data);
   }
-  else {
     const error= await res.json()
     return Response.json(error)
-  }
 }
 
 
