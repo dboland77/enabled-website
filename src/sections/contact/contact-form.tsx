@@ -40,7 +40,11 @@ export default function ContactForm() {
     try {
       const response = await fetch('/api/send', {
             method: 'POST',
-            body:'hello from form'
+            headers:{
+              'Accept':'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
           });
       reset();
     } catch (error) {
