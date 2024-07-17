@@ -1,44 +1,84 @@
+import { FormEvent } from 'react';
 import { m } from 'framer-motion';
+import Box from '@mui/material/Box';
+import Stack, {StackProps} from '@mui/material/Stack';
+import LoadingButton from '@mui/lab/LoadingButton';
 
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import { useForm, Controller } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 
+import FormProvider, { RHFTextField } from 'src/components/hook-form';
 import { varFade, MotionViewport } from 'src/components/animate';
+import { ContactFormSchema } from './contactFormSchema';
 
-// ----------------------------------------------------------------------
+
+export const defaultValues = {
+  email: '',
+  fullName: '',
+  message: ''
+};
 
 export default function ContactForm() {
+
+  const methods = useForm({
+    resolver: yupResolver(ContactFormSchema),
+    defaultValues,
+  });
+
+  const {
+    watch,
+    reset,
+    control,
+    setValue,
+    handleSubmit,
+    formState: { isSubmitting },
+  } = methods;
+
+  const onSubmit = handleSubmit(async (data) => {
+    try {
+      const response = await fetch('/api/send', {
+            method: 'POST',
+            headers:{
+              'Accept':'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+      reset();
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
   return (
-    <Stack component={MotionViewport} spacing={5} id="contact">
-      <m.div variants={varFade().inUp}>
-        <Typography variant="h3">Get in touch.</Typography>
-      </m.div>
+    <FormProvider methods={methods} onSubmit={onSubmit}>
+    <Box
+      gap={5}
+      display="grid"
+      gridTemplateColumns={{
+        xs: 'repeat(1, 1fr)',
+        sm: 'repeat(2, 1fr)',
+      }}
+    >
+      <Stack spacing={2}>
+          <RHFTextField name="fullName" label="Name" />
 
-      <Stack spacing={3}>
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Name" />
-        </m.div>
+          <RHFTextField name="email" label="Email address" />
 
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Email" />
-        </m.div>
+          <RHFTextField name="message" label="Message"/>
+        </Stack>
+        </Box>
 
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Subject" />
-        </m.div>
-
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Enter your message here." multiline rows={4} />
-        </m.div>
-      </Stack>
-
-      <m.div variants={varFade().inUp}>
-        <Button size="large" variant="contained">
-          Submit Now
-        </Button>
-      </m.div>
-    </Stack>
+        <LoadingButton
+              size="large"
+              type="submit"
+              variant="contained"
+              loading={isSubmitting}
+            >
+              Send Message
+            </LoadingButton>
+</FormProvider>
   );
 }

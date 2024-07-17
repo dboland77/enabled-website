@@ -32,7 +32,6 @@ import FormProvider, {
 import { FormSchema } from './schema';
 import ValuesPreview from './values-preview';
 
-// ----------------------------------------------------------------------
 
 const OPTIONS = [
   { value: 'option 1', label: 'Option 1' },
