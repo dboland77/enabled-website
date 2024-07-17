@@ -1,15 +1,14 @@
-const RESEND_API_KEY = process.env.RESEND_API_KEY
+const NEXT_PUBLIC_RESEND_API_KEY = process.env.NEXT_PUBLIC_RESEND_API_KEY;
 
-export async function POST(request:Request) {
-  
-  const body = await request.json()
-  const {email, fullName, message} = body
+export async function POST(request: Request) {
+  const body = await request.json();
+  const { email, fullName, message } = body;
 
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${RESEND_API_KEY}`,
+      Authorization: `Bearer ${NEXT_PUBLIC_RESEND_API_KEY}`,
     },
     body: JSON.stringify({
       from: 'EnableD <hello@getenabled.co.uk>',
@@ -23,8 +22,6 @@ export async function POST(request:Request) {
     const data = await res.json();
     return Response.json(data);
   }
-    const error= await res.json()
-    return Response.json(error)
+  const error = await res.json();
+  return Response.json(error);
 }
-
-
