@@ -1,6 +1,8 @@
 import { m } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Stack, {StackProps} from '@mui/material/Stack';
+import LoadingButton from '@mui/lab/LoadingButton';
+
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useForm, Controller } from 'react-hook-form';
@@ -25,22 +27,39 @@ export default function ContactForm() {
     defaultValues,
   });
 
+  const {
+    watch,
+    reset,
+    control,
+    setValue,
+    handleSubmit,
+    formState: { isSubmitting },
+  } = methods;
 
+  const onSubmit = handleSubmit(async (data) => {
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      reset();
+      console.info('DATA', data);
+    } catch (error) {
+      console.error(error);
+    }
+  });
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  // async function onSubmit(event: FormEvent<HTMLFormElement>) {
+  //   event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
-    const response = await fetch('/api/send', {
-      method: 'POST',
-      body: formData,
-    });
+  //   const formData = new FormData(event.currentTarget);
+  //   const response = await fetch('/api/send', {
+  //     method: 'POST',
+  //     body: formData,
+  //   });
 
-    const data = await response.json();
-   return data
-  }
+  //   const data = await response.json();
+  //  return data
+  // }
   return (
-    <FormProvider methods={methods} onSubmit={handleSubmit}>
+    <FormProvider methods={methods} onSubmit={onSubmit}>
     <Box
       gap={5}
       display="grid"
@@ -50,45 +69,23 @@ export default function ContactForm() {
       }}
     >
       <Stack spacing={2}>
-        <Block>
-          <RHFTextField name="fullName" label="Full Name" />
-        </Block>
+          <RHFTextField name="fullName" label="Name" />
 
-        <Block>
           <RHFTextField name="email" label="Email address" />
-        </Block>
 
-        <Block>
-          <RHFTextField name="age" label="Age" type="number" />
-        </Block>
+          <RHFTextField name="message" label="Message"/>
         </Stack>
         </Box>
+
+        <LoadingButton
+              
+              size="large"
+              type="submit"
+              variant="contained"
+              loading={isSubmitting}
+            >
+              Send Message
+            </LoadingButton>
 </FormProvider>
-  );
-}
-
-
-// ----------------------------------------------------------------------
-
-interface BlockProps extends StackProps {
-  label?: string;
-  children: React.ReactNode;
-}
-
-function Block({ label = 'RHFTextField', sx, children }: BlockProps) {
-  return (
-    <Stack spacing={1} sx={{ width: 1, ...sx }}>
-      <Typography
-        variant="caption"
-        sx={{
-          textAlign: 'right',
-          fontStyle: 'italic',
-          color: 'text.disabled',
-        }}
-      >
-        {label}
-      </Typography>
-      {children}
-    </Stack>
   );
 }
