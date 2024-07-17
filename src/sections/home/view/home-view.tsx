@@ -62,7 +62,7 @@ export default function HomeView() {
           position: 'relative',
           bgcolor: 'background.default',
         }}
-        >
+      >
         <FormValidationView/>
         <HomeEnabled />
         <HomeFeatures />
