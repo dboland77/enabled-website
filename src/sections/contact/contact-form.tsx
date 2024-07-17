@@ -1,17 +1,32 @@
 import { m } from 'framer-motion';
-
-import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import Stack, {StackProps} from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import { FormControl, InputLabel, Input, FormHelperText } from '@mui/material';
+import { useForm, Controller } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 import { varFade, MotionViewport } from 'src/components/animate';
-import { FormSchema } from './schema';
+import { ContactFormSchema } from './contactFormSchema';
 
 import { FormEvent } from 'react';
 import FormProvider, { RHFTextField } from 'src/components/hook-form';
+
+export const defaultValues = {
+  email: '',
+  fullName: '',
+  message: ''
+};
+
 export default function ContactForm() {
+
+  const methods = useForm({
+    resolver: yupResolver(ContactFormSchema),
+    defaultValues,
+  });
+
+
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -21,18 +36,59 @@ export default function ContactForm() {
       body: formData,
     });
 
-    // Handle response if necessary
     const data = await response.json();
-    console.log(data);
+   return data
   }
   return (
-    <FormControl>
-      <form onSubmit={handleSubmit}>
-        <InputLabel htmlFor="my-input">Email address</InputLabel>
-        <Input id="my-input" aria-describedby="my-helper-text" />
-        <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
-        <Button type="submit">Submit</Button>
-      </form>
-    </FormControl>
+    <FormProvider methods={methods} onSubmit={handleSubmit}>
+    <Box
+      gap={5}
+      display="grid"
+      gridTemplateColumns={{
+        xs: 'repeat(1, 1fr)',
+        sm: 'repeat(2, 1fr)',
+      }}
+    >
+      <Stack spacing={2}>
+        <Block>
+          <RHFTextField name="fullName" label="Full Name" />
+        </Block>
+
+        <Block>
+          <RHFTextField name="email" label="Email address" />
+        </Block>
+
+        <Block>
+          <RHFTextField name="age" label="Age" type="number" />
+        </Block>
+        </Stack>
+        </Box>
+</FormProvider>
+  );
+}
+
+
+// ----------------------------------------------------------------------
+
+interface BlockProps extends StackProps {
+  label?: string;
+  children: React.ReactNode;
+}
+
+function Block({ label = 'RHFTextField', sx, children }: BlockProps) {
+  return (
+    <Stack spacing={1} sx={{ width: 1, ...sx }}>
+      <Typography
+        variant="caption"
+        sx={{
+          textAlign: 'right',
+          fontStyle: 'italic',
+          color: 'text.disabled',
+        }}
+      >
+        {label}
+      </Typography>
+      {children}
+    </Stack>
   );
 }

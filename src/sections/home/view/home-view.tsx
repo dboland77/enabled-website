@@ -35,7 +35,6 @@ export default function HomeView() {
         <HomeFAQ />
         <ContactView />
 
-
       </Box>
     </MainLayout>
   );
