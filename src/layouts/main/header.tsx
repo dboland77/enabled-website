@@ -60,7 +60,7 @@ export default function Header() {
           <Badge
             sx={{
               [`& .${badgeClasses.badge}`]: {
-                top: 8,
+                top: 12,
                 right: -16,
               },
             }}

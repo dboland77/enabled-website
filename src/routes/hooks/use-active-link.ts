@@ -1,4 +1,4 @@
-import { usePathname } from 'next/navigation';
+import { usePathname, useParams } from 'next/navigation';
 
 // ----------------------------------------------------------------------
 
@@ -6,6 +6,9 @@ type ReturnType = boolean;
 
 export function useActiveLink(path: string, deep = true): ReturnType {
   const pathname = usePathname();
+  const hashLocation = window.location.hash;
+
+  console.log(`${pathname}${hashLocation}`);
 
   const checkPath = path.startsWith('#');
 
