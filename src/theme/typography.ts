@@ -123,8 +123,8 @@ export const typography = {
   },
   button: {
     fontWeight: 700,
-    lineHeight: 24 / 14,
-    fontSize: pxToRem(14),
+    lineHeight: 24 / 16,
+    fontSize: pxToRem(16),
     textTransform: 'unset',
   },
 } as const;

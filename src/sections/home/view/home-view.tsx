@@ -22,7 +22,6 @@ export default function HomeView() {
     <MainLayout>
       <ScrollProgress scrollYProgress={scrollYProgress} />
 
-
       <Box
         sx={{
           overflow: 'hidden',
@@ -32,9 +31,12 @@ export default function HomeView() {
       >
         <HomeEnabled />
         <HomeFeatures />
-        <HomeFAQ />
-        <ContactView />
-
+        <div id="faq">
+          <HomeFAQ />
+        </div>
+        <div id="contact">
+          <ContactView />
+        </div>
       </Box>
     </MainLayout>
   );

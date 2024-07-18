@@ -8,10 +8,8 @@ import Container from '@mui/material/Container';
 import Badge, { badgeClasses } from '@mui/material/Badge';
 import Link, { LinkProps } from '@mui/material/Link';
 
-
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
-
 
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
 import { useResponsive } from 'src/hooks/use-responsive';
@@ -74,17 +72,16 @@ export default function Header() {
           >
             <Logo />
           </Badge>
-
           <Box sx={{ flexGrow: 1 }} />
 
           {mdUp && <NavDesktop data={navConfig} />}
 
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
             <Button variant="contained">
-            <Link component={RouterLink} href={paths.contact} color="inherit" underline="none">
+              <Link component={RouterLink} href={paths.contact} color="inherit" underline="none">
                 Curious?
-      </Link>
-              </Button>
+              </Link>
+            </Button>
 
             {/* <SettingsButton
               sx={{

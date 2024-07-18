@@ -55,7 +55,6 @@ export default function HomeFAQ() {
       sx={{
         py: { xs: 10, md: 15 },
       }}
-      id="faq"
     >
       <Box
         gap={{ xs: 3, lg: 10 }}

@@ -16,7 +16,6 @@ import { HEADER } from '../../../config-layout';
 import { NavItem, NavItemDashboard } from './nav-item';
 import { NavListProps, NavSubListProps } from '../types';
 
-// ----------------------------------------------------------------------
 
 export default function NavList({ data }: NavListProps) {
   const theme = useTheme();

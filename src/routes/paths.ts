@@ -5,8 +5,8 @@ const MOCK_ID = 12345;
 const MOCK_TITLE = 'test title';
 
 export const paths = {
-  pricing: '#pricing',
-  features: '#features',
+  pricing: '/#pricing',
+  features: '/',
   contact: '#contact',
   faq: '#faq',
   page404: '/error/404',
