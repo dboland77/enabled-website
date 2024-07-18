@@ -85,15 +85,17 @@ const StyledNavItem = styled(ListItemButton, {
         duration: theme.transitions.duration.shorter,
       }),
       '&:hover': {
-        opacity: 0.64,
+        // opacity: 0.64,
         backgroundColor: 'transparent',
-        '&:before': {
-          ...dotStyles,
-        },
+        color: theme.palette.primary.main,
+        fontWeight: theme.typography.fontWeightSemiBold,
+        // '&:before': {
+        //   ...dotStyles,
+        // },
       },
       ...(active && {
         color: theme.palette.primary.main,
-        fontWeight: theme.typography.fontWeightSemiBold,
+        fontWeight: theme.typography.fontWeightBold,
         '&:before': {
           ...dotStyles,
         },
