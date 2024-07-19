@@ -20,9 +20,8 @@ export default function NavList({ data }: NavListProps) {
   const theme = useTheme();
 
   const pathname = usePathname();
-  const hashname = useLocationHash();
 
-  const active = useActiveLink(pathname, hashname, data.path);
+  const active = useActiveLink(data.path);
 
   const [openMenu, setOpenMenu] = useState(false);
 

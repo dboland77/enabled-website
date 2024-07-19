@@ -1,10 +1,15 @@
+import { useLocationHash } from './use-location-hash';
+
 type ReturnType = boolean;
 
-export const useActiveLink = (pathname: string, hashname: string, path: string): ReturnType => {
+export const useActiveLink = (path: string): ReturnType => {
+  const hash = useLocationHash();
+
+  console.log(hash);
+
   const currentPath = path === '/' ? '/' : `${path}/`;
 
   const active = true;
 
-  console.log(hashname, path);
   return active;
 };
