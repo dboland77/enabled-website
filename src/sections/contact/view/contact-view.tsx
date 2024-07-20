@@ -2,9 +2,9 @@
 
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import { Typography } from '@mui/material';
 
 import ContactForm from '../contact-form';
-import { Typography } from '@mui/material';
 
 export default function ContactView() {
   return (
