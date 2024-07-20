@@ -1,19 +1,13 @@
-import { usePathname } from 'next/navigation';
-
-// ----------------------------------------------------------------------
+import { useLocationHash } from './use-location-hash';
 
 type ReturnType = boolean;
 
-export function useActiveLink(path: string, deep = true): ReturnType {
-  const pathname = usePathname();
-
-  const checkPath = path.startsWith('#');
+export const useActiveLink = (path: string): ReturnType => {
+  const hash = useLocationHash();
 
   const currentPath = path === '/' ? '/' : `${path}/`;
 
-  const normalActive = !checkPath && pathname === currentPath;
+  const active = true;
 
-  const deepActive = !checkPath && pathname.includes(currentPath);
-
-  return deep ? deepActive : normalActive;
-}
+  return active;
+};

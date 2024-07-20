@@ -141,7 +141,7 @@ const StyledNavItem = styled(ListItemButton, {
 
   const baseStyles = {
     item: {
-      borderRadius: 6,
+      borderRadius: 12,
       color: theme.palette.text.secondary,
     },
     icon: {

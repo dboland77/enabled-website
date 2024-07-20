@@ -7,7 +7,7 @@ import Portal from '@mui/material/Portal';
 import { useTheme } from '@mui/material/styles';
 import ListSubheader from '@mui/material/ListSubheader';
 
-import { usePathname } from 'src/routes/hooks';
+import { useLocationHash, usePathname } from 'src/routes/hooks';
 import { useActiveLink } from 'src/routes/hooks/use-active-link';
 
 import { paper } from 'src/theme/css';
@@ -16,14 +16,12 @@ import { HEADER } from '../../../config-layout';
 import { NavItem, NavItemDashboard } from './nav-item';
 import { NavListProps, NavSubListProps } from '../types';
 
-// ----------------------------------------------------------------------
-
 export default function NavList({ data }: NavListProps) {
   const theme = useTheme();
 
   const pathname = usePathname();
 
-  const active = useActiveLink(data.path, !!data.children);
+  const active = useActiveLink(data.path);
 
   const [openMenu, setOpenMenu] = useState(false);
 

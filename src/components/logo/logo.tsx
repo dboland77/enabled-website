@@ -21,10 +21,10 @@ const Logo = forwardRef<HTMLDivElement, LogoProps>(
     // const PRIMARY_DARK = theme.palette.primary.dark;
 
     const logo = (
-      <Box  
+      <Box
         component="img"
         src="/logo/logo_full.svg"
-        sx={{ width: 140, height: 50, cursor: 'pointer', ...sx }}
+        sx={{ width: 160, height: 60, cursor: 'pointer', ...sx }}
       />
     );
 

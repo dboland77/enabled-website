@@ -21,7 +21,7 @@ const LINKS = [
   {
     headline: 'Enabled',
     children: [
-      { name: 'Features', href:'#' },
+      { name: 'Features', href: '#' },
       { name: 'FAQ', href: paths.faq },
     ],
   },
@@ -75,7 +75,7 @@ export default function Footer() {
 
       <Container
         sx={{
-          pt: 10,
+          pt: 4,
           pb: 5,
           textAlign: { xs: 'center', md: 'unset' },
         }}

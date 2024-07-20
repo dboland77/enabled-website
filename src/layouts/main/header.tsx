@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-// import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
@@ -7,8 +6,10 @@ import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Badge, { badgeClasses } from '@mui/material/Badge';
+import Link, { LinkProps } from '@mui/material/Link';
 
-// import { paths } from 'src/routes/paths';
+import { paths } from 'src/routes/paths';
+import { RouterLink } from 'src/routes/components';
 
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
 import { useResponsive } from 'src/hooks/use-responsive';
@@ -23,6 +24,7 @@ import NavDesktop from './nav/desktop';
 import { HEADER } from '../config-layout';
 import { navConfig } from './config-navigation';
 import HeaderShadow from '../common/header-shadow';
+
 // import SettingsButton from '../common/settings-button';
 
 export default function Header() {
@@ -58,7 +60,7 @@ export default function Header() {
           <Badge
             sx={{
               [`& .${badgeClasses.badge}`]: {
-                top: 8,
+                top: 12,
                 right: -16,
               },
             }}
@@ -70,13 +72,16 @@ export default function Header() {
           >
             <Logo />
           </Badge>
-
           <Box sx={{ flexGrow: 1 }} />
 
           {mdUp && <NavDesktop data={navConfig} />}
 
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
-            <Button variant="contained">Try Now</Button>
+            <Button variant="contained">
+              <Link component={RouterLink} href={paths.contact} color="inherit" underline="none">
+                Curious?
+              </Link>
+            </Button>
 
             {/* <SettingsButton
               sx={{

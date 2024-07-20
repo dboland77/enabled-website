@@ -108,8 +108,8 @@ export const typography = {
     fontSize: pxToRem(16),
   },
   body2: {
-    lineHeight: 22 / 14,
-    fontSize: pxToRem(14),
+    lineHeight: 22 / 16,
+    fontSize: pxToRem(16),
   },
   caption: {
     lineHeight: 1.5,
@@ -123,8 +123,8 @@ export const typography = {
   },
   button: {
     fontWeight: 700,
-    lineHeight: 24 / 14,
-    fontSize: pxToRem(14),
+    lineHeight: 24 / 16,
+    fontSize: pxToRem(16),
     textTransform: 'unset',
   },
 } as const;

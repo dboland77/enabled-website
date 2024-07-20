@@ -14,7 +14,7 @@ import { NavListProps } from '../types';
 // ----------------------------------------------------------------------
 
 export default function NavList({ data }: NavListProps) {
-  const active = useActiveLink(data.path, !!data.children);
+  const active = useActiveLink(data.path);
 
   const [openMenu, setOpenMenu] = useState(false);
 
