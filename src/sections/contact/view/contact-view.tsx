@@ -9,7 +9,7 @@ import ContactForm from '../contact-form';
 export default function ContactView() {
   return (
     <>
-      <Container sx={{ py: 10 }}>
+      <Container sx={{ py: 10 }} id="contact">
         <Typography variant="h3" sx={{ mt: 8, mb: 2 }}>
           Get in touch
         </Typography>

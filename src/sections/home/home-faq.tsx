@@ -55,6 +55,7 @@ export default function HomeFAQ() {
       sx={{
         py: { xs: 10, md: 10 },
       }}
+      id="faq"
     >
       <Typography variant="h3" id="faq">
         Frequently Asked Questions
