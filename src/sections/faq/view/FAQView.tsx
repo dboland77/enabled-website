@@ -10,9 +10,6 @@ export default function FAQView() {
   return (
     <>
       <Container sx={{ py: 10 }} id="contact">
-        <Typography variant="h3" sx={{ mt: 8, mb: 2 }}>
-          Frequently Asked Questions
-        </Typography>
         <Box
           gap={10}
           display="grid"
