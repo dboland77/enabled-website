@@ -16,7 +16,7 @@ import { bgGradient } from 'src/theme/css';
 
 import Iconify from 'src/components/iconify';
 
-import { IPostHero } from 'src/types/blog';
+import { IPostHero } from 'src/app/lib/types/blog';
 
 // ----------------------------------------------------------------------
 

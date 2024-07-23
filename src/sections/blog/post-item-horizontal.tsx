@@ -19,7 +19,7 @@ import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 import CustomPopover, { usePopover } from 'src/components/custom-popover';
 
-import { IPostItem } from 'src/types/blog';
+import { IPostItem } from 'src/app/lib/types/blog';
 
 type Props = {
   post: IPostItem;
