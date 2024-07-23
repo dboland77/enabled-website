@@ -12,7 +12,7 @@ import { RouterLink } from 'src/routes/components';
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
-import { fDate } from 'src/utils/format-time';
+import { fDate } from 'src/app/lib/format-time';
 
 import { AvatarShape } from 'src/assets/illustrations';
 
