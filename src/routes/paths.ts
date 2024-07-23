@@ -5,10 +5,10 @@ const MOCK_ID = 12345;
 const MOCK_TITLE = 'test title';
 
 export const paths = {
-  pricing: '/#pricing',
+  pricing: '/pricing',
   features: '/',
-  contact: '#contact',
-  faq: '#faq',
+  contact: '/contact',
+  faq: '/faq',
   page404: '/error/404',
   demo: '/demo',
   cookies: '/cookies-policy',

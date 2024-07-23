@@ -48,7 +48,7 @@ const FAQS = [
   },
 ];
 
-export default function HomeFAQ() {
+export default function FAQ() {
   return (
     <Container
       component={MotionViewport}
