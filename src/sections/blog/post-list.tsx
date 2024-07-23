@@ -4,7 +4,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 
 import Iconify from 'src/components/iconify';
 
-import { IPostItem } from 'src/app/lib/types/blog';
+import { IPostItem } from 'src/types/blog';
 
 import PostItem from './post-item';
 import { PostItemSkeleton } from './post-skeleton';

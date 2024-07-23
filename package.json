@@ -2,7 +2,7 @@
   "name": "enabled",
   "author": "Dave Boland",
   "version": "1.0.0",
-  "description": "EnableD Workplace Accommodations Website",
+  "description": "enableD Workplace Accommodations Website",
   "private": true,
   "scripts": {
     "dev": "next dev -p 8083",
@@ -12,12 +12,12 @@
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "rm:all": "rm -rf node_modules .next out dist build",
-    "re:start": "yarn rm:all && yarn install && yarn dev",
-    "re:build": "yarn rm:all && yarn install && yarn build",
+    "re:start": "pnpm rm:all && pnpm install && pnpm dev",
+    "re:build": "pnpm rm:all && pnpm install && pnpm build",
     "re:build-npm": "npm run rm:all && npm install && npm run build",
-    "dev:ts": "yarn dev & yarn ts:watch",
+    "dev:ts": "pnpm dev & pnpm ts:watch",
     "ts": "tsc --noEmit --incremental",
-    "ts:watch": "yarn ts --watch"
+    "ts:watch": "pnpm ts --watch"
   },
   "dependencies": {
     "@emotion/cache": "^11.10.5",

@@ -12,14 +12,14 @@ import { RouterLink } from 'src/routes/components';
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
-import { fDate } from 'src/app/lib/format-time';
+import { fDate } from 'src/utils/format-time';
 
 import Label from 'src/components/label';
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 import CustomPopover, { usePopover } from 'src/components/custom-popover';
 
-import { IPostItem } from 'src/app/lib/types/blog';
+import { IPostItem } from 'src/types/blog';
 
 type Props = {
   post: IPostItem;
