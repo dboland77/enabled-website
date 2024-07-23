@@ -2,17 +2,16 @@ import { FormEvent } from 'react';
 import { m } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Stack, { StackProps } from '@mui/material/Stack';
-import LoadingButton from '@mui/lab/LoadingButton';
 
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { LoadingButton } from '@mui/lab';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import FormProvider, { RHFTextField } from 'src/components/hook-form';
 import { varFade, MotionViewport } from 'src/components/animate';
 import { ContactFormSchema } from './contactFormSchema';
-
 export const defaultValues = {
   email: '',
   fullName: '',
