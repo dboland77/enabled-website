@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
@@ -8,7 +7,6 @@ import IconButton from '@mui/material/IconButton';
 
 import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';
-import { RouterLink } from 'src/routes/components';
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
@@ -32,17 +30,8 @@ export default function PostItemHorizontal({ post }: Props) {
 
   const smUp = useResponsive('up', 'sm');
 
-  const {
-    title,
-    author,
-    publish,
-    coverUrl,
-    createdAt,
-    totalViews,
-    totalShares,
-    totalComments,
-    description,
-  } = post;
+  const { title, author, publish, coverUrl, createdAt, totalViews, totalShares, totalComments } =
+    post;
 
   return (
     <>

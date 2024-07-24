@@ -36,7 +36,7 @@ export default function PostDetailsPreview({
   onSubmit,
   isSubmitting,
 }: Props) {
-  const hasContent = title || description || content || coverUrl;
+  // const hasContent = title || description || content || coverUrl;
 
   const hasHero = title || coverUrl;
 

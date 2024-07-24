@@ -1,8 +1,9 @@
-import * as Yup from 'yup';
+import * as z from 'zod';
 
-
-export const ContactFormSchema = Yup.object().shape({
-  fullName: Yup.string().required('Full name is required'),
-  email: Yup.string().required('Email is required').email('Email must be a valid email address'),
-  message:Yup.string().required('Please Enter a message')
-});
+export const ContactFormSchema = z
+  .object({
+    fullName: z.string(),
+    email: z.string().email({ message: 'Email must be a valid email address' }),
+    message: z.string(),
+  })
+  .strict();

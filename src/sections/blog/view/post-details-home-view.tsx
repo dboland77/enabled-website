@@ -2,24 +2,18 @@
 
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import Checkbox from '@mui/material/Checkbox';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import AvatarGroup from '@mui/material/AvatarGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 import { paths } from 'src/routes/paths';
-import { RouterLink } from 'src/routes/components';
 
 import Iconify from 'src/components/iconify';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 
-import PostList from '../post-list';
 import PostDetailsHero from '../post-details-hero';
-import { PostDetailsSkeleton } from '../post-skeleton';
 
 type Props = {
   title: string;
@@ -35,10 +29,6 @@ const post = {
 };
 
 export default function PostDetailsHomeView({ title }: Props) {
-  const renderSkeleton = <PostDetailsSkeleton />;
-
-  const renderError = <Container sx={{ my: 10 }}>hello</Container>;
-
   const renderPost = post && (
     <>
       <PostDetailsHero
@@ -118,14 +108,6 @@ export default function PostDetailsHomeView({ title }: Props) {
           <Divider sx={{ mt: 5, mb: 2 }} />
         </Stack>
       </Container>
-    </>
-  );
-
-  const renderLatestPosts = (
-    <>
-      <Typography variant="h4" sx={{ mb: 5 }}>
-        Recent Posts
-      </Typography>
     </>
   );
 

@@ -1,8 +1,10 @@
-// useHash.js
+'use client';
+
 import { useState, useEffect } from 'react';
 
 export const useLocationHash = () => {
   const [hash, setHash] = useState(window.location.hash);
+
   useEffect(() => {
     const onHashChange = () => {
       setHash(window.location.hash);
@@ -10,5 +12,6 @@ export const useLocationHash = () => {
     window.addEventListener('hashchange', onHashChange);
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
+
   return hash;
 };

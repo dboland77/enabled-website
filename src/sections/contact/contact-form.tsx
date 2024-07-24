@@ -1,16 +1,10 @@
-import { FormEvent } from 'react';
-import { m } from 'framer-motion';
-import Box from '@mui/material/Box';
-import Stack, { StackProps } from '@mui/material/Stack';
-import LoadingButton from '@mui/lab/LoadingButton';
+import Stack from '@mui/material/Stack';
 
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import { useForm, Controller } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
+import { LoadingButton } from '@mui/lab';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 import FormProvider, { RHFTextField } from 'src/components/hook-form';
-import { varFade, MotionViewport } from 'src/components/animate';
 import { ContactFormSchema } from './contactFormSchema';
 
 export const defaultValues = {
@@ -21,15 +15,12 @@ export const defaultValues = {
 
 export default function ContactForm() {
   const methods = useForm({
-    resolver: yupResolver(ContactFormSchema),
+    resolver: zodResolver(ContactFormSchema),
     defaultValues,
   });
 
   const {
-    watch,
     reset,
-    control,
-    setValue,
     handleSubmit,
     formState: { isSubmitting },
   } = methods;
@@ -44,34 +35,26 @@ export default function ContactForm() {
         },
         body: JSON.stringify(data),
       });
+
       reset();
+      return response;
     } catch (error) {
-      console.error(error);
+      return error;
     }
   });
 
   return (
     <FormProvider methods={methods} onSubmit={onSubmit}>
-      <Box
-        gap={5}
-        display="grid"
-        width={800}
-        gridTemplateColumns={{
-          xs: 'repeat(1, 1fr)',
-          sm: 'repeat(2, 1fr)',
-        }}
-      >
-        <Stack spacing={2}>
-          <RHFTextField name="fullName" label="Name" />
+      <Stack spacing={2}>
+        <RHFTextField name="fullName" label="Name" />
 
-          <RHFTextField name="email" label="Email address" />
+        <RHFTextField name="email" label="Email address" />
 
-          <RHFTextField name="message" label="Message" multiline rows={4} />
-          <LoadingButton size="large" type="submit" variant="contained" loading={isSubmitting}>
-            Send Message
-          </LoadingButton>
-        </Stack>
-      </Box>
+        <RHFTextField name="message" label="Message" multiline rows={4} />
+        <LoadingButton size="large" type="submit" variant="contained" loading={isSubmitting}>
+          Send Message
+        </LoadingButton>
+      </Stack>
     </FormProvider>
   );
 }
