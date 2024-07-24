@@ -1,7 +1,6 @@
 'use client';
 
 import { useLocationHash } from './use-location-hash';
-import { useSearchParams } from 'next/navigation';
 
 type ReturnType = boolean;
 

@@ -7,7 +7,7 @@ import Portal from '@mui/material/Portal';
 import { useTheme } from '@mui/material/styles';
 import ListSubheader from '@mui/material/ListSubheader';
 
-import { useLocationHash, usePathname } from 'src/routes/hooks';
+import { usePathname } from 'src/routes/hooks';
 import { useActiveLink } from 'src/routes/hooks/use-active-link';
 
 import { paper } from 'src/theme/css';

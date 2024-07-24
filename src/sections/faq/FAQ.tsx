@@ -1,6 +1,3 @@
-import { m } from 'framer-motion';
-
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -48,7 +45,7 @@ const FAQS = [
 export default function FAQ() {
   return (
     <>
-      <Typography variant="h3" id="faq" sx={{paddingLeft:3}}>
+      <Typography variant="h3" id="faq" sx={{ paddingLeft: 3 }}>
         Frequently Asked Questions
       </Typography>
 

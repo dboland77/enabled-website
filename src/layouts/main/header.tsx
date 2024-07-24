@@ -6,7 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Badge, { badgeClasses } from '@mui/material/Badge';
-import Link, { LinkProps } from '@mui/material/Link';
+import Link from '@mui/material/Link';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
@@ -24,8 +24,6 @@ import NavDesktop from './nav/desktop';
 import { HEADER } from '../config-layout';
 import { navConfig } from './config-navigation';
 import HeaderShadow from '../common/header-shadow';
-
-// import SettingsButton from '../common/settings-button';
 
 export default function Header() {
   const theme = useTheme();

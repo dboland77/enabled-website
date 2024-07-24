@@ -3,9 +3,6 @@
 import { useScroll } from 'framer-motion';
 
 import Box from '@mui/material/Box';
-import { styled } from '@mui/material/styles';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
 
 import MainLayout from 'src/layouts/main';
 

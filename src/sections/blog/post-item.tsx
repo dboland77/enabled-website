@@ -1,14 +1,10 @@
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import { alpha, useTheme } from '@mui/material/styles';
-
-import { paths } from 'src/routes/paths';
-import { RouterLink } from 'src/routes/components';
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
@@ -127,10 +123,6 @@ export function PostContent({
   totalComments,
   index,
 }: PostContentProps) {
-  const mdUp = useResponsive('up', 'md');
-
-  const linkTo = paths.post.details(title);
-
   const latestPostLarge = index === 0;
 
   const latestPostSmall = index === 1 || index === 2;

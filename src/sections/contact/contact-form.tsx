@@ -1,17 +1,12 @@
-import { FormEvent } from 'react';
-import { m } from 'framer-motion';
-import Box from '@mui/material/Box';
-import Stack, { StackProps } from '@mui/material/Stack';
+import Stack from '@mui/material/Stack';
 
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import { LoadingButton } from '@mui/lab';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import FormProvider, { RHFTextField } from 'src/components/hook-form';
-import { varFade, MotionViewport } from 'src/components/animate';
 import { ContactFormSchema } from './contactFormSchema';
+
 export const defaultValues = {
   email: '',
   fullName: '',
@@ -25,10 +20,7 @@ export default function ContactForm() {
   });
 
   const {
-    watch,
     reset,
-    control,
-    setValue,
     handleSubmit,
     formState: { isSubmitting },
   } = methods;
@@ -43,9 +35,11 @@ export default function ContactForm() {
         },
         body: JSON.stringify(data),
       });
+
       reset();
+      return response;
     } catch (error) {
-      console.error(error);
+      return error;
     }
   });
 

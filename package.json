@@ -45,6 +45,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.2.5",
     "@svgr/webpack": "^8.1.0",
     "@types/autosuggest-highlight": "^3.2.0",
     "@types/lodash": "^4.14.199",
