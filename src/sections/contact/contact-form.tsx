@@ -51,26 +51,16 @@ export default function ContactForm() {
 
   return (
     <FormProvider methods={methods} onSubmit={onSubmit}>
-      <Box
-        gap={5}
-        display="grid"
-        width={800}
-        gridTemplateColumns={{
-          xs: 'repeat(1, 1fr)',
-          sm: 'repeat(2, 1fr)',
-        }}
-      >
-        <Stack spacing={2}>
-          <RHFTextField name="fullName" label="Name" />
+      <Stack spacing={2}>
+        <RHFTextField name="fullName" label="Name" />
 
-          <RHFTextField name="email" label="Email address" />
+        <RHFTextField name="email" label="Email address" />
 
-          <RHFTextField name="message" label="Message" multiline rows={4} />
-          <LoadingButton size="large" type="submit" variant="contained" loading={isSubmitting}>
-            Send Message
-          </LoadingButton>
-        </Stack>
-      </Box>
+        <RHFTextField name="message" label="Message" multiline rows={4} />
+        <LoadingButton size="large" type="submit" variant="contained" loading={isSubmitting}>
+          Send Message
+        </LoadingButton>
+      </Stack>
     </FormProvider>
   );
 }
