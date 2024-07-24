@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { LoadingButton } from '@mui/lab';
 import { useForm, Controller } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 import FormProvider, { RHFTextField } from 'src/components/hook-form';
 import { varFade, MotionViewport } from 'src/components/animate';
@@ -20,7 +20,7 @@ export const defaultValues = {
 
 export default function ContactForm() {
   const methods = useForm({
-    resolver: yupResolver(ContactFormSchema),
+    resolver: zodResolver(ContactFormSchema),
     defaultValues,
   });
 

@@ -1,13 +1,10 @@
 import { m } from 'framer-motion';
 
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
-import { alpha } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-
-import { varFade, MotionViewport } from 'src/components/animate';
+import { Divider } from '@mui/material';
 
 const FAQS = [
   {
@@ -50,36 +47,24 @@ const FAQS = [
 
 export default function FAQ() {
   return (
-    <Container
-      component={MotionViewport}
-      sx={{
-        py: { xs: 10, md: 10 },
-      }}
-      id="faq"
-    >
-      <Typography variant="h3" id="faq">
+    <>
+      <Typography variant="h3" id="faq" sx={{paddingLeft:3}}>
         Frequently Asked Questions
       </Typography>
-      <Box
-        gap={{ xs: 3, lg: 5 }}
-        display="grid"
-        alignItems="center"
-        gridTemplateColumns={{
-          xs: 'repeat(1, 1fr)',
-          md: 'repeat(1, 1fr)',
-        }}
-      >
-        {FAQS.map((faq, index) => (
-          <m.div variants={varFade().inUp} key={faq.title}>
-            <Typography variant="h5" sx={{ mt: 8, mb: 2 }}>
-              {faq.title}
-            </Typography>
-            <Typography variant="body1" sx={{ color: 'text.primary' }}>
-              {faq.description}
-            </Typography>
-          </m.div>
-        ))}
-      </Box>
-    </Container>
+
+      {FAQS.map((faq, index) => (
+        <>
+          <Container sx={{ padding: 2 }}>
+            <Stack spacing={{ xs: 1, sm: 2 }} useFlexGap>
+              <Typography variant="h5">{faq.title}</Typography>
+              <Typography variant="body1" sx={{ color: 'text.primary' }}>
+                {faq.description}
+              </Typography>
+            </Stack>
+          </Container>
+          <Divider />
+        </>
+      ))}
+    </>
   );
 }

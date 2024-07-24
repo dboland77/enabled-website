@@ -8,8 +8,8 @@ import { MotionLazy } from 'src/components/animate/motion-lazy';
 import { SettingsProvider } from 'src/components/settings';
 
 export const metadata = {
-  title: 'EnableD - disability accommodations admin',
-  description: 'Disability Accommodations made easy',
+  title: 'EnableD - reasonable adjustments administration',
+  description: 'Reasonable adjsutments for disability made easy',
   keywords: 'equality, inclusivity,accommodations,adjustments,reasonable,admin,disability',
   themeColor: '#000000',
   manifest: '/manifest.json',

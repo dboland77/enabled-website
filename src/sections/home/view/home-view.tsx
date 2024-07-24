@@ -8,14 +8,11 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 import MainLayout from 'src/layouts/main';
-import { ContactView } from 'src/sections/contact/view';
-import { FAQView } from '../../faq/view';
 
 import ScrollProgress from 'src/components/scroll-progress';
 
 import HomeEnabled from '../home-enabled';
 import HomeFeatures from '../home-features';
-// import HomeForDesigner from '../home-for-designer';
 
 export default function HomeView() {
   const { scrollYProgress } = useScroll();
@@ -33,9 +30,6 @@ export default function HomeView() {
       >
         <HomeEnabled />
         <HomeFeatures />
-
-        <FAQView />
-        <ContactView />
       </Box>
     </MainLayout>
   );

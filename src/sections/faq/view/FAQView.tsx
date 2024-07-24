@@ -4,23 +4,15 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { Typography } from '@mui/material';
 
+import MainLayout from 'src/layouts/main';
 import FAQ from '../FAQ';
 
 export default function FAQView() {
   return (
-    <>
-      <Container sx={{ py: 10 }} id="contact">
-        <Box
-          gap={10}
-          display="grid"
-          gridTemplateColumns={{
-            xs: 'repeat(1, 1fr)',
-            md: 'repeat(2, 1fr)',
-          }}
-        >
-          <FAQ />
-        </Box>
+    <MainLayout>
+      <Container id="faq">
+        <FAQ />
       </Container>
-    </>
+    </MainLayout>
   );
 }
