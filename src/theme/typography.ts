@@ -108,8 +108,8 @@ export const typography = {
     fontSize: pxToRem(16),
   },
   body2: {
-    lineHeight: 22 / 16,
-    fontSize: pxToRem(16),
+    lineHeight: 22 / 18,
+    fontSize: pxToRem(18),
   },
   caption: {
     lineHeight: 1.5,
@@ -118,7 +118,7 @@ export const typography = {
   overline: {
     fontWeight: 700,
     lineHeight: 1.5,
-    fontSize: pxToRem(12),
+    fontSize: pxToRem(14),
     textTransform: 'uppercase',
   },
   button: {

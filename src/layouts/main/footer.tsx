@@ -100,33 +100,25 @@ export default function Footer() {
               Reasonable adjustments in the workplace made easy with enableD.
             </Typography>
 
-            <Stack
-              direction="row"
-              justifyContent={{ xs: 'center', md: 'flex-start' }}
-              sx={{
-                mt: 3,
-                mb: { xs: 5, md: 0 },
-              }}
+            <Link
+              key="linkedIn"
+              component={RouterLink}
+              href="https://www.linkedin.com/company/enabled-app/"
+              color="inherit"
+              variant="body2"
             >
-              <Link
-                key="linkedIn"
-                component={RouterLink}
-                href="https://www.linkedin.com/company/enabled-app/"
-                color="inherit"
-                variant="body2"
+              <IconButton
+                key="linkedin"
+                sx={{
+                  mt: 3,
+                  '&:hover': {
+                    bgcolor: alpha('#123456', 0.08),
+                  },
+                }}
               >
-                <IconButton
-                  key="linkedin"
-                  sx={{
-                    '&:hover': {
-                      bgcolor: alpha('#123456', 0.08),
-                    },
-                  }}
-                >
-                  <Iconify color="blue" icon="skill-icons:linkedin" />
-                </IconButton>
-              </Link>
-            </Stack>
+                <Iconify width={35} color="blue" icon="skill-icons:linkedin" />
+              </IconButton>
+            </Link>
           </Grid>
 
           <Grid xs={12} md={6}>
