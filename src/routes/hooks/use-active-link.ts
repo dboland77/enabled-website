@@ -9,7 +9,7 @@ export const useActiveLink = (path: string): ReturnType => {
 
   if (path === '/') path = '';
 
-  const active = currentPath === path + '/';
+  const active = currentPath === `path${'/'}`;
 
   return active;
 };
