@@ -1,15 +1,14 @@
 'use client';
 
-import { useLocationHash } from './use-location-hash';
+import { usePathname } from 'next/navigation';
 
 type ReturnType = boolean;
 
 export const useActiveLink = (path: string): ReturnType => {
-  const hash = useLocationHash();
+  const currentPath = usePathname();
 
-  console.log(hash);
-
-  const active = hash === path;
+  if (path === '/') path = '';
+  const active = currentPath === path + '/';
 
   return active;
 };
