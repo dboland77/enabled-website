@@ -9,7 +9,6 @@ import MainLayout from 'src/layouts/main';
 import ScrollProgress from 'src/components/scroll-progress';
 
 import HomeEnabled from '../home-enabled';
-import HomeFeatures from '../home-features';
 
 export default function HomeView() {
   const { scrollYProgress } = useScroll();
@@ -26,7 +25,6 @@ export default function HomeView() {
         }}
       >
         <HomeEnabled />
-        <HomeFeatures />
       </Box>
     </MainLayout>
   );

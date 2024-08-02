@@ -4,7 +4,8 @@ const MOCK_TITLE = 'test title';
 
 export const paths = {
   pricing: '/pricing',
-  features: '/',
+  about: '/about',
+  features: '/features',
   contact: '/contact',
   faq: '/faq',
   page404: '/error/404',

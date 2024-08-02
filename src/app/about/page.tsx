@@ -1,9 +1,9 @@
-import { CookiesPolicyView } from 'src/sections/legal';
+import { AboutView } from 'src/sections/about/view';
 
 export const metadata = {
-  title: 'EnableD: Cookies Policy',
+  title: 'EnableD: About',
 };
 
-export default function CookiesPolicy() {
-  return <CookiesPolicyView />;
+export default function About() {
+  return <AboutView />;
 }
