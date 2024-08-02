@@ -1,4 +1,4 @@
-const {NEXT_PUBLIC_RESEND_API_KEY} = process.env;
+const { RESEND_API_KEY } = process.env;
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${NEXT_PUBLIC_RESEND_API_KEY}`,
+      Authorization: `Bearer ${RESEND_API_KEY}`,
     },
     body: JSON.stringify({
       from: 'EnableD <hello@getenabled.co.uk>',
