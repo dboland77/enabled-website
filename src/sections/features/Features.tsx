@@ -35,7 +35,7 @@ const FEATURES = [
   },
 ];
 
-export default function HomeFeatures() {
+export default function Features() {
   return (
     <Container sx={{ mb: 3 }}>
       <Box
@@ -44,21 +44,21 @@ export default function HomeFeatures() {
         alignItems="center"
         gridTemplateColumns={{
           xs: 'repeat(1, 1fr)',
-          md: 'repeat(3, 1fr)',
+          md: 'repeat(1, 1fr)',
         }}
       >
         {FEATURES.map((feature, index) => (
           <Card
             sx={{
               mx: {
-                minHeight: 420,
+                minHeight: '10rem',
               },
               textAlign: 'left',
               bgcolor: 'background.default',
               p: (theme) => theme.spacing(2, 5),
 
               boxShadow: (theme) => ({
-                md: `-30px 30px 80px`,
+                md: `0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)`,
               }),
             }}
           >
