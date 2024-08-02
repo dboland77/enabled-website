@@ -1,4 +1,4 @@
-const NEXT_PUBLIC_RESEND_API_KEY = process.env.NEXT_PUBLIC_RESEND_API_KEY;
+const {NEXT_PUBLIC_RESEND_API_KEY} = process.env;
 
 export async function POST(request: Request) {
   const body = await request.json();

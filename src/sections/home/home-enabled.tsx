@@ -6,12 +6,11 @@ import Typography from '@mui/material/Typography';
 
 import { varFade, MotionViewport } from 'src/components/animate';
 import { primary } from 'src/theme/palette';
-import { useTheme } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 import { RouterLink } from 'src/routes/components';
 import { paths } from 'src/routes/paths';
+
 export default function HomeEnabled() {
-  const theme = useTheme();
   return (
     <Container
       component={MotionViewport}
