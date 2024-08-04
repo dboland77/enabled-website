@@ -15,7 +15,7 @@ export default function HomeEnabled() {
     <Container
       component={MotionViewport}
       sx={{
-        py: { xs: 10, md: 15 },
+        py: { xs: 10, md: 20 },
       }}
     >
       <Stack
@@ -30,8 +30,8 @@ export default function HomeEnabled() {
             Your Journey to a fairer workplace
             <br />
             starts
+            {'  '}
             <Link component={RouterLink} href={paths.contact} color="inherit" underline="always">
-              {'  '}
               here
             </Link>
           </Typography>
