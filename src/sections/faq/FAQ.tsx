@@ -44,8 +44,8 @@ const FAQS = [
 
 export default function FAQ() {
   return (
-    <>
-      <Typography variant="h3" id="faq" sx={{ paddingLeft: 3 }}>
+    <Container sx={{ padding: 2 }}>
+      <Typography variant="h3" id="faq" sx={{ textAlign: 'center' }}>
         Frequently Asked Questions
       </Typography>
 
@@ -62,6 +62,6 @@ export default function FAQ() {
           <Divider />
         </>
       ))}
-    </>
+    </Container>
   );
 }

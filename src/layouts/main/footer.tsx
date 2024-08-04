@@ -75,12 +75,12 @@ export default function Footer() {
 
       <Container
         sx={{
-          pt: 4,
-          pb: 5,
+          pt: 1,
+          pb: 1,
           textAlign: { xs: 'center', md: 'unset' },
         }}
       >
-        <Logo sx={{ mb: 3 }} />
+        <Logo sx={{ mb: 1 }} />
 
         <Grid
           container
@@ -110,7 +110,8 @@ export default function Footer() {
               <IconButton
                 key="linkedin"
                 sx={{
-                  mt: 3,
+                  mt: 1,
+                  paddingLeft:0,
                   '&:hover': {
                     bgcolor: alpha('#123456', 0.08),
                   },
@@ -122,7 +123,7 @@ export default function Footer() {
           </Grid>
 
           <Grid xs={12} md={6}>
-            <Stack spacing={5} direction={{ xs: 'column', md: 'row' }}>
+            <Stack spacing={2} direction={{ xs: 'column', md: 'row' }} sx={{ mt: -8 }}>
               {LINKS.map((list) => (
                 <Stack
                   key={list.headline}
@@ -130,19 +131,13 @@ export default function Footer() {
                   alignItems={{ xs: 'center', md: 'flex-start' }}
                   sx={{ width: 1 }}
                 >
-                  <Typography component="div" variant="overline">
-                    {list.headline}
+                  <Typography component="div" variant="h4">
+                    {list.headline.toLocaleUpperCase()}
                   </Typography>
 
                   {list.children.map((link) => (
-                    <Link
-                      key={link.name}
-                      component={RouterLink}
-                      href={link.href}
-                      color="inherit"
-                      variant="body2"
-                    >
-                      {link.name}
+                    <Link key={link.name} component={RouterLink} href={link.href} color="inherit">
+                      {link.name.toLocaleUpperCase()}
                     </Link>
                   ))}
                 </Stack>
@@ -151,7 +146,7 @@ export default function Footer() {
           </Grid>
         </Grid>
 
-        <Typography variant="body2" sx={{ mt: 10 }}>
+        <Typography variant="body2" sx={{ mt: 1 }}>
           © {currentYear}. All rights reserved
         </Typography>
       </Container>
