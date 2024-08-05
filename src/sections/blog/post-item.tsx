@@ -10,8 +10,6 @@ import { useResponsive } from 'src/hooks/use-responsive';
 
 import { fDate } from 'src/utils/format-time';
 
-import { AvatarShape } from 'src/assets/illustrations';
-
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 
@@ -70,17 +68,6 @@ export default function PostItem({ post, index }: Props) {
   return (
     <Card>
       <Box sx={{ position: 'relative' }}>
-        <AvatarShape
-          sx={{
-            left: 0,
-            zIndex: 9,
-            width: 88,
-            height: 36,
-            bottom: -16,
-            position: 'absolute',
-          }}
-        />
-
         <Avatar
           alt={author.name}
           src={author.avatarUrl}
