@@ -2,9 +2,11 @@
 
 import { Container, Typography } from '@mui/material';
 import React from 'react';
+import Image from 'src/components/image';
 
 const About = () => (
   <Container>
+    <Image src="src/assets/about/Dave.png"></Image>
     <Typography>
       Dave Boland is a distinguished professional with a background in actuarial science and
       insurance risk modelling. With 15 years of experience, Dave has driven innovative risk
