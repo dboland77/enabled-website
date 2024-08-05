@@ -12,7 +12,6 @@ declare module '@mui/material/Button' {
   }
 }
 
-
 export function button(theme: Theme) {
   const lightMode = theme.palette.mode === 'light';
 
@@ -43,7 +42,7 @@ export function button(theme: Theme) {
             backgroundColor: lightMode ? theme.palette.common.white : theme.palette.grey[800],
             color: theme.palette.primary.main,
             borderColor: theme.palette.primary.main,
-            border:'1px solid'
+            border: '1px solid',
           },
         }),
         // OUTLINED
