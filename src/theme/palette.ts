@@ -117,7 +117,6 @@ const base = {
   action,
 };
 
-
 export function palette(mode: 'light' | 'dark') {
   const light = {
     ...base,

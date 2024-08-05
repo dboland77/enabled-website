@@ -13,4 +13,9 @@ export const navConfig = [
     icon: <Iconify icon="solar:atom-bold-duotone" />,
     path: paths.faq,
   },
+  {
+    title: 'ABOUT',
+    icon: <Iconify icon="solar:atom-bold-duotone" />,
+    path: paths.about,
+  },
 ];

@@ -20,7 +20,6 @@ import { createPresets } from './options/presets';
 import { createContrast } from './options/contrast';
 import NextAppDirEmotionCacheProvider from './next-emotion-cache';
 
-
 type Props = {
   children: React.ReactNode;
 };

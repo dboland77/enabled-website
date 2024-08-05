@@ -3,13 +3,13 @@
 import Container from '@mui/material/Container';
 
 import MainLayout from 'src/layouts/main';
-import About from '../About';
+import AboutFounder from '../AboutFounder';
 
 export default function AboutView() {
   return (
     <MainLayout>
       <Container id="about">
-        <About />
+        <AboutFounder />
       </Container>
     </MainLayout>
   );

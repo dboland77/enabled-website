@@ -111,7 +111,7 @@ export default function Footer() {
                 key="linkedin"
                 sx={{
                   mt: 1,
-                  paddingLeft:0,
+                  paddingLeft: 0,
                   '&:hover': {
                     bgcolor: alpha('#123456', 0.08),
                   },
@@ -123,7 +123,7 @@ export default function Footer() {
           </Grid>
 
           <Grid xs={12} md={6}>
-            <Stack spacing={2} direction={{ xs: 'column', md: 'row' }} sx={{ mt: -8 }}>
+            <Stack spacing={2} direction={{ xs: 'column', md: 'row' }} sx={{ mt: { md: -8 } }}>
               {LINKS.map((list) => (
                 <Stack
                   key={list.headline}
