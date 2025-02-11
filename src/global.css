@@ -1,2 +1,50 @@
 /* scrollbar */
 @import 'simplebar-react/dist/simplebar.min.css';
+
+/* definition list */
+dl {
+  margin: 0 auto;
+  padding-top: 8rem;
+  width: 90%;
+  max-width: 48rem;
+}
+dt,
+dd {
+  display: inline-block;
+  margin: 0 0 2rem 0;
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+  vertical-align: top;
+  white-space: collapse;
+}
+dt {
+  width: 17%;
+  min-width: 4rem;
+}
+dd {
+  width: 82%;
+}
+
+/* labels */
+dd::before {
+  content: '';
+  color: rgba(0, 0, 0, 0.75);
+  display: inline-block;
+  float: right;
+  font-size: 1.2rem;
+  padding: 0 0.4rem 0.05rem;
+  text-align: center;
+  border-radius: 0.4rem;
+}
+.software::before {
+  content: 'software';
+  background: rgba(255, 255, 2, 0.15);
+}
+.fintech::before {
+  content: 'fintech';
+  background: rgba(2, 255, 255, 0.15);
+}
+.ux::before {
+  content: 'ux';
+  background: rgba(255, 2, 255, 0.15);
+}
