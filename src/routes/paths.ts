@@ -6,6 +6,7 @@ export const paths = {
   pricing: '/pricing',
   about: '/about',
   features: '/features',
+  glossary: '/glossary',
   contact: '/contact',
   faq: '/faq',
   page404: '/error/404',
