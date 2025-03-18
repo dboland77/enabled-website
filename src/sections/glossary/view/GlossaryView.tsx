@@ -1,40 +1,40 @@
 'use client';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import Container from '@mui/material/Container';
 
 import MainLayout from 'src/layouts/main';
+import Drawer from '@mui/material/Drawer';
 import Glossary from '../Glossary';
 import GlossaryNav from './GlossaryNav';
-import Drawer from '@mui/material/Drawer';
 
 export default function FeaturesView() {
   const drawerWidth = 240;
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
+  // const [mobileOpen, setMobileOpen] = useState(false);
+  // const [isClosing, setIsClosing] = useState(false);
 
-  const handleDrawerClose = () => {
-    setIsClosing(true);
-    setMobileOpen(false);
-  };
+  // const handleDrawerClose = () => {
+  //   setIsClosing(true);
+  //   setMobileOpen(false);
+  // };
 
-  const handleDrawerTransitionEnd = () => {
-    setIsClosing(false);
-  };
+  // const handleDrawerTransitionEnd = () => {
+  //   setIsClosing(false);
+  // };
 
-  const handleDrawerToggle = () => {
-    if (!isClosing) {
-      setMobileOpen(!mobileOpen);
-    }
-  };
+  // const handleDrawerToggle = () => {
+  //   if (!isClosing) {
+  //     setMobileOpen(!mobileOpen);
+  //   }
+  // };
   return (
     <MainLayout>
       <Container id="glossary">
         <Drawer
           variant="temporary"
-          open={mobileOpen}
-          onTransitionEnd={handleDrawerTransitionEnd}
-          onClose={handleDrawerClose}
+          // open={mobileOpen}
+          // onTransitionEnd={handleDrawerTransitionEnd}
+          // onClose={handleDrawerClose}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
@@ -43,7 +43,7 @@ export default function FeaturesView() {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
-          {<GlossaryNav />}
+          <GlossaryNav />
         </Drawer>
         <Drawer
           variant="permanent"
@@ -53,7 +53,7 @@ export default function FeaturesView() {
           }}
           open
         >
-          {<GlossaryNav />}
+          <GlossaryNav />
         </Drawer>
         <Glossary />
       </Container>

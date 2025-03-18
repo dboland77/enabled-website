@@ -1,7 +1,5 @@
-import { useState } from 'react';
+/* eslint-disable no-irregular-whitespace */
 import Container from '@mui/material/Container';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 
 export default function Glossary() {
   return (

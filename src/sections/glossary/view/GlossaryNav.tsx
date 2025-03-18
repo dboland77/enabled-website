@@ -17,18 +17,16 @@ const GlossaryNav = () => {
   return (
     <Box sx={{ width: '5%' }}>
       <List component="nav" aria-label="alphabet nav">
-        {alphabet.map((item, index) => {
-          return (
-            <ListItemButton
-              selected={selectedIndex === index}
-              onClick={(event) => handleListItemClick(index)}
-              component={Link}
-              href={`#${alphabet[index]}`}
-            >
-              <ListItemText primary={item} />
-            </ListItemButton>
-          );
-        })}
+        {alphabet.map((item, index) => (
+          <ListItemButton
+            selected={selectedIndex === index}
+            onClick={(event) => handleListItemClick(index)}
+            component={Link}
+            href={`#${alphabet[index]}`}
+          >
+            <ListItemText primary={item} />
+          </ListItemButton>
+        ))}
       </List>
     </Box>
   );
