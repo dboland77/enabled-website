@@ -5,7 +5,10 @@ import Glossary from '../Glossary';
 
 import { VariableSizeGrid as Grid } from 'react-window';
 
-
+interface ICell  {
+  columnIndex : Number;
+  rowIndex:Number
+}
 // These cell sizes are arbitrary.
 // Yours should be based on the content of the cell.
 const columnWidths = new Array(1000)
@@ -15,30 +18,19 @@ const rowHeights = new Array(1000)
   .fill(true)
   .map(() => 25 + Math.round(Math.random() * 50));
 
-const Cell = ({ columnIndex, rowIndex, style }) => (
-  <div
-    className={
-      columnIndex % 2
-        ? rowIndex % 2 === 0
-          ? 'GridItemOdd'
-          : 'GridItemEven'
-        : rowIndex % 2
-        ? 'GridItemOdd'
-        : 'GridItemEven'
-    }
-    style={style}
-  >
-    r{rowIndex}, c{columnIndex}
+const Cell = ({ columnIndex, rowIndex }:ICell) => (
+  <div>
+    {`r${rowIndex}, c${columnIndex}`}
   </div>
 );
 
 const Example = () => (
   <Grid
     className="Grid"
-    columnCount={1000}
+    columnCount={3}
     columnWidth={index => columnWidths[index]}
     height={150}
-    rowCount={1000}
+    rowCount={100}
     rowHeight={index => rowHeights[index]}
     width={300}
   >
