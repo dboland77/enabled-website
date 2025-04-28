@@ -4,12 +4,7 @@ type GlossaryItem = {
   Letter: string;
   Name: string;
   Definition: string;
-}
-const Glossary:GlossaryItem[] =  [
-  {Letter:'A',
-    Name: 'Test this',
-    Definition:  'Define this'}
-]
+};
+const Glossary: GlossaryItem[] = [{ Letter: 'A', Name: 'Test this', Definition: 'Define this' }];
 
-export  {Glossary}
-   
+export { Glossary };

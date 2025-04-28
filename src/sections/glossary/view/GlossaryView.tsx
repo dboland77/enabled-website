@@ -1,52 +1,99 @@
 'use client';
-import Container from '@mui/material/Container';
-import MainLayout from 'src/layouts/main';
-import Glossary from '../Glossary';
+import React, { useState } from 'react';
+import * as Faker from 'faker';
+import { Table } from '../Tables';
+import { Button, Typography, Box, Grid } from '@mui/material';
 
-import { VariableSizeGrid as Grid } from 'react-window';
+export type ItemType = {
+  firstName: string;
+  lastName: string;
+  suffix: string;
+};
 
-interface ICell  {
-  columnIndex : Number;
-  rowIndex:Number
-}
-// These cell sizes are arbitrary.
-// Yours should be based on the content of the cell.
-const columnWidths = new Array(1000)
-  .fill(true)
-  .map(() => 75 + Math.round(Math.random() * 50));
-const rowHeights = new Array(1000)
-  .fill(true)
-  .map(() => 25 + Math.round(Math.random() * 50));
+const GlossaryView: React.FC = () => {
+  const [loadedItemsState, setLoadedItemsState] = useState<{
+    hasNextPage: boolean;
+    items: ItemType[];
+  }>({
+    hasNextPage: true,
+    items: [],
+  });
 
-const Cell = ({ columnIndex, rowIndex }:ICell) => (
-  <div>
-    {`r${rowIndex}, c${columnIndex}`}
-  </div>
-);
+  const [showTable, setShowTable] = React.useState(true);
 
-const Example = () => (
-  <Grid
-    className="Grid"
-    columnCount={3}
-    columnWidth={index => columnWidths[index]}
-    height={150}
-    rowCount={100}
-    rowHeight={index => rowHeights[index]}
-    width={300}
-  >
-    {Cell}
-  </Grid>
-);
+  const [scrollState, setScrollState] = React.useState({
+    rowIndex: 0,
+    columnIndex: 0,
+  });
 
+  let loadMoreItems = (startIndex: number, stopIndex: number): Promise<any> => {
+    return new Promise(() =>
+      setTimeout(() => {
+        setLoadedItemsState({
+          hasNextPage: loadedItemsState.items.length < 100,
+          items: [...loadedItemsState.items].concat(
+            new Array(10).fill(true).map(() => ({
+              firstName: Faker.name.firstName(),
+              lastName: Faker.name.lastName(),
+              suffix: Faker.name.suffix(),
+            }))
+          ),
+        });
+      }, 1500)
+    );
+  };
 
-export default function FeaturesView() {
+  // the item is loaded if either 1) there are no more pages or 2) there exists an item at that index
+  let isItemLoaded = (index: number) =>
+    !loadedItemsState.hasNextPage || !!loadedItemsState.items[index];
 
-  return (
-    <MainLayout>
-      <Container id="glossary">
-        {/* <Glossary /> */}
-        <Example/>
-      </Container>
-    </MainLayout>
+  const setScrollRowAndColum = React.useCallback((rowIndex: number, columnIndex: number) => {
+    setScrollState({ rowIndex, columnIndex });
+  }, []);
+
+  const showTableCallback = React.useCallback(() => setShowTable(true), []);
+  const hideTableCallback = React.useCallback(() => setShowTable(false), []);
+
+  const { hasNextPage, items } = loadedItemsState;
+
+  return showTable ? (
+    <>
+      <Button onClick={hideTableCallback} style={{ width: '100%', backgroundColor: 'lightBlue' }}>
+        HIDE TABLE
+      </Button>
+      <Box m={2} />
+      <Grid style={{ padding: '20px' }}>
+        <Typography>
+          This grid loads the next "page" of data when the user scrolls to the end of loaded data.
+        </Typography>
+        <Box m={0.5} />
+        <Typography>
+          It also stores your scroll offset in component state so you don't loose your position when
+          you navigate away and back.
+        </Typography>
+        <Box m={3} />
+
+        <Table
+          hasNextPage={hasNextPage}
+          items={items}
+          loadMoreItems={loadMoreItems}
+          isItemLoaded={isItemLoaded}
+          scrollState={scrollState}
+          setScrollRowAndColumn={setScrollRowAndColum}
+        />
+      </Grid>
+    </>
+  ) : (
+    <>
+      <Button onClick={showTableCallback} style={{ width: '100%', backgroundColor: 'lightBlue' }}>
+        SHOW TABLE
+      </Button>
+      <Grid style={{ padding: '20px' }}>
+        <Box m={2} />
+        <Typography> No more table!</Typography>
+      </Grid>
+    </>
   );
-}
+};
+
+export default GlossaryView;
