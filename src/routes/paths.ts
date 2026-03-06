@@ -1,3 +1,0 @@
-export const paths = {
-  page404: '/error/404/',
-};
