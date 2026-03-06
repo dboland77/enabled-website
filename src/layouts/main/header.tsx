@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import NextLink from 'next/link';
+import { useRouter } from 'next/navigation';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -11,7 +11,6 @@ import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Badge, { badgeClasses } from '@mui/material/Badge';
-import MuiLink from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -40,12 +39,17 @@ const NAV_ITEMS = [
 
 export default function Header() {
   const theme = useTheme();
+  const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const offsetTop = useOffSetTop(HEADER.H_DESKTOP);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const handleNavClick = (href: string) => {
+    router.push(href);
   };
 
   return (
@@ -112,15 +116,19 @@ export default function Header() {
             }}
           >
             {NAV_ITEMS.map((item) => (
-              <MuiLink
+              <Box
                 key={item.label}
-                component={NextLink}
-                href={item.href}
-                underline="none"
+                component="button"
+                onClick={() => handleNavClick(item.href)}
                 sx={{
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
                   color: 'text.primary',
                   fontWeight: 500,
                   fontSize: '0.9rem',
+                  fontFamily: 'inherit',
+                  padding: 0,
                   transition: 'color 0.2s ease-in-out',
                   '&:hover': {
                     color: 'primary.main',
@@ -128,7 +136,7 @@ export default function Header() {
                 }}
               >
                 {item.label}
-              </MuiLink>
+              </Box>
             ))}
           </Stack>
 
@@ -148,8 +156,7 @@ export default function Header() {
               Open App
             </Button>
             <Button
-              component={NextLink}
-              href="/contact"
+              onClick={() => handleNavClick('/contact')}
               variant="contained"
               sx={{
                 fontWeight: 600,
@@ -185,9 +192,10 @@ export default function Header() {
           {NAV_ITEMS.map((item) => (
             <ListItem key={item.label} disablePadding>
               <ListItemButton
-                component={NextLink}
-                href={item.href}
-                onClick={handleDrawerToggle}
+                onClick={() => {
+                  handleDrawerToggle();
+                  handleNavClick(item.href);
+                }}
               >
                 <ListItemText 
                   primary={item.label} 
@@ -211,11 +219,12 @@ export default function Header() {
             Open App
           </Button>
           <Button
-            component={NextLink}
-            href="/contact"
+            onClick={() => {
+              handleDrawerToggle();
+              handleNavClick('/contact');
+            }}
             variant="contained"
             fullWidth
-            onClick={handleDrawerToggle}
             sx={{ fontWeight: 600 }}
           >
             Get in Touch

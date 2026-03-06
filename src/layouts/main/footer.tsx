@@ -1,7 +1,9 @@
-import NextLink from 'next/link';
+'use client';
+
+import { useRouter } from 'next/navigation';
 
 import Box from '@mui/material/Box';
-import MuiLink from '@mui/material/Link';
+import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
@@ -17,7 +19,12 @@ const FOOTER_LINKS = [
 ];
 
 export default function Footer() {
+  const router = useRouter();
   const currentYear = new Date().getFullYear();
+
+  const handleNavClick = (href: string) => {
+    router.push(href);
+  };
 
   return (
     <Box
@@ -48,14 +55,18 @@ export default function Footer() {
             spacing={{ xs: 2, md: 4 }}
           >
             {FOOTER_LINKS.map((link) => (
-              <MuiLink
+              <Box
                 key={link.label}
-                component={NextLink}
-                href={link.href}
-                underline="none"
+                component="button"
+                onClick={() => handleNavClick(link.href)}
                 sx={{
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
                   color: 'text.secondary',
                   fontSize: '0.875rem',
+                  fontFamily: 'inherit',
+                  padding: 0,
                   transition: 'color 0.2s ease-in-out',
                   '&:hover': {
                     color: 'primary.main',
@@ -63,7 +74,7 @@ export default function Footer() {
                 }}
               >
                 {link.label}
-              </MuiLink>
+              </Box>
             ))}
           </Stack>
         </Stack>
@@ -81,7 +92,7 @@ export default function Footer() {
           </Typography>
 
           <Stack direction="row" spacing={3}>
-            <MuiLink
+            <Link
               href="mailto:hello@getenabled.co.uk"
               underline="none"
               sx={{
@@ -91,7 +102,7 @@ export default function Footer() {
               }}
             >
               hello@getenabled.co.uk
-            </MuiLink>
+            </Link>
           </Stack>
         </Stack>
       </Container>
