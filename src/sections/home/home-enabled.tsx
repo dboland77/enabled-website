@@ -106,46 +106,46 @@ export default function HomeEnabled() {
 
           <m.div variants={varFade().inUp}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mt: 2 }}>
-              <Link href={paths.contact} passHref legacyBehavior>
-                <Button
-                  component="a"
-                  size="large"
-                  variant="contained"
-                  sx={{
-                    px: 4,
-                    py: 1.5,
-                    fontSize: '1rem',
-                    fontWeight: 600,
-                    boxShadow: `0 8px 16px ${alpha(theme.palette.primary.main, 0.24)}`,
-                    '&:hover': {
-                      boxShadow: `0 12px 24px ${alpha(theme.palette.primary.main, 0.32)}`,
-                    },
-                  }}
-                  endIcon={<Iconify icon="solar:arrow-right-linear" />}
-                >
-                  Get Started
-                </Button>
-              </Link>
+              <Button
+                component={Link}
+                href={paths.contact}
+                size="large"
+                variant="contained"
+                sx={{
+                  px: 4,
+                  py: 1.5,
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  boxShadow: `0 8px 16px ${alpha(theme.palette.primary.main, 0.24)}`,
+                  '&:hover': {
+                    boxShadow: `0 12px 24px ${alpha(theme.palette.primary.main, 0.32)}`,
+                  },
+                }}
+                endIcon={<Iconify icon="solar:arrow-right-linear" />}
+              >
+                Get Started
+              </Button>
 
-              <Link href={paths.features} passHref legacyBehavior>
-                <Button
-                  component="a"
-                  size="large"
-                  variant="outlined"
-                  sx={{
-                    px: 4,
-                    py: 1.5,
-                    fontSize: '1rem',
-                    fontWeight: 600,
+              <Button
+                component={Link}
+                href={paths.features}
+                size="large"
+                variant="outlined"
+                sx={{
+                  px: 4,
+                  py: 1.5,
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  borderWidth: 2,
+                  '&:hover': {
                     borderWidth: 2,
-                    '&:hover': {
-                      borderWidth: 2,
-                    },
-                  }}
-                >
-                  Learn More
-                </Button>
-              </Link>
+                  },
+                }}
+              >
+                Learn More
+              </Button>
             </Stack>
           </m.div>
         </Stack>
