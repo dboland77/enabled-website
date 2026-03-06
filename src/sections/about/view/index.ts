@@ -1,1 +1,3 @@
-export { default as AboutView } from './about-view';
+import AboutView from './about-view';
+
+export { AboutView };

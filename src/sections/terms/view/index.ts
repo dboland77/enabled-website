@@ -1,1 +1,3 @@
-export { default as TermsView } from './terms-view';
+import TermsView from './terms-view';
+
+export { TermsView };

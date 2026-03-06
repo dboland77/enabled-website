@@ -1,1 +1,3 @@
-export { default as PricingView } from './pricing-view';
+import PricingView from './pricing-view';
+
+export { PricingView };

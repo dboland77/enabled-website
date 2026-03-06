@@ -1,1 +1,3 @@
-export { default as PrivacyView } from './privacy-view';
+import PrivacyView from './privacy-view';
+
+export { PrivacyView };
