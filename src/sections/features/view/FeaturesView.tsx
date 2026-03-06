@@ -1,6 +1,6 @@
 'use client';
 
-import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 
 import MainLayout from 'src/layouts/main';
 import Features from '../Features';
@@ -8,9 +8,16 @@ import Features from '../Features';
 export default function FeaturesView() {
   return (
     <MainLayout>
-      <Container id="features">
+      <Box
+        id="features"
+        sx={{
+          overflow: 'hidden',
+          bgcolor: 'background.default',
+          pt: { xs: 8, md: 10 },
+        }}
+      >
         <Features />
-      </Container>
+      </Box>
     </MainLayout>
   );
 }

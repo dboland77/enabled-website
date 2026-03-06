@@ -21,7 +21,7 @@ const LINKS = [
   {
     headline: 'Enabled',
     children: [
-      { name: 'Features', href: '#' },
+      { name: 'Features', href: paths.features },
       { name: 'FAQ', href: paths.faq },
     ],
   },

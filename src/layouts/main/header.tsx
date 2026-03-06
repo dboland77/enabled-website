@@ -6,7 +6,6 @@ import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Badge, { badgeClasses } from '@mui/material/Badge';
-import Link from '@mui/material/Link';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
@@ -75,10 +74,16 @@ export default function Header() {
           {mdUp && <NavDesktop data={navConfig} />}
 
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
-            <Button variant="contained">
-              <Link component={RouterLink} href={paths.contact} color="inherit" underline="none">
-                Curious?
-              </Link>
+            <Button
+              component={RouterLink}
+              href={paths.contact}
+              variant="contained"
+              sx={{
+                fontWeight: 600,
+                px: 3,
+              }}
+            >
+              Get in Touch
             </Button>
 
             {/* <SettingsButton
