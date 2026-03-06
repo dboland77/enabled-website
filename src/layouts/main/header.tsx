@@ -1,4 +1,7 @@
+'use client';
+
 import { useState } from 'react';
+import NextLink from 'next/link';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -8,7 +11,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Badge, { badgeClasses } from '@mui/material/Badge';
-import Link from '@mui/material/Link';
+import MuiLink from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -108,8 +111,9 @@ export default function Header() {
             }}
           >
             {NAV_ITEMS.map((item) => (
-              <Link
+              <MuiLink
                 key={item.label}
+                component={NextLink}
                 href={item.href}
                 underline="none"
                 sx={{
@@ -123,7 +127,7 @@ export default function Header() {
                 }}
               >
                 {item.label}
-              </Link>
+              </MuiLink>
             ))}
           </Stack>
 
@@ -143,7 +147,7 @@ export default function Header() {
               Open App
             </Button>
             <Button
-              component="a"
+              component={NextLink}
               href="/contact"
               variant="contained"
               sx={{
@@ -180,7 +184,7 @@ export default function Header() {
           {NAV_ITEMS.map((item) => (
             <ListItem key={item.label} disablePadding>
               <ListItemButton
-                component="a"
+                component={NextLink}
                 href={item.href}
                 onClick={handleDrawerToggle}
               >
@@ -206,7 +210,7 @@ export default function Header() {
             Open App
           </Button>
           <Button
-            component="a"
+            component={NextLink}
             href="/contact"
             variant="contained"
             fullWidth

@@ -1,5 +1,7 @@
+import NextLink from 'next/link';
+
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+import MuiLink from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
@@ -46,8 +48,9 @@ export default function Footer() {
             spacing={{ xs: 2, md: 4 }}
           >
             {FOOTER_LINKS.map((link) => (
-              <Link
+              <MuiLink
                 key={link.label}
+                component={NextLink}
                 href={link.href}
                 underline="none"
                 sx={{
@@ -60,7 +63,7 @@ export default function Footer() {
                 }}
               >
                 {link.label}
-              </Link>
+              </MuiLink>
             ))}
           </Stack>
         </Stack>
@@ -78,7 +81,7 @@ export default function Footer() {
           </Typography>
 
           <Stack direction="row" spacing={3}>
-            <Link
+            <MuiLink
               href="mailto:hello@getenabled.co.uk"
               underline="none"
               sx={{
@@ -88,7 +91,7 @@ export default function Footer() {
               }}
             >
               hello@getenabled.co.uk
-            </Link>
+            </MuiLink>
           </Stack>
         </Stack>
       </Container>
