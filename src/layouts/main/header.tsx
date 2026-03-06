@@ -8,23 +8,17 @@ import Container from '@mui/material/Container';
 import Badge, { badgeClasses } from '@mui/material/Badge';
 
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
-import { useResponsive } from 'src/hooks/use-responsive';
 
 import { bgBlur } from 'src/theme/css';
 
 import Logo from 'src/components/logo';
 import Label from 'src/components/label';
 
-import NavMobile from './nav/mobile';
-import NavDesktop from './nav/desktop';
 import { HEADER } from '../config-layout';
-import { navConfig } from './config-navigation';
 import HeaderShadow from '../common/header-shadow';
 
 export default function Header() {
   const theme = useTheme();
-
-  const mdUp = useResponsive('up', 'md');
 
   const offsetTop = useOffSetTop(HEADER.H_DESKTOP);
 
@@ -68,8 +62,6 @@ export default function Header() {
           </Badge>
           <Box sx={{ flexGrow: 1 }} />
 
-          {mdUp && navConfig.length > 0 && <NavDesktop data={navConfig} />}
-
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
             <Button
               component="a"
@@ -82,8 +74,6 @@ export default function Header() {
             >
               Get in Touch
             </Button>
-
-            {!mdUp && navConfig.length > 0 && <NavMobile data={navConfig} />}
           </Stack>
         </Container>
       </Toolbar>
