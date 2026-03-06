@@ -88,7 +88,7 @@ const AboutEnabled = () => {
           display="grid"
           gridTemplateColumns={{ xs: '1fr', md: 'repeat(3, 1fr)' }}
         >
-          {HIGHLIGHTS.map((item, index) => (
+          {HIGHLIGHTS.map((item) => (
             <m.div key={item.title} variants={varFade().inUp}>
               <Box
                 sx={{

@@ -83,7 +83,7 @@ export default function Features() {
           md: 'repeat(3, 1fr)',
         }}
       >
-        {FEATURES.map((feature, index) => (
+        {FEATURES.map((feature) => (
           <m.div key={feature.title} variants={varFade().inUp}>
             <Box
               sx={{
