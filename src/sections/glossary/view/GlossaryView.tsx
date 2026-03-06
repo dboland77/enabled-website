@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useState } from 'react';
 import * as Faker from 'faker';
 import { Table } from '../Tables';
