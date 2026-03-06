@@ -1,3 +1,1 @@
-import FeaturesView from './features-view';
-
-export { FeaturesView };
+export { default as FeaturesView } from './features-view';
