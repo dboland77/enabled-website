@@ -25,7 +25,7 @@ export default function AboutView() {
             {/* Hero Section */}
             <Stack spacing={3} textAlign="center" alignItems="center">
               <Typography variant="h2" component="h1">
-                About EnableD
+                About enableD
               </Typography>
               <Typography 
                 variant="h6" 
@@ -45,7 +45,7 @@ export default function AboutView() {
                     Our Mission
                   </Typography>
                   <Typography color="text.secondary">
-                    At EnableD, we believe that every employee deserves the support they need to thrive 
+                    At enableD, we believe that every employee deserves the support they need to thrive 
                     in their role. Our mission is to make workplace accommodations simple, transparent, 
                     and dignified for everyone involved.
                   </Typography>
@@ -103,10 +103,28 @@ export default function AboutView() {
                 }}
               >
                 <Grid container spacing={4} alignItems="center">
+                  <Grid item xs={12} md={4}>
+                    <Box
+                      component="img"
+                      src="/assets/about/DaveBoland.jpeg"
+                      alt="Dave Boland - Founder of enableD"
+                      sx={{
+                        width: '100%',
+                        maxWidth: 280,
+                        height: 'auto',
+                        borderRadius: 2,
+                        mx: 'auto',
+                        display: 'block',
+                      }}
+                    />
+                  </Grid>
                   <Grid item xs={12} md={8}>
                     <Stack spacing={3}>
+                      <Typography variant="h5" color="text.primary">
+                        Dave Boland
+                      </Typography>
                       <Typography color="text.secondary">
-                        EnableD was founded with a deeply personal understanding of the challenges 
+                        enableD was founded with a deeply personal understanding of the challenges 
                         faced by employees with disabilities in the workplace. Having experienced 
                         firsthand the complexities of navigating accommodation requests, our founder 
                         recognised the need for a better solution.
@@ -118,7 +136,7 @@ export default function AboutView() {
                         like the Equality Act 2010.
                       </Typography>
                       <Typography color="text.secondary">
-                        Today, EnableD is helping organisations across the UK create more inclusive 
+                        Today, enableD is helping organisations across the UK create more inclusive 
                         workplaces where every employee can perform at their best.
                       </Typography>
                     </Stack>

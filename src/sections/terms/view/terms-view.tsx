@@ -35,14 +35,14 @@ export default function TermsView() {
             <Stack spacing={4}>
               <Section title="1. Agreement to Terms">
                 <Typography>
-                  By accessing or using the EnableD platform, you agree to be bound by these Terms and Conditions. 
+                  By accessing or using the enableD platform, you agree to be bound by these Terms and Conditions. 
                   If you disagree with any part of these terms, you may not access our services.
                 </Typography>
               </Section>
 
               <Section title="2. Description of Service">
                 <Typography>
-                  EnableD provides a digital platform designed to streamline workplace accommodation processes, 
+                  enableD provides a digital platform designed to streamline workplace accommodation processes, 
                   helping organisations support employees with disabilities and health conditions effectively 
                   and in compliance with relevant legislation.
                 </Typography>
@@ -75,15 +75,15 @@ export default function TermsView() {
 
               <Section title="5. Intellectual Property">
                 <Typography>
-                  The EnableD platform, including its original content, features, and functionality, 
-                  is owned by EnableD and protected by international copyright, trademark, and other 
+                  The enableD platform, including its original content, features, and functionality, 
+                  is owned by enableD and protected by international copyright, trademark, and other 
                   intellectual property laws.
                 </Typography>
               </Section>
 
               <Section title="6. Limitation of Liability">
                 <Typography>
-                  EnableD shall not be liable for any indirect, incidental, special, consequential, 
+                  enableD shall not be liable for any indirect, incidental, special, consequential, 
                   or punitive damages resulting from your use of or inability to use the service. 
                   Our total liability shall not exceed the amount paid by you for the service in 
                   the twelve months preceding the claim.

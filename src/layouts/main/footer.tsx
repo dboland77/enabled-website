@@ -5,17 +5,13 @@ import { useRouter } from 'next/navigation';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-
-import Logo from 'src/components/logo';
 
 const FOOTER_LINKS = [
   { label: 'Privacy Policy', href: '/privacy' },
   { label: 'Terms & Conditions', href: '/terms' },
-  { label: 'Cookie Policy', href: '/cookies' },
-  { label: 'Accessibility', href: '/accessibility' },
+  { label: 'FAQ', href: '/faq' },
 ];
 
 export default function Footer() {
@@ -30,29 +26,26 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        py: 5,
-        bgcolor: 'background.neutral',
+        py: 2.5,
+        bgcolor: 'primary.main',
       }}
     >
       <Container>
         <Stack
-          direction={{ xs: 'column', md: 'row' }}
+          direction={{ xs: 'column', sm: 'row' }}
           justifyContent="space-between"
-          alignItems={{ xs: 'center', md: 'flex-start' }}
-          spacing={3}
+          alignItems="center"
+          spacing={2}
         >
-          <Stack alignItems={{ xs: 'center', md: 'flex-start' }} spacing={2}>
-            <Logo />
-            <Typography variant="body2" color="text.secondary">
-              Workplace accommodations made easy.
-            </Typography>
-          </Stack>
+          <Typography variant="body2" sx={{ color: 'common.white' }}>
+            {currentYear} enableD. All rights reserved.
+          </Typography>
 
           <Stack
             direction="row"
             flexWrap="wrap"
-            justifyContent={{ xs: 'center', md: 'flex-end' }}
-            spacing={{ xs: 2, md: 4 }}
+            justifyContent="center"
+            spacing={{ xs: 2, md: 3 }}
           >
             {FOOTER_LINKS.map((link) => (
               <Box
@@ -63,13 +56,13 @@ export default function Footer() {
                   background: 'none',
                   border: 'none',
                   cursor: 'pointer',
-                  color: 'text.secondary',
-                  fontSize: '0.875rem',
+                  color: 'common.white',
+                  fontSize: '0.8rem',
                   fontFamily: 'inherit',
                   padding: 0,
-                  transition: 'color 0.2s ease-in-out',
+                  transition: 'opacity 0.2s ease-in-out',
                   '&:hover': {
-                    color: 'primary.main',
+                    opacity: 0.8,
                   },
                 }}
               >
@@ -77,33 +70,18 @@ export default function Footer() {
               </Box>
             ))}
           </Stack>
-        </Stack>
 
-        <Divider sx={{ my: 3 }} />
-
-        <Stack
-          direction={{ xs: 'column', sm: 'row' }}
-          justifyContent="space-between"
-          alignItems="center"
-          spacing={2}
-        >
-          <Typography variant="body2" color="text.secondary">
-            {currentYear} EnableD. All rights reserved.
-          </Typography>
-
-          <Stack direction="row" spacing={3}>
-            <Link
-              href="mailto:hello@getenabled.co.uk"
-              underline="none"
-              sx={{
-                color: 'text.secondary',
-                fontSize: '0.875rem',
-                '&:hover': { color: 'primary.main' },
-              }}
-            >
-              hello@getenabled.co.uk
-            </Link>
-          </Stack>
+          <Link
+            href="mailto:hello@getenabled.co.uk"
+            underline="none"
+            sx={{
+              color: 'common.white',
+              fontSize: '0.8rem',
+              '&:hover': { opacity: 0.8 },
+            }}
+          >
+            hello@getenabled.co.uk
+          </Link>
         </Stack>
       </Container>
     </Box>

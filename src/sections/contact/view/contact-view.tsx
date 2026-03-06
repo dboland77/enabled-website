@@ -10,6 +10,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
+import Grid from '@mui/material/Grid';
 
 import MainLayout from 'src/layouts/main';
 import { HEADER } from 'src/layouts/config-layout';
@@ -52,109 +53,117 @@ export default function ContactView() {
     <MainLayout>
       <Box
         sx={{
-          pt: { xs: `${HEADER.H_MOBILE + 40}px`, md: `${HEADER.H_DESKTOP + 80}px` },
-          pb: { xs: 10, md: 15 },
+          pt: { xs: `${HEADER.H_MOBILE + 24}px`, md: `${HEADER.H_DESKTOP + 40}px` },
+          pb: { xs: 4, md: 6 },
           minHeight: '100vh',
           bgcolor: 'background.default',
+          display: 'flex',
+          alignItems: 'center',
         }}
       >
-        <Container maxWidth="sm">
-          <Stack spacing={4} alignItems="center">
-            <Stack spacing={2} textAlign="center">
-              <Typography variant="h3" component="h1">
-                Get in Touch
-              </Typography>
-              <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 480 }}>
-                Have a question about EnableD or want to learn how we can help your organisation? 
-                We would love to hear from you.
-              </Typography>
-            </Stack>
+        <Container maxWidth="md">
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            sx={{
+              p: { xs: 3, md: 4 },
+              borderRadius: 2,
+              bgcolor: 'background.paper',
+              boxShadow: (theme) => theme.shadows[1],
+            }}
+          >
+            <Stack spacing={3}>
+              <Stack spacing={1} textAlign="center">
+                <Typography variant="h4" component="h1">
+                  Get in Touch
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Have a question about enableD? We would love to hear from you.
+                </Typography>
+              </Stack>
 
-            <Box
-              component="form"
-              onSubmit={handleSubmit}
-              sx={{
-                width: '100%',
-                p: { xs: 3, md: 5 },
-                borderRadius: 2,
-                bgcolor: 'background.paper',
-                boxShadow: (theme) => theme.shadows[1],
-              }}
-            >
-              <Stack spacing={3}>
-                <TextField
-                  fullWidth
-                  label="Name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  variant="outlined"
-                />
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    fullWidth
+                    label="Name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    variant="outlined"
+                    size="small"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    fullWidth
+                    label="Email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    variant="outlined"
+                    size="small"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    fullWidth
+                    label="Company (optional)"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    variant="outlined"
+                    size="small"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    fullWidth
+                    label="Message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    multiline
+                    rows={3}
+                    variant="outlined"
+                    size="small"
+                  />
+                </Grid>
+              </Grid>
 
-                <TextField
-                  fullWidth
-                  label="Email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  variant="outlined"
-                />
-
-                <TextField
-                  fullWidth
-                  label="Company (optional)"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  variant="outlined"
-                />
-
-                <TextField
-                  fullWidth
-                  label="Message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  multiline
-                  rows={5}
-                  variant="outlined"
-                />
-
+              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} alignItems="center" justifyContent="space-between">
+                <Typography variant="body2" color="text.secondary">
+                  Or email{' '}
+                  <Box
+                    component="a"
+                    href="mailto:hello@getenabled.co.uk"
+                    sx={{
+                      color: 'primary.main',
+                      textDecoration: 'none',
+                      '&:hover': { textDecoration: 'underline' },
+                    }}
+                  >
+                    hello@getenabled.co.uk
+                  </Box>
+                </Typography>
                 <Button
                   type="submit"
                   variant="contained"
-                  size="large"
                   disabled={isSubmitting}
                   sx={{
-                    mt: 2,
-                    py: 1.5,
+                    px: 4,
                     fontWeight: 600,
                   }}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </Stack>
-            </Box>
-
-            <Typography variant="body2" color="text.secondary">
-              Or email us directly at{' '}
-              <Box
-                component="a"
-                href="mailto:hello@getenabled.co.uk"
-                sx={{
-                  color: 'primary.main',
-                  textDecoration: 'none',
-                  '&:hover': { textDecoration: 'underline' },
-                }}
-              >
-                hello@getenabled.co.uk
-              </Box>
-            </Typography>
-          </Stack>
+            </Stack>
+          </Box>
         </Container>
       </Box>
 

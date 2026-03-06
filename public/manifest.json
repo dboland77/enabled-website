@@ -1,6 +1,6 @@
 {
-  "name": "EnableD",
-  "short_name": "EnableD",
+  "name": "enableD",
+  "short_name": "enableD",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#000000",
