@@ -30,8 +30,7 @@ import HeaderShadow from '../common/header-shadow';
 
 const NAV_ITEMS = [
   { label: 'Features', href: '#features' },
-  { label: 'About the Founder', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', href: '#about' },
   { label: 'Blog', href: '/blog' },
 ];
 
@@ -145,7 +144,7 @@ export default function Header() {
             </Button>
             <Button
               component="a"
-              href="#contact"
+              href="/contact"
               variant="contained"
               sx={{
                 fontWeight: 600,
@@ -208,7 +207,7 @@ export default function Header() {
           </Button>
           <Button
             component="a"
-            href="#contact"
+            href="/contact"
             variant="contained"
             fullWidth
             onClick={handleDrawerToggle}
