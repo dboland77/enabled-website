@@ -1,7 +1,6 @@
 'use client';
 
 import { m } from 'framer-motion';
-import Link from 'next/link';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -11,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
 
 import { varFade, MotionViewport } from 'src/components/animate';
+import { RouterLink } from 'src/routes/components';
 import { paths } from 'src/routes/paths';
 import Iconify from 'src/components/iconify';
 
@@ -107,7 +107,7 @@ export default function HomeEnabled() {
           <m.div variants={varFade().inUp}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mt: 2 }}>
               <Button
-                component={Link}
+                component={RouterLink}
                 href={paths.contact}
                 size="large"
                 variant="contained"
@@ -116,7 +116,6 @@ export default function HomeEnabled() {
                   py: 1.5,
                   fontSize: '1rem',
                   fontWeight: 600,
-                  textDecoration: 'none',
                   boxShadow: `0 8px 16px ${alpha(theme.palette.primary.main, 0.24)}`,
                   '&:hover': {
                     boxShadow: `0 12px 24px ${alpha(theme.palette.primary.main, 0.32)}`,
@@ -128,7 +127,7 @@ export default function HomeEnabled() {
               </Button>
 
               <Button
-                component={Link}
+                component={RouterLink}
                 href={paths.features}
                 size="large"
                 variant="outlined"
@@ -137,7 +136,6 @@ export default function HomeEnabled() {
                   py: 1.5,
                   fontSize: '1rem',
                   fontWeight: 600,
-                  textDecoration: 'none',
                   borderWidth: 2,
                   '&:hover': {
                     borderWidth: 2,
