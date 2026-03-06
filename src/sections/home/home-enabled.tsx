@@ -95,7 +95,7 @@ export default function HomeEnabled() {
                 lineHeight: 1.7,
               }}
             >
-              Streamline reasonable adjustments for your organisation. EnableD makes disability
+              Streamline reasonable adjustments for your organisation. enableD makes disability
               accommodations simple, compliant, and effective.
             </Typography>
           </m.div>

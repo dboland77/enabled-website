@@ -17,8 +17,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'EnableD - reasonable adjustments administration',
-  description: 'Reasonable adjsutments for disability made easy',
+  title: 'enableD - reasonable adjustments administration',
+  description: 'Reasonable adjustments for disability made easy',
   keywords: 'equality, inclusivity,accommodations,adjustments,reasonable,admin,disability',
   manifest: '/manifest.json',
   icons: [

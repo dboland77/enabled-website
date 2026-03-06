@@ -35,7 +35,7 @@ export default function PrivacyView() {
             <Stack spacing={4}>
               <Section title="Introduction">
                 <Typography>
-                  EnableD (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your privacy. 
+                  enableD (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your privacy. 
                   This Privacy Policy explains how we collect, use, disclose, and safeguard your information 
                   when you use our workplace accommodations platform.
                 </Typography>
