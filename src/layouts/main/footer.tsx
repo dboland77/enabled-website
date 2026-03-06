@@ -8,8 +8,6 @@ import Grid from '@mui/material/Unstable_Grid2';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-import { paths } from 'src/routes/paths';
-import { usePathname } from 'src/routes/hooks';
 import { RouterLink } from 'src/routes/components';
 
 import Logo from 'src/components/logo';
@@ -19,51 +17,13 @@ const currentYear = new Date().getFullYear();
 
 const LINKS = [
   {
-    headline: 'Enabled',
-    children: [
-      { name: 'Features', href: paths.features },
-      { name: 'FAQ', href: paths.faq },
-    ],
-  },
-  {
-    headline: 'Legal',
-    children: [
-      { name: 'Privacy Policy', href: paths.privacypolicy },
-      { name: 'Cookies Policy', href: paths.cookies },
-    ],
-  },
-  {
     headline: 'Contact',
     children: [{ name: 'hello@getenabled.co.uk', href: 'mailto:hello@getenabled.co.uk' }],
   },
 ];
 
 export default function Footer() {
-  const pathname = usePathname();
-
-  const homePage = pathname === '/';
-
-  const simpleFooter = (
-    <Box
-      component="footer"
-      sx={{
-        py: 5,
-        textAlign: 'center',
-        position: 'relative',
-        bgcolor: 'background.default',
-      }}
-    >
-      <Container>
-        <Logo sx={{ mb: 1, mx: 'auto' }} />
-
-        <Typography variant="caption" component="div">
-          © {currentYear} All rights reserved
-        </Typography>
-      </Container>
-    </Box>
-  );
-
-  const mainFooter = (
+  return (
     <Box
       component="footer"
       sx={{
@@ -152,6 +112,4 @@ export default function Footer() {
       </Container>
     </Box>
   );
-
-  return homePage ? mainFooter : simpleFooter;
 }

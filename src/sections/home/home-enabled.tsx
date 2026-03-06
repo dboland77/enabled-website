@@ -4,15 +4,11 @@ import { m } from 'framer-motion';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
 
 import { varFade, MotionViewport } from 'src/components/animate';
-import { RouterLink } from 'src/routes/components';
-import { paths } from 'src/routes/paths';
-import Iconify from 'src/components/iconify';
 
 export default function HomeEnabled() {
   const theme = useTheme();
@@ -102,49 +98,6 @@ export default function HomeEnabled() {
               Streamline reasonable adjustments for your organisation. EnableD makes disability
               accommodations simple, compliant, and effective.
             </Typography>
-          </m.div>
-
-          <m.div variants={varFade().inUp}>
-            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mt: 2 }}>
-              <Button
-                component={RouterLink}
-                href={paths.contact}
-                size="large"
-                variant="contained"
-                sx={{
-                  px: 4,
-                  py: 1.5,
-                  fontSize: '1rem',
-                  fontWeight: 600,
-                  boxShadow: `0 8px 16px ${alpha(theme.palette.primary.main, 0.24)}`,
-                  '&:hover': {
-                    boxShadow: `0 12px 24px ${alpha(theme.palette.primary.main, 0.32)}`,
-                  },
-                }}
-                endIcon={<Iconify icon="solar:arrow-right-linear" />}
-              >
-                Get Started
-              </Button>
-
-              <Button
-                component={RouterLink}
-                href={paths.features}
-                size="large"
-                variant="outlined"
-                sx={{
-                  px: 4,
-                  py: 1.5,
-                  fontSize: '1rem',
-                  fontWeight: 600,
-                  borderWidth: 2,
-                  '&:hover': {
-                    borderWidth: 2,
-                  },
-                }}
-              >
-                Learn More
-              </Button>
-            </Stack>
           </m.div>
         </Stack>
       </Container>

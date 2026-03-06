@@ -7,9 +7,6 @@ import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Badge, { badgeClasses } from '@mui/material/Badge';
 
-import { paths } from 'src/routes/paths';
-import { RouterLink } from 'src/routes/components';
-
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
 import { useResponsive } from 'src/hooks/use-responsive';
 
@@ -71,12 +68,12 @@ export default function Header() {
           </Badge>
           <Box sx={{ flexGrow: 1 }} />
 
-          {mdUp && <NavDesktop data={navConfig} />}
+          {mdUp && navConfig.length > 0 && <NavDesktop data={navConfig} />}
 
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
             <Button
-              component={RouterLink}
-              href={paths.contact}
+              component="a"
+              href="mailto:hello@getenabled.co.uk"
               variant="contained"
               sx={{
                 fontWeight: 600,
@@ -86,14 +83,7 @@ export default function Header() {
               Get in Touch
             </Button>
 
-            {/* <SettingsButton
-              sx={{
-                ml: { xs: 1, md: 0 },
-                mr: { md: 2 },
-              }}
-            /> */}
-
-            {!mdUp && <NavMobile data={navConfig} />}
+            {!mdUp && navConfig.length > 0 && <NavMobile data={navConfig} />}
           </Stack>
         </Container>
       </Toolbar>
