@@ -32,8 +32,9 @@ import { HEADER } from '../config-layout';
 import HeaderShadow from '../common/header-shadow';
 
 const NAV_ITEMS = [
-  { label: 'Features', href: '#features' },
-  { label: 'About', href: '#about' },
+  { label: 'Features', href: '/features' },
+  { label: 'About', href: '/about' },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
 ];
 
