@@ -48,7 +48,7 @@ export default function HomeEnabled() {
         >
           <m.div variants={varFade().inDown}>
             <Typography
-              variant="overline"
+              variant="h4"
               sx={{
                 color: 'primary.main',
                 fontWeight: 700,
@@ -92,11 +92,11 @@ export default function HomeEnabled() {
                 color: 'text.secondary',
                 fontWeight: 400,
                 maxWidth: 600,
-                lineHeight: 1.7,
+                lineHeight: 1.1,
               }}
             >
-              Streamline reasonable adjustments for your organisation. enableD makes disability
-              accommodations simple, compliant, and effective.
+              <p>Streamline reasonable adjustments for your organisation.</p>
+              <p>enableD makes disability adjustments simple, compliant, and effective.</p>
             </Typography>
           </m.div>
         </Stack>

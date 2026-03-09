@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 const FOOTER_LINKS = [
   { label: 'Privacy Policy', href: '/privacy' },
   { label: 'Terms & Conditions', href: '/terms' },
-  { label: 'FAQ', href: '/faq' },
+  // { label: 'FAQ', href: '/faq' },
 ];
 
 export default function Footer() {
@@ -40,13 +40,7 @@ export default function Footer() {
           <Typography variant="body2" sx={{ color: 'common.white' }}>
             {currentYear} enableD. All rights reserved.
           </Typography>
-
-          <Stack
-            direction="row"
-            flexWrap="wrap"
-            justifyContent="center"
-            spacing={{ xs: 2, md: 3 }}
-          >
+          <Stack direction="row" flexWrap="wrap" justifyContent="center" spacing={{ xs: 2, md: 3 }}>
             {FOOTER_LINKS.map((link) => (
               <Box
                 key={link.label}
@@ -57,7 +51,7 @@ export default function Footer() {
                   border: 'none',
                   cursor: 'pointer',
                   color: 'common.white',
-                  fontSize: '0.8rem',
+                  fontSize: '1rem',
                   fontFamily: 'inherit',
                   padding: 0,
                   transition: 'opacity 0.2s ease-in-out',
@@ -70,13 +64,12 @@ export default function Footer() {
               </Box>
             ))}
           </Stack>
-
           <Link
             href="mailto:hello@getenabled.co.uk"
             underline="none"
             sx={{
               color: 'common.white',
-              fontSize: '0.8rem',
+              fontSize: '1rem',
               '&:hover': { opacity: 0.8 },
             }}
           >

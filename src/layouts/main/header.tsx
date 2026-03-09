@@ -35,6 +35,7 @@ const NAV_ITEMS = [
   { label: 'About', href: '/about' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
+  { label: 'FAQ', href: '/faq' },
 ];
 
 export default function Header() {
@@ -126,7 +127,7 @@ export default function Header() {
                   cursor: 'pointer',
                   color: 'text.primary',
                   fontWeight: 500,
-                  fontSize: '0.9rem',
+                  fontSize: '1rem',
                   fontFamily: 'inherit',
                   padding: 0,
                   transition: 'color 0.2s ease-in-out',
@@ -197,10 +198,7 @@ export default function Header() {
                   handleNavClick(item.href);
                 }}
               >
-                <ListItemText 
-                  primary={item.label} 
-                  primaryTypographyProps={{ fontWeight: 500 }}
-                />
+                <ListItemText primary={item.label} primaryTypographyProps={{ fontWeight: 500 }} />
               </ListItemButton>
             </ListItem>
           ))}
