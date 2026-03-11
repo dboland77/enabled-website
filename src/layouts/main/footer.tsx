@@ -9,9 +9,9 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 const FOOTER_LINKS = [
+  { label: 'Blog', href: '/blog' },
   { label: 'Privacy Policy', href: '/privacy' },
   { label: 'Terms & Conditions', href: '/terms' },
-  // { label: 'FAQ', href: '/faq' },
 ];
 
 export default function Footer() {
