@@ -141,7 +141,12 @@ export default function Header() {
             ))}
           </Stack>
 
-          <Stack alignItems="center" direction="row" spacing={2}>
+          <Stack 
+            alignItems="center" 
+            direction="row" 
+            spacing={2} 
+            sx={{ display: { xs: 'none', md: 'flex' } }}
+          >
             <Button
               component="a"
               href="https://app.getenabled.co.uk"
@@ -151,7 +156,6 @@ export default function Header() {
               sx={{
                 fontWeight: 600,
                 px: 3,
-                display: { xs: 'none', sm: 'inline-flex' },
               }}
             >
               Open App
