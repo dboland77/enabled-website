@@ -10,7 +10,6 @@ import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
-import Badge, { badgeClasses } from '@mui/material/Badge';
 import IconButton from '@mui/material/IconButton';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -21,14 +20,10 @@ import Divider from '@mui/material/Divider';
 
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
 
-import { bgBlur } from 'src/theme/css';
-
 import Logo from 'src/components/logo';
-import Label from 'src/components/label';
 import Iconify from 'src/components/iconify';
 
 import { HEADER } from '../config-layout';
-import HeaderShadow from '../common/header-shadow';
 
 const NAV_ITEMS = [
   { label: 'Features', href: '/features' },
@@ -54,21 +49,25 @@ export default function Header() {
   };
 
   return (
-    <AppBar>
+    <AppBar
+      sx={{
+        bgcolor: 'background.default',
+        color: 'text.primary',
+        boxShadow: 'none',
+        borderBottom: offsetTop ? `1px solid ${theme.palette.divider}` : 'none',
+      }}
+    >
       <Toolbar
         sx={{
           height: {
             xs: HEADER.H_MOBILE,
             md: HEADER.H_DESKTOP,
           },
-          transition: theme.transitions.create(['height'], {
+          transition: theme.transitions.create(['height', 'border-bottom'], {
             easing: theme.transitions.easing.easeInOut,
             duration: theme.transitions.duration.shorter,
           }),
           ...(offsetTop && {
-            ...bgBlur({
-              color: theme.palette.background.default,
-            }),
             height: {
               md: HEADER.H_DESKTOP_OFFSET,
             },
@@ -84,24 +83,10 @@ export default function Header() {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { md: 'none' }, color: 'text.primary' }}
           >
-            <Iconify icon="solar:hamburger-menu-linear" width={24} />
+            <Iconify icon="solar:hamburger-menu-linear" width={27} />
           </IconButton>
 
-          <Badge
-            sx={{
-              [`& .${badgeClasses.badge}`]: {
-                top: 12,
-                right: -16,
-              },
-            }}
-            badgeContent={
-              <Label color="info" sx={{ textTransform: 'unset', height: 22, px: 0.5 }}>
-                Beta
-              </Label>
-            }
-          >
-            <Logo />
-          </Badge>
+          <Logo />
 
           <Box sx={{ flexGrow: 1 }} />
 
@@ -122,17 +107,20 @@ export default function Header() {
                 component="button"
                 onClick={() => handleNavClick(item.href)}
                 sx={{
-                  background: 'none',
+                  bgcolor: 'transparent',
                   border: 'none',
                   cursor: 'pointer',
                   color: 'text.primary',
                   fontWeight: 500,
-                  fontSize: '1rem',
+                  fontSize: '1.125rem',
                   fontFamily: 'inherit',
-                  padding: 0,
-                  transition: 'color 0.2s ease-in-out',
+                  px: 1.5,
+                  py: 0.75,
+                  borderRadius: '6px',
+                  transition: 'background 0.15s ease-in-out, color 0.15s ease-in-out',
                   '&:hover': {
-                    color: 'primary.main',
+                    bgcolor: 'primary.darker',
+                    color: 'common.white',
                   },
                 }}
               >
@@ -155,26 +143,29 @@ export default function Header() {
               variant="outlined"
               sx={{
                 fontWeight: 600,
-                px: 3,
+                fontSize: '1.125rem',
+                px: 3.5,
               }}
             >
               Open App
             </Button>
             <Button
-              onClick={() => handleNavClick('/contact')}
+              component="a"
+              href="https://calendly.com/dave-getenabled/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               variant="contained"
               sx={{
                 fontWeight: 600,
-                px: 3,
+                fontSize: '1.125rem',
+                px: 3.5,
               }}
             >
-              Get in Touch
+              Book a Call
             </Button>
           </Stack>
         </Container>
       </Toolbar>
-
-      {offsetTop && <HeaderShadow />}
 
       {/* Mobile Navigation Drawer */}
       <Drawer
@@ -221,15 +212,15 @@ export default function Header() {
             Open App
           </Button>
           <Button
-            onClick={() => {
-              handleDrawerToggle();
-              handleNavClick('/contact');
-            }}
+            component="a"
+            href="https://calendly.com/dave-getenabled/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             variant="contained"
             fullWidth
             sx={{ fontWeight: 600 }}
           >
-            Get in Touch
+            Book a Call
           </Button>
         </Box>
       </Drawer>

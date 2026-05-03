@@ -1,4 +1,4 @@
-import { Barlow, Public_Sans } from 'next/font/google';
+import { Atkinson_Hyperlegible, DM_Sans } from 'next/font/google';
 
 // ----------------------------------------------------------------------
 
@@ -31,15 +31,15 @@ declare module '@mui/material/styles' {
   }
 }
 
-export const primaryFont = Public_Sans({
-  weight: ['400', '500', '600', '700', '800', '900'],
+export const primaryFont = Atkinson_Hyperlegible({
+  weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 });
 
-export const secondaryFont = Barlow({
-  weight: ['400', '500', '600', '700', '800', '900'],
+export const secondaryFont = DM_Sans({
+  weight: ['300', '400', '500', '600', '700', '800'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
@@ -51,8 +51,8 @@ export const secondaryFont = Barlow({
 // https://nextjs.org/docs/basic-features/font-optimization#google-fonts
 
 export const typography = {
-  fontFamily: primaryFont.style.fontFamily,
-  fontSecondaryFamily: secondaryFont.style.fontFamily,
+  fontFamily: `'Atkinson Hyperlegible Next', ${primaryFont.style.fontFamily}`,
+  fontSecondaryFamily: `'DM Sans', ${secondaryFont.style.fontFamily}`,
   fontWeightRegular: 400,
   fontWeightMedium: 500,
   fontWeightSemiBold: 600,

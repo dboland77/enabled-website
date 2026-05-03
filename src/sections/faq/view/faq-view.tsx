@@ -17,11 +17,11 @@ import Iconify from 'src/components/iconify';
 const FAQ_DATA = [
   {
     question: 'What is enableD?',
-    answer: 'enableD is a digital platform designed to streamline workplace accommodation processes. We help organisations support employees with disabilities and health conditions by making the reasonable adjustments process simple, transparent, and compliant with UK legislation like the Equality Act 2010.',
+    answer: 'enableD is a digital platform designed to streamline the reasonable adjustments process. I help organisations support employees with disabilities and health conditions by making reasonable adjustments simple, transparent, and compliant with UK legislation like the Equality Act 2010.',
   },
   {
     question: 'Who can use enableD?',
-    answer: 'enableD is designed for both employers and employees. HR teams and managers can use the platform to manage accommodation requests efficiently, while employees can easily submit and track their requests for reasonable adjustments.',
+    answer: 'enableD is designed for both employers and employees. HR teams and managers can use the platform to manage reasonable adjustments efficiently, while employees can easily submit and track their own requests.',
   },
   {
     question: 'What are reasonable adjustments?',
@@ -29,31 +29,27 @@ const FAQ_DATA = [
   },
   {
     question: 'How does enableD ensure compliance with the Equality Act 2010?',
-    answer: 'enableD is built with UK employment law at its core. The platform guides users through the accommodation process with built-in compliance checks, documentation templates, and audit trails that help organisations meet their legal obligations while treating employees with dignity.',
+    answer: 'enableD is built with UK employment law at its core. The platform guides users through the reasonable adjustments process with built-in compliance checks, documentation templates, and audit trails that help organisations meet their legal obligations while treating employees with dignity.',
   },
   {
     question: 'Is my data secure on enableD?',
-    answer: 'Yes, we take data security very seriously. enableD uses industry-standard encryption, secure data storage, and strict access controls to protect sensitive information. We are fully compliant with GDPR and UK data protection regulations.',
+    answer: 'Yes, I take data security very seriously. enableD uses industry-standard encryption, secure data storage, and strict access controls to protect sensitive information. I am fully compliant with GDPR and UK data protection regulations.',
   },
   {
     question: 'How long does it take to set up enableD?',
-    answer: 'Most organisations can be up and running within a day. Our onboarding team provides guidance and support to ensure a smooth implementation, including data migration assistance and staff training if needed.',
-  },
-  {
-    question: 'Can enableD integrate with our existing HR systems?',
-    answer: 'Yes, enableD offers integration capabilities with popular HR and payroll systems. Contact our team to discuss your specific integration requirements.',
+    answer: 'Most organisations can be up and running within a day. I provide guidance and support to ensure a smooth implementation, including data migration assistance and training if needed.',
   },
   {
     question: 'What support do you offer?',
-    answer: 'We provide comprehensive support including email and phone assistance, detailed documentation, and regular check-ins for enterprise customers. Our team is dedicated to helping you get the most out of enableD.',
+    answer: 'I provide comprehensive support including email and phone assistance, detailed documentation, and regular check-ins. I am dedicated to helping you get the most out of enableD.',
   },
   {
     question: 'Is there a free trial available?',
-    answer: 'Yes, we offer a free trial so you can explore the platform and see how enableD can benefit your organisation. Contact us to get started.',
+    answer: 'Yes, I offer a free trial so you can explore the platform and see how enableD can benefit your organisation. Get in touch to get started.',
   },
   {
     question: 'How do I get started with enableD?',
-    answer: 'Getting started is easy. Simply click the "Get in Touch" button to contact our team, and we\'ll guide you through the process of setting up enableD for your organisation.',
+    answer: 'Getting started is easy. Simply click the "Book a Call" button to schedule time with me, and I\'ll guide you through the process of setting up enableD for your organisation.',
   },
 ];
 
@@ -81,47 +77,49 @@ export default function FaqView() {
                 Frequently Asked Questions
               </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
-                Find answers to common questions about enableD and workplace accommodations.
+                Find answers to common questions about enableD and reasonable adjustments.
               </Typography>
             </Stack>
 
             <Stack spacing={2}>
-              {FAQ_DATA.map((faq, index) => (
-                <Accordion
-                  key={index}
-                  expanded={expanded === `panel${index}`}
-                  onChange={handleChange(`panel${index}`)}
-                  sx={{
-                    bgcolor: 'background.paper',
-                    boxShadow: (theme) => theme.shadows[1],
-                    '&:before': { display: 'none' },
-                    borderRadius: '8px !important',
-                    '&.Mui-expanded': {
-                      margin: 0,
-                    },
-                  }}
-                >
-                  <AccordionSummary
-                    expandIcon={<Iconify icon="solar:alt-arrow-down-linear" width={20} />}
+              {FAQ_DATA.map((faq, index) => {
+                const bg = index % 2 === 0 ? '#1a2e3a' : '#1a7fa8';
+                return (
+                  <Accordion
+                    key={index}
+                    expanded={expanded === `panel${index}`}
+                    onChange={handleChange(`panel${index}`)}
                     sx={{
-                      px: 3,
-                      py: 1,
-                      '& .MuiAccordionSummary-content': {
-                        my: 2,
-                      },
+                      backgroundColor: bg,
+                      boxShadow: 'none',
+                      '&:before': { display: 'none' },
+                      borderRadius: '8px !important',
+                      '&.Mui-expanded': { margin: 0 },
+                      '& .MuiAccordionSummary-root': { backgroundColor: bg },
+                      '& .MuiAccordionDetails-root': { backgroundColor: bg },
                     }}
                   >
-                    <Typography variant="subtitle1" fontWeight={600}>
-                      {faq.question}
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails sx={{ px: 3, pb: 3 }}>
-                    <Typography color="text.secondary">
-                      {faq.answer}
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              ))}
+                    <AccordionSummary
+                      expandIcon={<Iconify icon="solar:alt-arrow-down-linear" width={20} sx={{ color: 'white' }} />}
+                      sx={{
+                        px: 3,
+                        py: 1,
+                        borderRadius: '8px',
+                        '& .MuiAccordionSummary-content': { my: 2 },
+                      }}
+                    >
+                      <Typography fontWeight={600} sx={{ fontSize: '1.125rem', color: 'white' }}>
+                        {faq.question}
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails sx={{ px: 3, pb: 3 }}>
+                      <Typography sx={{ fontSize: '1.0625rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.9)' }}>
+                        {faq.answer}
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                );
+              })}
             </Stack>
 
             <Box
@@ -130,14 +128,14 @@ export default function FaqView() {
                 mt: 4,
                 p: 4,
                 borderRadius: 2,
-                bgcolor: 'primary.main',
+                bgcolor: '#1a2e3a',
               }}
             >
               <Typography variant="h6" sx={{ color: 'common.white', mb: 1 }}>
                 Still have questions?
               </Typography>
               <Typography variant="body2" sx={{ color: 'common.white', opacity: 0.9 }}>
-                Contact us at{' '}
+                Contact me at{' '}
                 <Box
                   component="a"
                   href="mailto:hello@getenabled.co.uk"

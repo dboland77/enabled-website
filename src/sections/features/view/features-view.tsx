@@ -15,8 +15,8 @@ import Iconify from 'src/components/iconify';
 const FEATURES = [
   {
     icon: 'solar:clipboard-check-bold',
-    title: 'Streamlined Accommodation Requests',
-    description: 'Simplify the process of requesting and managing workplace accommodations with our intuitive digital workflow.',
+    title: 'Streamlined Reasonable Adjustments',
+    description: 'Simplify the process of requesting and managing reasonable adjustments with an intuitive digital workflow.',
   },
   {
     icon: 'solar:shield-check-bold',
@@ -26,12 +26,12 @@ const FEATURES = [
   {
     icon: 'solar:users-group-rounded-bold',
     title: 'Employee Self-Service',
-    description: 'Empower employees to submit and track their accommodation requests through a secure, accessible portal.',
+    description: 'Empower employees to submit and track their reasonable adjustments through a secure, accessible portal.',
   },
   {
     icon: 'solar:chart-bold',
     title: 'Analytics & Reporting',
-    description: 'Gain insights into accommodation trends, response times, and outcomes with comprehensive reporting tools.',
+    description: 'Gain insights into reasonable adjustments trends, response times, and outcomes with comprehensive reporting tools.',
   },
   {
     icon: 'solar:lock-bold',
@@ -46,7 +46,7 @@ const FEATURES = [
   {
     icon: 'solar:document-text-bold',
     title: 'Documentation Management',
-    description: 'Centralise all accommodation-related documents, assessments, and correspondence in one place.',
+    description: 'Centralise all reasonable adjustments documents, assessments, and correspondence in one place.',
   },
   {
     icon: 'solar:hand-shake-bold',
@@ -77,7 +77,7 @@ export default function FeaturesView() {
                 color="text.secondary" 
                 sx={{ maxWidth: 600, fontWeight: 400 }}
               >
-                Everything you need to manage workplace accommodations effectively, 
+                Everything you need to manage reasonable adjustments effectively,
                 compliantly, and with dignity for all employees.
               </Typography>
             </Stack>

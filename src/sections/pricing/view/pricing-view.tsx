@@ -1,7 +1,5 @@
 'use client';
 
-import NextLink from 'next/link';
-
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -10,175 +8,181 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Chip from '@mui/material/Chip';
 
 import MainLayout from 'src/layouts/main';
 import { HEADER } from 'src/layouts/config-layout';
 import Iconify from 'src/components/iconify';
 
+const NAVY = '#1a2e3a';
+const TEAL = '#2596be';
+const TEAL_DARK = '#1a7fa8';
+
 const PRICING_PLANS = [
   {
     name: 'Starter',
-    description: 'Perfect for small organisations getting started with accommodation management.',
-    price: '99',
-    period: 'per month',
+    description: 'For organisations with up to 150 employees.',
+    price: '149',
     features: [
-      'Up to 50 employees',
-      'Basic accommodation workflow',
-      'Email support',
-      'Standard reporting',
+      'Employee passport for every staff member',
+      'Adjustment request and approval workflow',
+      'Full audit trail — every request, decision, and update timestamped',
       'Secure document storage',
+      'Email support',
     ],
-    buttonText: 'Get Started',
-    popular: false,
   },
   {
-    name: 'Professional',
-    description: 'For growing organisations that need more advanced features and support.',
-    price: '249',
-    period: 'per month',
+    name: 'Growth',
+    description: 'For organisations with up to 500 employees.',
+    price: '299',
     features: [
-      'Up to 250 employees',
-      'Advanced workflow automation',
+      'Everything in Starter, plus:',
+      'Reporting and analytics',
       'Priority support',
-      'Advanced analytics',
-      'API access',
-      'Custom integrations',
-      'Dedicated account manager',
     ],
-    buttonText: 'Get Started',
-    popular: true,
-  },
-  {
-    name: 'Enterprise',
-    description: 'Tailored solutions for large organisations with complex requirements.',
-    price: 'Custom',
-    period: '',
-    features: [
-      'Unlimited employees',
-      'Full customisation',
-      '24/7 premium support',
-      'Custom reporting',
-      'Single sign-on (SSO)',
-      'Dedicated infrastructure',
-      'On-site training',
-      'SLA guarantee',
-    ],
-    buttonText: 'Contact Sales',
-    popular: false,
   },
 ];
 
 export default function PricingView() {
   return (
     <MainLayout>
+      {/* Hero */}
       <Box
         sx={{
-          pt: { xs: `${HEADER.H_MOBILE + 40}px`, md: `${HEADER.H_DESKTOP + 80}px` },
-          pb: { xs: 10, md: 15 },
-          minHeight: '100vh',
-          bgcolor: 'background.default',
+          bgcolor: NAVY,
+          pt: { xs: `${HEADER.H_MOBILE + 48}px`, md: `${HEADER.H_DESKTOP + 80}px` },
+          pb: { xs: 10, md: 14 },
         }}
       >
-        <Container maxWidth="lg">
-          <Stack spacing={8}>
-            <Stack spacing={3} textAlign="center" alignItems="center">
-              <Typography variant="h2" component="h1">
-                Simple, Transparent Pricing
-              </Typography>
-              <Typography 
-                variant="h6" 
-                color="text.secondary" 
-                sx={{ maxWidth: 600, fontWeight: 400 }}
-              >
-                Choose the plan that fits your organisation. All plans include a 14-day free trial.
-              </Typography>
-            </Stack>
+        <Container maxWidth="md">
+          <Stack spacing={3} alignItems={{ xs: 'flex-start', md: 'flex-start' }} sx={{ maxWidth: 680 }}>
+            <Typography
+              component="h1"
+              sx={{
+                fontFamily: "'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', sans-serif",
+                fontWeight: 800,
+                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
+                lineHeight: 1.2,
+                letterSpacing: '-0.02em',
+                color: 'common.white',
+              }}
+            >
+              Simple, transparent pricing
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: '1rem', md: '1.125rem' },
+                lineHeight: 1.75,
+                color: 'rgba(255,255,255,0.82)',
+                maxWidth: 580,
+              }}
+            >
+              Two plans. No hidden fees. No long-term contracts. Cancel any time. Both include a
+              14-day free trial.
+            </Typography>
+          </Stack>
+        </Container>
+      </Box>
 
+      {/* Plans */}
+      <Box sx={{ bgcolor: 'background.default', py: { xs: 10, md: 14 } }}>
+        <Container maxWidth="md">
+          <Stack spacing={8}>
             <Grid container spacing={4} justifyContent="center">
               {PRICING_PLANS.map((plan) => (
-                <Grid item xs={12} md={4} key={plan.name}>
+                <Grid item xs={12} sm={6} key={plan.name}>
                   <Card
                     sx={{
                       height: '100%',
-                      position: 'relative',
                       bgcolor: 'background.paper',
-                      boxShadow: (theme) => plan.popular ? theme.shadows[8] : theme.shadows[1],
-                      border: plan.popular ? '2px solid' : '1px solid',
-                      borderColor: plan.popular ? 'primary.main' : 'divider',
-                      transition: 'box-shadow 0.2s ease-in-out',
+                      boxShadow: 'none',
+                      border: '2px solid',
+                      borderColor: 'divider',
+                      borderRadius: 2,
+                      transition: 'border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
                       '&:hover': {
-                        boxShadow: (theme) => theme.shadows[8],
+                        borderColor: TEAL,
+                        boxShadow: `0 4px 24px rgba(37,150,190,0.12)`,
                       },
                     }}
                   >
-                    {plan.popular && (
-                      <Chip
-                        label="Most Popular"
-                        color="primary"
-                        size="small"
-                        sx={{
-                          position: 'absolute',
-                          top: 16,
-                          right: 16,
-                          fontWeight: 600,
-                        }}
-                      />
-                    )}
                     <CardContent sx={{ p: 4 }}>
                       <Stack spacing={4} height="100%">
+
+                        {/* Plan name + description */}
                         <Stack spacing={1}>
-                          <Typography variant="h5" component="h3">
+                          <Typography
+                            variant="h5"
+                            component="h2"
+                            sx={{ fontWeight: 700, color: NAVY }}
+                          >
                             {plan.name}
                           </Typography>
-                          <Typography variant="body2" color="text.secondary" sx={{ minHeight: 48 }}>
+                          <Typography sx={{ fontSize: '1rem', color: 'text.primary' }}>
                             {plan.description}
                           </Typography>
                         </Stack>
 
+                        {/* Price */}
                         <Stack direction="row" alignItems="baseline" spacing={0.5}>
-                          {plan.price !== 'Custom' && (
-                            <Typography variant="h6" color="text.secondary">
-                              £
-                            </Typography>
-                          )}
-                          <Typography variant="h3" component="span">
+                          <Typography
+                            sx={{ fontSize: '1.25rem', fontWeight: 700, color: 'text.primary', lineHeight: 1 }}
+                          >
+                            £
+                          </Typography>
+                          <Typography
+                            component="span"
+                            sx={{
+                              fontFamily: "'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', sans-serif",
+                              fontWeight: 800,
+                              fontSize: { xs: '2.5rem', md: '3rem' },
+                              lineHeight: 1,
+                              color: NAVY,
+                              letterSpacing: '-0.02em',
+                            }}
+                          >
                             {plan.price}
                           </Typography>
-                          {plan.period && (
-                            <Typography variant="body2" color="text.secondary">
-                              {plan.period}
-                            </Typography>
-                          )}
+                          <Typography sx={{ fontSize: '0.9375rem', color: 'text.primary', ml: 0.5 }}>
+                            / month
+                          </Typography>
                         </Stack>
 
-                        <Stack spacing={2}>
+                        {/* Features */}
+                        <Stack spacing={2} sx={{ flexGrow: 1 }}>
                           {plan.features.map((feature) => (
-                            <Stack key={feature} direction="row" spacing={1.5} alignItems="center">
-                              <Iconify 
-                                icon="solar:check-circle-bold" 
-                                width={20} 
-                                sx={{ color: 'primary.main', flexShrink: 0 }} 
+                            <Stack key={feature} direction="row" spacing={1.5} alignItems="flex-start">
+                              <Iconify
+                                icon="solar:check-circle-bold"
+                                width={20}
+                                sx={{ color: TEAL_DARK, flexShrink: 0, mt: '2px' }}
                               />
-                              <Typography variant="body2">
+                              <Typography sx={{ fontSize: '1rem', color: 'text.primary', lineHeight: 1.6 }}>
                                 {feature}
                               </Typography>
                             </Stack>
                           ))}
                         </Stack>
 
-                        <Box sx={{ mt: 'auto', pt: 2 }}>
+                        {/* CTA */}
+                        <Box sx={{ pt: 1 }}>
                           <Button
-                            component={NextLink}
+                            component="a"
                             href="/contact"
-                            variant={plan.popular ? 'contained' : 'outlined'}
+                            variant="contained"
                             size="large"
                             fullWidth
-                            sx={{ fontWeight: 600 }}
+                            sx={{
+                              fontWeight: 700,
+                              fontSize: '1rem',
+                              bgcolor: NAVY,
+                              '&:hover': { bgcolor: TEAL_DARK },
+                              transition: 'background-color 0.2s ease-in-out',
+                            }}
                           >
-                            {plan.buttonText}
+                            Get Started →
                           </Button>
                         </Box>
+
                       </Stack>
                     </CardContent>
                   </Card>
@@ -186,18 +190,25 @@ export default function PricingView() {
               ))}
             </Grid>
 
-            <Stack spacing={2} textAlign="center" alignItems="center">
-              <Typography variant="body1" color="text.secondary">
-                Need a custom solution? Have questions about which plan is right for you?
+            {/* Bottom note */}
+            <Stack spacing={1} textAlign="center" alignItems="center">
+              <Typography sx={{ fontSize: '1rem', color: 'text.primary' }}>
+                Not sure which plan fits your organisation? Get in touch and I can work it out with
+                you.
               </Typography>
-              <Button
-                component={NextLink}
-                href="/contact"
-                variant="text"
-                sx={{ fontWeight: 600 }}
+              <Box
+                component="a"
+                href="mailto:hello@getenabled.co.uk"
+                sx={{
+                  color: TEAL_DARK,
+                  fontWeight: 600,
+                  fontSize: '1rem',
+                  textDecoration: 'none',
+                  '&:hover': { textDecoration: 'underline' },
+                }}
               >
-                Contact our sales team
-              </Button>
+                hello@getenabled.co.uk
+              </Box>
             </Stack>
           </Stack>
         </Container>

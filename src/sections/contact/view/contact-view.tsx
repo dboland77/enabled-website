@@ -38,7 +38,7 @@ export default function ContactView() {
 
     setSnackbar({
       open: true,
-      message: 'Thank you for your message. We will be in touch shortly.',
+      message: 'Thank you for your message. I\'ll be in touch shortly.',
       severity: 'success',
     });
     setFormData({ name: '', email: '', company: '', message: '' });
@@ -78,7 +78,7 @@ export default function ContactView() {
                   Get in Touch
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Have a question about enableD? We would love to hear from you.
+                  Have a question about enableD? I'd love to hear from you.
                 </Typography>
               </Stack>
 

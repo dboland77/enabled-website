@@ -36,26 +36,26 @@ export default function TermsView() {
               <Section title="1. Agreement to Terms">
                 <Typography>
                   By accessing or using the enableD platform, you agree to be bound by these Terms and Conditions. 
-                  If you disagree with any part of these terms, you may not access our services.
+                  If you disagree with any part of these terms, you may not access my services.
                 </Typography>
               </Section>
 
               <Section title="2. Description of Service">
                 <Typography>
-                  enableD provides a digital platform designed to streamline workplace accommodation processes, 
-                  helping organisations support employees with disabilities and health conditions effectively 
+                  enableD provides a digital platform designed to streamline the reasonable adjustments process,
+                  helping organisations support employees with disabilities and health conditions effectively
                   and in compliance with relevant legislation.
                 </Typography>
               </Section>
 
               <Section title="3. User Accounts">
                 <Typography component="div">
-                  When you create an account with us, you must:
+                  When you create an account, you must:
                   <Box component="ul" sx={{ mt: 2, pl: 3 }}>
                     <li>Provide accurate, complete, and current information</li>
                     <li>Maintain the security of your password and account</li>
                     <li>Accept responsibility for all activities under your account</li>
-                    <li>Notify us immediately of any unauthorised use</li>
+                    <li>Notify me immediately of any unauthorised use</li>
                   </Box>
                 </Typography>
               </Section>
@@ -85,14 +85,14 @@ export default function TermsView() {
                 <Typography>
                   enableD shall not be liable for any indirect, incidental, special, consequential, 
                   or punitive damages resulting from your use of or inability to use the service. 
-                  Our total liability shall not exceed the amount paid by you for the service in 
+                  My total liability shall not exceed the amount paid by you for the service in
                   the twelve months preceding the claim.
                 </Typography>
               </Section>
 
               <Section title="7. Termination">
                 <Typography>
-                  We may terminate or suspend your account and access to the service immediately, 
+                  I may terminate or suspend your account and access to the service immediately,
                   without prior notice or liability, for any reason, including breach of these Terms.
                 </Typography>
               </Section>
@@ -106,15 +106,15 @@ export default function TermsView() {
 
               <Section title="9. Changes to Terms">
                 <Typography>
-                  We reserve the right to modify these terms at any time. We will notify users of 
-                  any material changes by posting the new Terms on this page and updating the 
+                  I reserve the right to modify these terms at any time. I will notify users of
+                  any material changes by posting the new Terms on this page and updating the
                   &quot;Last updated&quot; date.
                 </Typography>
               </Section>
 
-              <Section title="10. Contact Us">
+              <Section title="10. Contact Me">
                 <Typography>
-                  If you have questions about these Terms, please contact us at{' '}
+                  If you have questions about these Terms, please contact me at{' '}
                   <Box
                     component="a"
                     href="mailto:legal@getenabled.co.uk"

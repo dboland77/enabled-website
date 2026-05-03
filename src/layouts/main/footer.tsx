@@ -27,7 +27,7 @@ export default function Footer() {
       component="footer"
       sx={{
         py: 2.5,
-        bgcolor: 'primary.main',
+        bgcolor: 'primary.darker',
       }}
     >
       <Container>

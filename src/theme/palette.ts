@@ -20,7 +20,7 @@ declare module '@mui/material/styles/createPalette' {
 
 // SETUP COLORS
 
-// logo colour: #1077c6
+// Brand: teal #2596be / dark navy #1a2e3a
 
 export const grey = {
   0: '#FFFFFF',
@@ -36,11 +36,11 @@ export const grey = {
 };
 
 export const primary = {
-  lighter: '2E2EFF',
-  light: '#0B558E',
-  main: '#0B558E',
-  dark: '#B9DCF9',
-  darker: '#004B50',
+  lighter: '#caedf7',
+  light: '#65bdd9',
+  main: '#2596be',
+  dark: '#1a7fa8',
+  darker: '#1a2e3a',
   contrastText: '#FFFFFF',
 };
 

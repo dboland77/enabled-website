@@ -19,9 +19,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'enableD - reasonable adjustments administration',
   description: 'Reasonable adjustments for disability made easy',
-  keywords: 'equality, inclusivity,accommodations,adjustments,reasonable,admin,disability',
+  keywords: 'equality, inclusivity,reasonable adjustments,disability,admin,UK,Equality Act',
   manifest: '/manifest.json',
   icons: [
+    { rel: 'icon', type: 'image/svg+xml', url: '/favicon/favicon.svg' },
     { rel: 'icon', url: '/favicon/favicon.ico' },
     { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/favicon/favicon-16x16.png' },
     { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/favicon/favicon-32x32.png' },

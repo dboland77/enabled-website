@@ -35,49 +35,49 @@ export default function PrivacyView() {
             <Stack spacing={4}>
               <Section title="Introduction">
                 <Typography>
-                  enableD (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your privacy. 
-                  This Privacy Policy explains how we collect, use, disclose, and safeguard your information 
-                  when you use our workplace accommodations platform.
+                  enableD (&quot;I&quot;, &quot;my&quot;, or &quot;me&quot;) is committed to protecting your privacy.
+                  This Privacy Policy explains how I collect, use, disclose, and safeguard your information
+                  when you use the enableD reasonable adjustments platform.
                 </Typography>
               </Section>
 
-              <Section title="Information We Collect">
+              <Section title="Information I Collect">
                 <Typography component="div">
-                  We may collect information about you in a variety of ways, including:
+                  I may collect information about you in a variety of ways, including:
                   <Box component="ul" sx={{ mt: 2, pl: 3 }}>
                     <li>Personal data you provide directly (name, email, company information)</li>
-                    <li>Information about workplace accommodations and accessibility needs</li>
-                    <li>Usage data and analytics about how you interact with our platform</li>
+                    <li>Information about reasonable adjustments and accessibility needs</li>
+                    <li>Usage data and analytics about how you interact with the platform</li>
                     <li>Technical data such as IP address, browser type, and device information</li>
                   </Box>
                 </Typography>
               </Section>
 
-              <Section title="How We Use Your Information">
+              <Section title="How I Use Your Information">
                 <Typography component="div">
-                  We use the information we collect to:
+                  I use the information I collect to:
                   <Box component="ul" sx={{ mt: 2, pl: 3 }}>
-                    <li>Provide, maintain, and improve our services</li>
-                    <li>Process and manage workplace accommodation requests</li>
-                    <li>Communicate with you about our services</li>
+                    <li>Provide, maintain, and improve my services</li>
+                    <li>Process and manage reasonable adjustments requests</li>
+                    <li>Communicate with you about my services</li>
                     <li>Ensure compliance with legal obligations</li>
-                    <li>Protect the security and integrity of our platform</li>
+                    <li>Protect the security and integrity of the platform</li>
                   </Box>
                 </Typography>
               </Section>
 
               <Section title="Data Sharing and Disclosure">
                 <Typography>
-                  We do not sell your personal information. We may share your information with third parties 
-                  only in the following circumstances: with your consent, to comply with legal obligations, 
-                  to protect our rights, or with service providers who assist in operating our platform.
+                  I do not sell your personal information. I may share your information with third parties
+                  only in the following circumstances: with your consent, to comply with legal obligations,
+                  to protect my rights, or with service providers who assist in operating the platform.
                 </Typography>
               </Section>
 
               <Section title="Data Security">
                 <Typography>
-                  We implement appropriate technical and organisational measures to protect your personal 
-                  information against unauthorised access, alteration, disclosure, or destruction. However, 
+                  I implement appropriate technical and organisational measures to protect your personal
+                  information against unauthorised access, alteration, disclosure, or destruction. However,
                   no method of transmission over the Internet is 100% secure.
                 </Typography>
               </Section>
@@ -86,7 +86,7 @@ export default function PrivacyView() {
                 <Typography component="div">
                   Under applicable data protection laws, you may have the right to:
                   <Box component="ul" sx={{ mt: 2, pl: 3 }}>
-                    <li>Access the personal information we hold about you</li>
+                    <li>Access the personal information I hold about you</li>
                     <li>Request correction of inaccurate data</li>
                     <li>Request deletion of your data</li>
                     <li>Object to or restrict processing of your data</li>
@@ -95,9 +95,9 @@ export default function PrivacyView() {
                 </Typography>
               </Section>
 
-              <Section title="Contact Us">
+              <Section title="Contact Me">
                 <Typography>
-                  If you have questions about this Privacy Policy or our data practices, please contact us at{' '}
+                  If you have questions about this Privacy Policy or my data practices, please contact me at{' '}
                   <Box
                     component="a"
                     href="mailto:privacy@getenabled.co.uk"
