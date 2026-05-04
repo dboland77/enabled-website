@@ -44,9 +44,9 @@ function HeroSection() {
                 color: 'common.white',
               }}
             >
-              Most employers think they're handling reasonable adjustments properly.{' '}
+              Most employers think they&apos;re handling reasonable adjustments properly.{' '}
               <Box component="span" sx={{ color: TEAL_LIGHT }}>
-                Most aren't.
+                Most aren&apos;t.
               </Box>
             </Typography>
           </m.div>
@@ -130,8 +130,8 @@ function ProblemSection() {
                   color: 'text.primary',
                 }}
               >
-                The employee doesn't get what they need to do their job. HR is scrambling to piece
-                together what was agreed and when. Managers aren't briefed. Nothing is documented
+                The employee doesn&apos;t get what they need to do their job. HR is scrambling to piece
+                together what was agreed and when. Managers aren&apos;t briefed. Nothing is documented
                 properly.
               </Typography>
               <Typography
@@ -141,7 +141,7 @@ function ProblemSection() {
                   color: 'text.primary',
                 }}
               >
-                When that goes wrong, it doesn't just cost you an employee. A defended employment
+                When that goes wrong, it doesn&apos;t just cost you an employee. A defended employment
                 tribunal costs upwards of £80,000 in legal fees alone — before you count the weeks
                 of management time, the witness statements, and the disruption to your business.
               </Typography>
@@ -203,7 +203,7 @@ function SolutionSection() {
                 }}
               >
                 Employees request adjustments in their own time, in their own words. Managers
-                review, approve, and understand what's needed. Everything is documented,
+                review, approve, and understand what&apos;s needed. Everything is documented,
                 timestamped, and auditable.
               </Typography>
               <Typography
@@ -213,7 +213,7 @@ function SolutionSection() {
                   color: 'text.primary',
                 }}
               >
-                No more emails lost in inboxes. No more interviewers who weren't briefed. No more
+                No more emails lost in inboxes. No more interviewers who weren&apos;t briefed. No more
                 scrambling to evidence what was agreed when things go wrong.
               </Typography>
             </Stack>
@@ -270,8 +270,8 @@ function FounderSection() {
                   color: 'rgba(255,255,255,0.82)',
                 }}
               >
-                I'm autistic. I applied for a job, had a meltdown in an interview because my
-                adjustments weren't handled properly, and spent the next two years in the legal
+                I&apos;m autistic. I applied for a job, had a meltdown in an interview because my
+                adjustments weren&apos;t handled properly, and spent the next two years in the legal
                 system trying to get a fair outcome. I know exactly what a broken process costs —
                 not just in legal fees, but in what it does to the person on the other end of it.
               </Typography>
@@ -283,7 +283,7 @@ function FounderSection() {
                 }}
               >
                 No disabled employee should have to fight that hard. And no employer should be
-                exposed to that risk because they didn't have a proper system in place.
+                exposed to that risk because they didn&apos;t have a proper system in place.
               </Typography>
               <Typography
                 sx={{
@@ -293,7 +293,7 @@ function FounderSection() {
                   fontStyle: 'italic',
                 }}
               >
-                That's why I built this.
+                That&apos;s why I built this.
               </Typography>
             </Stack>
           </m.div>
@@ -343,7 +343,7 @@ function CtaSection() {
                 color: 'common.white',
               }}
             >
-              If you're not confident your current process would stand up to scrutiny, let's talk.
+              If you&apos;re not confident your current process would stand up to scrutiny, let&apos;s talk.
             </Typography>
           </m.div>
 

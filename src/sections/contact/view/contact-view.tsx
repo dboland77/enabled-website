@@ -78,7 +78,7 @@ export default function ContactView() {
                   Get in Touch
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Have a question about enableD? I'd love to hear from you.
+                  Have a question about enableD? I&apos;d love to hear from you.
                 </Typography>
               </Stack>
 
