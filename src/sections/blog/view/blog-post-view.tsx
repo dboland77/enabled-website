@@ -164,6 +164,12 @@ export default function BlogPostView({ post }: Props) {
                 color: 'text.primary',
                 fontWeight: 600,
               },
+              '& a': {
+                color: 'primary.main',
+                textDecoration: 'underline',
+                textUnderlineOffset: '3px',
+                '&:hover': { opacity: 0.75 },
+              },
               '& blockquote': {
                 borderLeft: 4,
                 borderColor: 'primary.main',
@@ -255,6 +261,8 @@ function formatContent(content: string): string {
     // Headers
     .replace(/^### (.+)$/gm, '<h3>$1</h3>')
     .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    // Links — must come before bold so [**text**](url) nests correctly
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
     // Bold
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     // Lists
