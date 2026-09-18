@@ -84,6 +84,9 @@ export default function GlossaryView() {
                 {visibleLetters.map((letter) => {
                   const hasTerms = activeLetters.has(letter);
                   const isSelected = letter === selectedLetter;
+                  let chipBgColor = 'grey.200';
+                  if (isSelected) chipBgColor = 'primary.main';
+                  else if (hasTerms) chipBgColor = 'primary.darker';
                   return (
                     <Chip
                       key={letter}
@@ -96,11 +99,7 @@ export default function GlossaryView() {
                         width: 52,
                         height: 52,
                         borderRadius: '50%',
-                        bgcolor: isSelected
-                          ? 'primary.main'
-                          : hasTerms
-                          ? 'primary.darker'
-                          : 'grey.200',
+                        bgcolor: chipBgColor,
                         color: hasTerms ? 'common.white' : 'text.disabled',
                         cursor: hasTerms ? 'pointer' : 'default',
                         boxShadow: isSelected ? '0 0 0 3px rgba(37,150,190,0.4)' : 'none',
