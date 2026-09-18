@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography';
 
 const FOOTER_LINKS = [
   { label: 'Blog', href: '/blog' },
+  { label: 'Glossary', href: '/glossary' },
   { label: 'Privacy Policy', href: '/privacy' },
   { label: 'Terms & Conditions', href: '/terms' },
 ];
