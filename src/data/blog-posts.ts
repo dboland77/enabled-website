@@ -15,6 +15,349 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'list-of-authorities-section-15-discrimination-arising-disability',
+    title: 'List of Authorities for a Section 15 Claim: Discrimination Arising from Disability',
+    description: 'A practical guide to the key cases and statutory provisions needed when preparing a list of authorities for a Section 15 Equality Act 2010 claim — discrimination arising from disability.',
+    coverImage: '/assets/blog/list-of-authorities-s15.jpg',
+    publishedAt: '2026-09-18',
+    author: {
+      name: 'Dave Boland',
+      avatar: '/assets/about/DaveBoland.jpeg',
+    },
+    category: 'Employment Law',
+    readTime: '14 min read',
+    content: `
+## What is a List of Authorities?
+
+A list of authorities is a document filed with the employment tribunal before a final hearing (or sometimes a preliminary hearing), setting out every case and statutory provision that a party intends to rely upon during their submissions. Both the tribunal and the opposing party receive the list in advance so that they can locate and read the relevant passages before the hearing begins.
+
+Employment judges are bound by decisions of the Employment Appeal Tribunal (EAT), the Court of Appeal, and the Supreme Court. Decisions of other employment tribunals are not binding but can be persuasive. The list should identify the full case name and neutral or law report citation, the specific legal proposition for which the case is cited, and the relevant paragraph numbers.
+
+Preparing a thorough list of authorities is not merely a procedural formality. Done properly, it signals to the tribunal the legal framework within which the case will be argued, helps structure opening and closing submissions, and ensures that the judge has the right materials to hand when writing the judgment.
+
+## Overview of Section 15
+
+Section 15 of the Equality Act 2010 creates a freestanding form of discrimination specific to disability. An employer (A) discriminates against a disabled person (B) if:
+
+> (a) A treats B unfavourably because of something arising in consequence of B's disability; and
+> (b) A cannot show that the treatment is a proportionate means of achieving a legitimate aim.
+
+There is no defence where the employer did not know, and could not reasonably have been expected to know, that the claimant was disabled: section 15(2).
+
+Section 15 was a new provision in the 2010 Act, introduced specifically to reinstate the protection lost after the House of Lords decision in Mayor and Burgesses of the London Borough of Lewisham v Malcolm [2008] UKHL 43, which had effectively gutted the "disability-related discrimination" claim under the predecessor legislation by introducing a narrow comparator test.
+
+## Statutory Provisions
+
+The following statutory provisions are almost always relevant in a section 15 claim:
+
+- **Equality Act 2010, section 6 and Schedule 1** — definition of disability and supplementary provisions
+- **Equality Act 2010, section 15** — discrimination arising from disability
+- **Equality Act 2010, section 39** — prohibition on discrimination in employment (the vehicle for the s15 claim)
+- **Equality Act 2010, section 136** — burden of proof
+- **Equality Act 2010, section 212** — general interpretation
+- **Equality Act 2010 (Disability) Regulations 2010 (SI 2010/2128)** — excluded conditions and progressive conditions
+- **Guidance on matters to be taken into account in determining questions relating to the definition of disability (2011)** — the Secretary of State's Guidance, not binding but to be taken into account
+- **EHRC Employment Code of Practice (2011), Chapter 5** — guidance on discrimination arising from disability; persuasive
+
+## Key Case Law
+
+### The Structured Approach to Section 15
+
+**Pnaiser v NHS England [2016] IRLR 170 (EAT, Langstaff P)**
+
+This is the foundational authority on the correct approach to a section 15 claim and is cited in virtually every case. The President of the EAT set out the structured steps a tribunal should follow:
+
+- Step 1: Is the claimant a disabled person within the meaning of section 6?
+- Step 2: Did the employer know, or ought it reasonably to have known, that the claimant was disabled (the section 15(2) gateway)?
+- Step 3: What was the unfavourable treatment?
+- Step 4: What was the "something arising in consequence of" the disability?
+- Step 5: Was the unfavourable treatment "because of" that something? (The causal link)
+- Step 6: If so, can the employer show the treatment was a proportionate means of achieving a legitimate aim?
+
+The EAT confirmed that the "something" need not be the only cause of the unfavourable treatment — it is enough that it contributed to or materially influenced the treatment. The test at Step 5 is whether the "something" was an effective cause of the treatment, not the sole cause.
+
+---
+
+**Basildon and Thurrock NHS Foundation Trust v Weerasinghe [2016] ICR 305 (EAT)**
+
+Confirmed that section 15 claims require a two-stage causal inquiry: first, whether the something arose in consequence of the disability; and second, whether the unfavourable treatment was because of the something. The tribunal must address both stages separately and must not conflate them.
+
+---
+
+### Unfavourable Treatment
+
+**Trustees of Swansea University Pension and Assurance Scheme v Williams [2018] UKSC 65**
+
+The Supreme Court considered whether an enhanced ill-health early retirement pension could constitute "unfavourable treatment" under section 15. The SC held it could not — the enhanced pension was more generous than the claimant would have received on ordinary retirement, and a reasonable worker would not regard receiving a greater benefit as a disadvantage.
+
+More broadly, the SC confirmed that "unfavourable treatment" bears its ordinary meaning: something that a reasonable worker in the claimant's position would regard as a disadvantage. The test is objective, not subjective. This case is important for respondents arguing that treatment alleged to be "unfavourable" was in fact neutral or even beneficial.
+
+---
+
+### Something Arising in Consequence of Disability
+
+**City of York Council v Grosset [2018] EWCA Civ 1105**
+
+The Court of Appeal delivered a critical ruling on the employer knowledge requirement. The CA held that the employer needs to know that the claimant is disabled (the s15(2) gateway), but does not need to know that the "something" arose in consequence of the disability. The causal link between the disability and the arising something is assessed objectively.
+
+On the facts, the employer knew Mr Grosset had cystic fibrosis but did not know that his conduct (showing an age-restricted film to pupils) was caused by stress arising from a deterioration in his condition. The CA held this was irrelevant: the objective causal connection was established, and ignorance of it did not provide a defence under section 15(2), which is concerned only with knowledge of the disability.
+
+This ruling significantly strengthens the position of claimants where an employer claims it did not appreciate the link between the disability and the conduct or absence leading to dismissal.
+
+---
+
+### Employer Knowledge of Disability
+
+**Gallop v Newport City Council [2013] EWCA Civ 1583**
+
+An employer cannot simply rely on an occupational health opinion that an employee does not fall within the definition of disability and escape section 15(2) on that basis. The employer must form its own judgment as to whether the statutory threshold is met and cannot outsource or delegate that question to an OH adviser. If an employer is aware of facts that point to disability but fails to make reasonable enquiries, it may be fixed with constructive knowledge.
+
+**Donelien v Liberata UK Ltd [2018] EWCA Civ 129**
+
+Constructive knowledge arises where the employer would have known of the disability had it made reasonable enquiries. The Court of Appeal confirmed that the test is whether a reasonable employer in the same position, on the information available, would have known of the disability. An employer who notices concerning signs (persistent absence, unexplained deterioration in performance, or express mention of a health condition) must make appropriate enquiries rather than proceeding in wilful ignorance.
+
+---
+
+### Disability-Related Absence
+
+Dismissal or other adverse action taken because of disability-related sickness absence is among the most common forms of section 15 claim. Key principles include:
+
+- The absence is the "something arising in consequence of" the disability
+- The employer must establish justification under s15(1)(b) if it knew or should have known of the disability
+- Compliance with a fair capability or conduct procedure does not automatically establish justification — the proportionality analysis under section 15 is a separate question
+
+**O'Brien v Bolton St Catherine's Academy [2017] EWCA Civ 145**
+
+The Court of Appeal emphasised that a tribunal must conduct a genuine proportionality exercise. A legitimate aim must be identified with particularity and supported by evidence. "Maintaining a reliable workforce" is capable of being a legitimate aim, but the employer must demonstrate that dismissal was a proportionate means of achieving it — specifically, that no less discriminatory course was available and that the impact on the claimant was proportionate to the benefit to the employer. The CA found that the tribunal had failed to carry out this exercise properly and remitted the case.
+
+---
+
+### Justification — Proportionate Means of a Legitimate Aim
+
+The section 15(1)(b) justification defence draws on the classic proportionality framework:
+
+- The employer must identify a **legitimate aim** — one that corresponds to a real business or operational need
+- The means chosen must be **proportionate** — reasonably necessary to achieve the aim, and no less discriminatory alternative was available
+
+**Buchanan v Commissioner of Police of the Metropolis [2016] ICR 1197 (EAT)**
+
+The employer must provide cogent evidence in support of the justification defence. The tribunal must assess the balance struck between the discriminatory impact of the treatment on the claimant and the importance of the legitimate aim. Vague, unsubstantiated assertions of business need are insufficient.
+
+---
+
+## Preparing the List: A Practical Checklist
+
+When compiling the list of authorities for a section 15 hearing, consider whether you need cases on each of the following issues:
+
+- **The definition of disability:** Schedule 1 supplementary provisions, Secretary of State's Guidance
+- **The structured approach to s15:** Pnaiser; Basildon and Thurrock
+- **Unfavourable treatment:** Williams (UKSC)
+- **Something arising in consequence of disability:** City of York v Grosset; Pnaiser
+- **Employer knowledge — actual:** s15(2) EqA 2010
+- **Employer knowledge — constructive:** Gallop; Donelien
+- **Disability-related absence:** O'Brien v Bolton
+- **Justification — legitimate aim:** Buchanan
+- **Justification — proportionality:** O'Brien v Bolton; Buchanan
+- **Burden of proof:** section 136 EqA 2010
+- **Interaction with reasonable adjustments:** consider whether a failure to adjust is relevant to the proportionality analysis
+
+A well-prepared list is focused. Include every case you will actually rely upon in submissions, but resist the temptation to add authorities you cannot properly deploy. Tribunals are increasingly alert to overlong lists that dilute the force of the key cases.
+    `,
+  },
+  {
+    slug: 'list-of-authorities-section-20-21-reasonable-adjustments',
+    title: 'List of Authorities for a Section 20/21 Claim: Failure to Make Reasonable Adjustments',
+    description: 'The key cases and statutory provisions for a list of authorities in a failure to make reasonable adjustments claim under sections 20 and 21 of the Equality Act 2010.',
+    coverImage: '/assets/blog/list-of-authorities-s20.jpg',
+    publishedAt: '2026-09-18',
+    author: {
+      name: 'Dave Boland',
+      avatar: '/assets/about/DaveBoland.jpeg',
+    },
+    category: 'Employment Law',
+    readTime: '15 min read',
+    content: `
+## Overview of Sections 20 and 21
+
+If you are new to lists of authorities, see our companion post on Section 15 claims which explains what a list is and why it matters. This post focuses specifically on the cases and statutory provisions needed for a failure to make reasonable adjustments claim.
+
+Section 20 of the Equality Act 2010 imposes three distinct requirements on employers:
+
+> **First requirement (s20(3)):** Where a provision, criterion or practice (PCP) of A's puts a disabled person at a substantial disadvantage in relation to a relevant matter in comparison with persons who are not disabled, A must take such steps as it is reasonable to have to take to avoid the disadvantage.
+
+> **Second requirement (s20(4)):** Where a physical feature of A's puts a disabled person at a substantial disadvantage in relation to a relevant matter in comparison with persons who are not disabled, A must take such steps as it is reasonable to have to take to avoid the disadvantage.
+
+> **Third requirement (s20(5)):** Where a disabled person would, but for the provision of an auxiliary aid, be put at a substantial disadvantage in relation to a relevant matter in comparison with persons who are not disabled, A must take such steps as it is reasonable to have to take to provide the auxiliary aid.
+
+Section 21 provides that a failure to comply with any of the three requirements amounts to discrimination.
+
+Unlike section 15, there is no separate justification defence for a section 20/21 claim. The question is binary: either an adjustment is reasonable and must be made, or it is not reasonable and need not be made. If a claimant establishes that a reasonable adjustment was not made, the claim succeeds.
+
+The duty is qualified by knowledge: it does not arise unless the employer knows, or ought reasonably to know, that the employee is disabled and is likely to be placed at a substantial disadvantage (Schedule 8, paragraph 20).
+
+## Statutory Provisions
+
+- **Equality Act 2010, section 6 and Schedule 1** — definition of disability
+- **Equality Act 2010, sections 20 and 21** — the duty and the consequences of failure
+- **Equality Act 2010, Schedule 8** — work: adjustments; in particular paragraph 20 (knowledge requirement)
+- **Equality Act 2010, section 39** — prohibition on discrimination in employment
+- **Equality Act 2010, section 136** — burden of proof
+- **EHRC Employment Code of Practice (2011), Chapter 6** — guidance on the duty to make reasonable adjustments; persuasive but not binding
+- **Guidance on matters to be taken into account in determining questions relating to the definition of disability (2011)**
+
+## Key Case Law
+
+### The Structured Approach
+
+**Environment Agency v Rowan [2008] ICR 218 (EAT)**
+
+This is the essential starting point for every section 20/21 claim and must always appear in the list. The EAT held that a tribunal determining a reasonable adjustments claim must make findings on:
+
+- The provision, criterion, practice, physical feature or absence of auxiliary aid said to place the claimant at a disadvantage
+- The identity of non-disabled comparators who are not subject to the same disadvantage (for the first requirement)
+- The nature and extent of the substantial disadvantage suffered by the claimant
+
+Without establishing these three elements, a claim cannot succeed and a tribunal cannot properly assess whether any proposed adjustment would have removed the disadvantage. Rowan is routinely cited in strike-out applications and in appeals where a tribunal has omitted to address one of these elements.
+
+---
+
+**Project Management Institute v Latif [2007] IRLR 579 (EAT)**
+
+On burden of proof and the identification of adjustments. The EAT confirmed that a claimant does not have to identify in advance the precise adjustment that the employer should have made. Once the claimant establishes that a PCP placed them at a substantial disadvantage, the burden shifts to the employer to show either that there was no reasonable step it could have taken, or that the step it took was reasonable.
+
+In practice, however, the EAT noted that the claimant will typically need to identify, at least in outline, a step that the employer could have taken, since the tribunal cannot assess reasonableness in a vacuum. The more clearly a claimant identifies the adjustment sought, the clearer the legal framework for the hearing.
+
+---
+
+### What Constitutes a PCP
+
+"Provision, criterion or practice" is interpreted broadly. It covers formal policies, informal working practices, ways of assessing performance, attendance requirements, and any other rule or condition applied to employees.
+
+**Nottinghamshire County Council v Meikle [2004] EWCA Civ 859**
+
+The Court of Appeal confirmed that an attendance management policy — specifically the triggers used to initiate formal warnings and ultimately dismissal — can constitute a PCP. Applying an absence management procedure rigidly to a disabled person whose absences are caused by their disability, without adjusting the triggers or process, can place them at a substantial disadvantage.
+
+**Smith v Churchills Stairlifts plc [2006] EWCA Civ 545**
+
+Identification of the PCP with precision is essential. The Court of Appeal confirmed that if the PCP is not correctly identified, the comparison exercise cannot be properly conducted. The claimant must be able to articulate exactly what the employer does (or requires) that constitutes the PCP, and show how it puts them at a disadvantage compared to non-disabled employees who are not subject to the same difficulty.
+
+---
+
+### Substantial Disadvantage
+
+"Substantial" means more than minor or trivial, consistent with its meaning in section 6 and Schedule 1. The comparison is between the disabled claimant and a non-disabled person placed in the same position — both subject to the same PCP — who does not share the disability.
+
+**RBS v Ashton [2011] ICR 632 (EAT)**
+
+The EAT provided useful guidance on the comparative exercise. The substantial disadvantage must be assessed by comparing the position of the disabled person and a non-disabled comparator who is subject to the same PCP. The question is whether the PCP creates a disadvantage for the disabled person that a non-disabled person would not experience. The disadvantage must be real and identifiable, not speculative.
+
+---
+
+### Employer Knowledge
+
+The duty to make adjustments does not arise unless the employer knows — or ought reasonably to know — that the employee is disabled and likely to be placed at a substantial disadvantage (Schedule 8, paragraph 20).
+
+**Gallop v Newport City Council [2013] EWCA Civ 1583**
+
+An employer cannot escape the knowledge requirement by pointing to an occupational health report concluding that the employee does not have a disability. The employer must form its own view and cannot delegate the question of disability status. This case is relevant in both section 15 and section 20/21 claims.
+
+**Ridout v TC Group [1998] IRLR 628 (EAT)**
+
+The EAT confirmed that the employer must have actual or constructive knowledge of the disability before the duty is triggered. If an employee has not disclosed a disability and there is no reason the employer ought to have enquired, the duty does not arise. Constructive knowledge, however, requires the employer to make reasonable enquiries where there are signs that an employee may be struggling due to a health condition.
+
+---
+
+### What Makes an Adjustment "Reasonable"
+
+There is no statutory definition of "reasonable." Schedule 8 lists relevant factors:
+
+- The extent to which the step would prevent the substantial disadvantage
+- The practicability of the step
+- The financial and other costs
+- The extent of disruption to the employer's activities
+- The financial and other resources available
+- The availability of financial or other assistance (e.g., Access to Work)
+- The nature of the employer's activities
+
+**G4S Cash Solutions (UK) Ltd v Powell [2016] ICR 713 (EAT)**
+
+The EAT confirmed that the reasonableness of a proposed adjustment is assessed objectively, having regard to all the circumstances. The tribunal must weigh the costs and practicability to the employer against the benefit to the claimant of having the adjustment made. This is a proportionate, fact-specific inquiry and no single factor is determinative.
+
+**Tarbuck v Sainsbury's Supermarkets Ltd [2006] IRLR 664 (EAT)**
+
+The question is not whether the employer thought the adjustment was reasonable but whether it objectively was reasonable. A tribunal must apply an objective standard. A genuine, subjective belief by the employer that no adjustment was practicable does not satisfy the duty if a reasonable employer in the same position would have identified and implemented an adjustment.
+
+---
+
+### The Duty May Require More Favourable Treatment
+
+**Archibald v Fife Council [2004] ICR 954 (HL)**
+
+A landmark House of Lords decision. The duty to make reasonable adjustments can require an employer to treat a disabled person more favourably than non-disabled colleagues — the duty is not merely to level the playing field but may require tilting it. On the facts, the council was required to offer Ms Archibald a ring-fenced transfer to a sedentary role, without requiring her to compete in open competition, when she became unable to perform her original role due to disability.
+
+This principle is frequently relied upon in redeployment cases, where a claimant argues that the employer should have offered them an alternative role without subjecting them to a competitive interview process or to the same selection criteria applied to non-disabled candidates.
+
+---
+
+### Redeployment as a Reasonable Adjustment
+
+**Chief Constable of South Yorkshire Police v Jelic [2010] IRLR 744 (EAT)**
+
+Swapping the duties of one employee with another can, in appropriate circumstances, constitute a reasonable adjustment. The EAT confirmed that the employer is not limited to adjustments within the claimant's existing role — consideration must be given to whether broader organisational measures could remove or reduce the disadvantage.
+
+This case is frequently cited in cases where the claimant argues that an alternative role existed to which they should have been transferred, or that duties could have been redistributed to enable them to continue working.
+
+---
+
+### The Adjustment Must Actually Remove or Reduce the Disadvantage
+
+A proposed adjustment that would not in practice have removed or materially reduced the substantial disadvantage is not a reasonable adjustment the employer was required to make.
+
+**Hay v Surrey County Council EAT/0015/07**
+
+The EAT confirmed that a step need not completely remove the disadvantage — it is enough if it would reduce it to a material degree. This has two consequences: a claimant cannot demand a perfect solution if a significant partial solution exists; equally, an employer cannot resist an adjustment merely because it would not entirely eliminate the difficulty.
+
+---
+
+### Burden of Proof
+
+**Section 136 Equality Act 2010**
+
+If there are facts from which the tribunal could decide that a contravention of the Act has occurred, the burden of proof shifts to the employer to show that the failure to make the adjustment was not a breach of the duty.
+
+**Project Management Institute v Latif [2007] IRLR 579 (EAT)**
+
+Once a claimant establishes (a) the PCP, (b) the substantial disadvantage, and (c) an adjustment that would have removed or reduced it, the burden passes to the employer to show why the adjustment was not reasonable. This sequencing is important in a hearing: the claimant's evidence should establish the threshold, after which the evidential burden moves.
+
+---
+
+## The Interaction Between Section 20/21 and Section 15
+
+In many cases, a claimant will bring both a section 15 claim (for the unfavourable treatment — such as dismissal) and a section 20/21 claim (for the failure to adjust — such as not offering reduced hours or a phased return that might have prevented the dismissal). These are distinct claims with different elements, but they often arise on the same facts.
+
+Where a section 15 justification defence is raised, the failure to make reasonable adjustments can be directly relevant to the proportionality analysis: it is harder for an employer to show that dismissal was a proportionate means of addressing an absence or performance problem if it failed to make adjustments that might have resolved the situation.
+
+---
+
+## Preparing the List: A Practical Checklist
+
+When compiling the list of authorities for a section 20/21 hearing, consider whether you need cases on:
+
+- **The structured approach:** Rowan (always required)
+- **Identification of the PCP:** Smith v Churchills; Meikle
+- **Substantial disadvantage — comparison exercise:** Rowan; Ashton
+- **Employer knowledge:** Gallop; Ridout
+- **What is "reasonable":** Powell; Tarbuck
+- **More favourable treatment:** Archibald
+- **Redeployment:** Jelic
+- **Whether the proposed adjustment would have been effective:** Hay v Surrey CC
+- **Burden of proof:** section 136; Latif
+- **The interaction with section 15:** both sets of authorities if both claims are live
+
+Keep the list focused. Every case cited will be expected to appear in your oral or written submissions, and adding cases you cannot deploy undermines the credibility of your preparation.
+    `,
+  },
+  {
     slug: 'understanding-equality-act-2010-disability-discrimination',
     title: 'Understanding the Equality Act 2010: A Complete Guide to Disability Discrimination Protection',
     description: 'The Equality Act 2010 provides comprehensive protection against disability discrimination in the UK. Learn about your rights and employer obligations under this landmark legislation.',
